@@ -26,7 +26,7 @@ zone = 1
 
 [node name="Transition_Zone2" parent="." unique_id=1379750923 instance=ExtResource("1_2c4so")]
 position = Vector2(1076, 345)
-zone = 3
+zone = 4
 
 [node name="Npc_positions" type="Node2D" parent="." unique_id=542592775]
 
