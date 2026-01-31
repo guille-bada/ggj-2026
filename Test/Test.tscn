@@ -7,12 +7,11 @@
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1313726576]
 zoom = Vector2(1.88, 1.88)
-limit_left = -9999897
 
 [node name="Character" parent="." unique_id=2096608912 instance=ExtResource("1_tf838")]
-position = Vector2(76, -46)
+position = Vector2(62, -79)
 _velocidad_maxima = 400.0
 _aceleracion = 1500.0
 
 [node name="Transition_Zone" parent="." unique_id=1673277274 instance=ExtResource("2_n8bxl")]
-position = Vector2(-230, -111)
+position = Vector2(-185, -63)

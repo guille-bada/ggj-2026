@@ -19,6 +19,7 @@ func _physics_process(delta):
 		elif input_direction.x != 0:
 			animated_sprite_2d.play("walk")
 			animated_sprite_2d.flip_h = input_direction.x<0
+		
 
 		
 	else:
