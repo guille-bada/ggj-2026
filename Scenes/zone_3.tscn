@@ -1,9 +1,13 @@
 [gd_scene format=3 uid="uid://be3lmhi43cseh"]
 
+[ext_resource type="PackedScene" uid="uid://dqcgxm7586jj2" path="res://Scenes/transition_zone.tscn" id="1_2c4so"]
+[ext_resource type="Script" uid="uid://crq6qppc8tg34" path="res://Scripts/map_zone.gd" id="1_ljfu7"]
+
 [sub_resource type="LabelSettings" id="LabelSettings_ss133"]
 font_size = 32
 
 [node name="Zone_3" type="Node2D" unique_id=837564778]
+script = ExtResource("1_ljfu7")
 
 [node name="Label" type="Label" parent="." unique_id=1610399105]
 offset_left = 43.0
@@ -12,3 +16,11 @@ offset_right = 83.0
 offset_bottom = 83.0
 text = "3"
 label_settings = SubResource("LabelSettings_ss133")
+
+[node name="Transition_Zone" parent="." unique_id=1673277274 instance=ExtResource("1_2c4so")]
+position = Vector2(536, 69)
+zone = 1
+
+[node name="Transition_Zone2" parent="." unique_id=1379750923 instance=ExtResource("1_2c4so")]
+position = Vector2(1076, 345)
+zone = 3

@@ -11,16 +11,6 @@ extends Node
 
 func _ready() -> void:
 	transition_zone(zone_1)
-	
-func _process(delta: float) -> void:
-	if Input.is_action_just_pressed("ui_up"):
-		transition_zone(zone_1)
-	if Input.is_action_just_pressed("ui_right"):
-		transition_zone(zone_2)
-	if Input.is_action_just_pressed("ui_down"):
-		transition_zone(zone_3)
-	if Input.is_action_just_pressed("ui_left"):
-		transition_zone(zone_4)
 
 func get_zone(zone: int) -> void:
 	var new_zone: PackedScene
@@ -35,7 +25,12 @@ func get_zone(zone: int) -> void:
 func transition_zone(zone: PackedScene) -> void:
 	fade.fade_in()
 	await fade.fade_in_complete
-	for n in zone_container.get_children():
+	for n:MapZone in zone_container.get_children():
+		for z in n.get_transition_zones():
+			z.transition_triggered.disconnect(get_zone)
 		n.queue_free()
 	var instance = zone.instantiate()
 	zone_container.add_child(instance)
+	for n:MapZone in zone_container.get_children():
+		for z in n.get_transition_zones():
+			z.transition_triggered.connect(get_zone)
