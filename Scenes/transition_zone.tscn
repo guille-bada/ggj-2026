@@ -1,17 +1,14 @@
 [gd_scene format=3 uid="uid://dqcgxm7586jj2"]
 
-[ext_resource type="Script" uid="uid://ctcv3mgqhh7f4" path="res://Scripts/Transition_Zone.gd" id="1_67sws"]
-[ext_resource type="PackedScene" uid="uid://dtndh384b372q" path="res://Scenes/Transition_Fade.tscn" id="2_00tnk"]
+[ext_resource type="Script" uid="uid://ctcv3mgqhh7f4" path="res://Scripts/Transition_Zone.gd" id="1_5o7va"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tautj"]
 size = Vector2(96, 80)
 
 [node name="Transition_Zone" type="Node2D" unique_id=1673277274]
-script = ExtResource("1_67sws")
+script = ExtResource("1_5o7va")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1496309184]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=2008384986]
 shape = SubResource("RectangleShape2D_tautj")
-
-[node name="Transition_Fade" parent="Area2D" unique_id=873741915 instance=ExtResource("2_00tnk")]

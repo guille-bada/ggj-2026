@@ -1,15 +1,17 @@
+class_name TransitionFade
 extends CanvasLayer
-@onready var color_rect: ColorRect = $ColorRect
 
-var fade_time : float = 1.7	
-	
+@export var color_rect: ColorRect
+@export var fade_time : float = 1.7
+signal fade_in_complete
+
 func fade_in():
 	var tween = create_tween()
-	color_rect.color.a=0
+	color_rect.color.a = 0
 	tween.tween_property(color_rect,"color:a", 1, fade_time)
 	await tween.finished
+	fade_in_complete.emit()
 	fade_out()
-	
 	
 func fade_out():
 	var tween = create_tween()
