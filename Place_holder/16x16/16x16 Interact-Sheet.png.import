@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c5hae0xyn0pp6"
-path="res://.godot/imported/run_up.png-d2d8adc0a422b9a4c4d371c8c4ef052f.ctex"
+uid="uid://cea064eexvrf2"
+path="res://.godot/imported/16x16 Interact-Sheet.png-c4c0395239dd8bd41018808106c51b53.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Place_holder/run_up.png"
-dest_files=["res://.godot/imported/run_up.png-d2d8adc0a422b9a4c4d371c8c4ef052f.ctex"]
+source_file="res://Place_holder/16x16/16x16 Interact-Sheet.png"
+dest_files=["res://.godot/imported/16x16 Interact-Sheet.png-c4c0395239dd8bd41018808106c51b53.ctex"]
 
 [params]
 

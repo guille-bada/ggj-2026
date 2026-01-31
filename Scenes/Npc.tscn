@@ -1,48 +1,53 @@
-[gd_scene load_steps=7 format=3 uid="uid://6g7e0j0ymkbd"]
+[gd_scene format=3 uid="uid://ntjcnxsmrybi"]
 
 [ext_resource type="Texture2D" uid="uid://d3v8eynat77lb" path="res://icon.svg" id="1_b5x2e"]
-[ext_resource type="Script" uid="uid://doavdufk2awuh" path="res://Scripts/Interactable.gd" id="1_gejva"]
+[ext_resource type="Script" path="res://Scripts/Interactable.gd" id="1_gejva"]
 [ext_resource type="Script" uid="uid://dugywm4y4rsf8" path="res://Scripts/Npc.gd" id="1_lvqg6"]
 [ext_resource type="Texture2D" uid="uid://cqgx3cf6h4744" path="res://Art/circle.png" id="1_m7bvo"]
-[ext_resource type="Script" uid="uid://dmwljtyqrk1hp" path="res://Scripts/ForceGlobalPosition.gd" id="2_c8tqv"]
+[ext_resource type="Script" path="res://Scripts/ForceGlobalPosition.gd" id="2_c8tqv"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_m7bvo"]
 radius = 67.0075
 
-[node name="Npc" type="Node2D" node_paths=PackedStringArray("interactable")]
+[node name="Npc" type="Node2D" unique_id=1714366342 node_paths=PackedStringArray("interactable", "head", "body")]
 script = ExtResource("1_lvqg6")
 interactable = NodePath("Interactable")
+head = NodePath("Mask/Head")
+body = NodePath("Mask/Body")
 
-[node name="Obstacle" type="Area2D" parent="."]
+[node name="Obstacle" type="Area2D" parent="." unique_id=1864928658]
 collision_layer = 2
 collision_mask = 3
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Obstacle"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Obstacle" unique_id=237625521]
 shape = SubResource("CircleShape2D_m7bvo")
 
-[node name="Interactable" type="Area2D" parent="."]
+[node name="Interactable" type="Area2D" parent="." unique_id=293931317]
 collision_layer = 8
 collision_mask = 0
 script = ExtResource("1_gejva")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Interactable"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Interactable" unique_id=1997400528]
 shape = SubResource("CircleShape2D_m7bvo")
 
-[node name="Mask" type="Sprite2D" parent="."]
+[node name="Mask" type="Sprite2D" parent="." unique_id=17857424]
 clip_children = 2
 scale = Vector2(0.6, 0.6)
 texture = ExtResource("1_m7bvo")
 
-[node name="Sprite" type="Sprite2D" parent="Mask"]
+[node name="Head" type="Sprite2D" parent="Mask" unique_id=949986244]
+position = Vector2(10, -5)
 scale = Vector2(1.667, 1.667)
 texture = ExtResource("1_b5x2e")
 
-[node name="Scripts" type="Node" parent="."]
+[node name="Body" type="Sprite2D" parent="Mask" unique_id=1236485731]
 
-[node name="SpriteForceGlobalPosition" type="Node" parent="Scripts" node_paths=PackedStringArray("subject")]
+[node name="Scripts" type="Node" parent="." unique_id=310320982]
+
+[node name="SpriteForceGlobalPosition" type="Node" parent="Scripts" unique_id=847149230 node_paths=PackedStringArray("subject")]
 script = ExtResource("2_c8tqv")
-subject = NodePath("../../Mask/Sprite")
+subject = NodePath("../../Mask/Head")
 
-[node name="MaskForceGlobalPosition" type="Node" parent="Scripts" node_paths=PackedStringArray("subject")]
+[node name="MaskForceGlobalPosition" type="Node" parent="Scripts" unique_id=173865544 node_paths=PackedStringArray("subject")]
 script = ExtResource("2_c8tqv")
 subject = NodePath("../../Mask")

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://up2yphccev11"
-path="res://.godot/imported/run_left.png-605dc77e6f3fb9ecaba593df63614e24.ctex"
+path="res://.godot/imported/run_left.png-5c5e4e327b5582a02b3fb0c2640ea811.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Place_holder/run_left.png"
-dest_files=["res://.godot/imported/run_left.png-605dc77e6f3fb9ecaba593df63614e24.ctex"]
+source_file="res://Place_holder/Sprite/run_left.png"
+dest_files=["res://.godot/imported/run_left.png-5c5e4e327b5582a02b3fb0c2640ea811.ctex"]
 
 [params]
 

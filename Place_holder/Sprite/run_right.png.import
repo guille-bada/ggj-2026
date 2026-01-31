@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://byx05stnd3u6i"
-path="res://.godot/imported/run_right.png-d9f9950dbac8e749dfa78563f11d909b.ctex"
+path="res://.godot/imported/run_right.png-ead06b573b6a38ae080db07d011390f6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Place_holder/run_right.png"
-dest_files=["res://.godot/imported/run_right.png-d9f9950dbac8e749dfa78563f11d909b.ctex"]
+source_file="res://Place_holder/Sprite/run_right.png"
+dest_files=["res://.godot/imported/run_right.png-ead06b573b6a38ae080db07d011390f6.ctex"]
 
 [params]
 
