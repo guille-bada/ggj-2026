@@ -4,9 +4,10 @@
 
 [node name="Map" type="Node2D" unique_id=670653064]
 
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1313726576]
+zoom = Vector2(2.505, 2.505)
+limit_left = -9999897
+
 [node name="Character" parent="." unique_id=2096608912 instance=ExtResource("1_tf838")]
-position = Vector2(126, -20)
 _velocidad_maxima = 400.0
 _aceleracion = 1500.0
-
-[node name="Camera2D" type="Camera2D" parent="." unique_id=1313726576]
