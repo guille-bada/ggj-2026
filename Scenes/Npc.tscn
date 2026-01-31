@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://6g7e0j0ymkbd"]
+
+[ext_resource type="Texture2D" uid="uid://d3v8eynat77lb" path="res://icon.svg" id="1_b5x2e"]
+[ext_resource type="Texture2D" uid="uid://cqgx3cf6h4744" path="res://Art/circle.png" id="1_m7bvo"]
+[ext_resource type="Script" uid="uid://dmwljtyqrk1hp" path="res://Scripts/ForceGlobalPosition.gd" id="2_c8tqv"]
+
+[node name="Npc" type="Node2D" unique_id=491971792]
+
+[node name="Mask" type="Sprite2D" parent="." unique_id=1779652395]
+clip_children = 2
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("1_m7bvo")
+
+[node name="Sprite" type="Sprite2D" parent="Mask" unique_id=612922757]
+scale = Vector2(1.667, 1.667)
+texture = ExtResource("1_b5x2e")
+
+[node name="Scripts" type="Node" parent="." unique_id=1236138701]
+
+[node name="SpriteForceGlobalPosition" type="Node" parent="Scripts" unique_id=785536829 node_paths=PackedStringArray("subject")]
+script = ExtResource("2_c8tqv")
+subject = NodePath("../../Mask/Sprite")
+
+[node name="MaskForceGlobalPosition" type="Node" parent="Scripts" unique_id=1146308959 node_paths=PackedStringArray("subject")]
+script = ExtResource("2_c8tqv")
+subject = NodePath("../../Mask")
