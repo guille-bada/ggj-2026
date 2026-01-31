@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://b5yo53sk5tcfq" path="res://Scripts/character.gd" id="1_jo2ib"]
 [ext_resource type="Texture2D" uid="uid://kvconcgnovph" path="res://Place_holder/Sprite/idle_down.png" id="2_jo2ib"]
 [ext_resource type="Texture2D" uid="uid://brlj0v2l2dg2a" path="res://Place_holder/Sprite/run_down.png" id="2_omicx"]
-[ext_resource type="Script" path="res://Scripts/Interaction.gd" id="6_xloa1"]
+[ext_resource type="Script" uid="uid://bvupbrpiraq75" path="res://Scripts/Interaction.gd" id="6_xloa1"]
 [ext_resource type="Texture2D" uid="uid://byx05stnd3u6i" path="res://Place_holder/Sprite/run_right.png" id="8_0tob0"]
 [ext_resource type="Texture2D" uid="uid://c5hae0xyn0pp6" path="res://Place_holder/Sprite/run_up.png" id="9_cw27m"]
 
@@ -262,7 +262,7 @@ height = 38.0
 radius = 27.0185
 
 [node name="Character" type="CharacterBody2D" unique_id=967131426 node_paths=PackedStringArray("interaction")]
-collision_layer = 4
+collision_layer = 5
 collision_mask = 3
 script = ExtResource("1_jo2ib")
 _aceleracion = 1500.0
