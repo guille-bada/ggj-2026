@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://ntjcnxsmrybi"]
+[gd_scene format=3 uid="uid://6g7e0j0ymkbd"]
 
 [ext_resource type="Texture2D" uid="uid://d3v8eynat77lb" path="res://icon.svg" id="1_b5x2e"]
 [ext_resource type="Script" uid="uid://doavdufk2awuh" path="res://Scripts/Interactable.gd" id="1_gejva"]
@@ -33,7 +33,7 @@ script = ExtResource("1_gejva")
 shape = SubResource("CircleShape2D_m7bvo")
 
 [node name="Mask" type="Sprite2D" parent="." unique_id=1661112244]
-clip_children = 2
+clip_children = 1
 scale = Vector2(0.6, 0.6)
 texture = ExtResource("1_m7bvo")
 
@@ -42,6 +42,7 @@ texture = ExtResource("1_m7bvo")
 [node name="Body" type="Sprite2D" parent="Mask/Node2D" unique_id=1732621489]
 
 [node name="Head" type="Sprite2D" parent="Mask/Node2D" unique_id=1234273306]
+position = Vector2(0, -58.333336)
 scale = Vector2(1.667, 1.667)
 texture = ExtResource("1_b5x2e")
 

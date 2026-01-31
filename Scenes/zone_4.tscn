@@ -2,12 +2,15 @@
 
 [ext_resource type="PackedScene" uid="uid://dqcgxm7586jj2" path="res://Scenes/transition_zone.tscn" id="1_l382l"]
 [ext_resource type="Script" uid="uid://crq6qppc8tg34" path="res://Scripts/map_zone.gd" id="1_yl0l6"]
+[ext_resource type="Resource" uid="uid://cgpkhtw5vtsx" path="res://Resources/Scenes/escena4.tres" id="2_rv4do"]
+[ext_resource type="PackedScene" uid="uid://6g7e0j0ymkbd" path="res://Scenes/Npc.tscn" id="3_jvpqj"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_ss133"]
 font_size = 32
 
 [node name="Zone_4" type="Node2D" unique_id=837564778]
 script = ExtResource("1_yl0l6")
+scene_resource = ExtResource("2_rv4do")
 
 [node name="Label" type="Label" parent="." unique_id=1610399105]
 offset_left = 43.0
@@ -24,3 +27,14 @@ zone = 2
 [node name="Transition_Zone2" parent="." unique_id=409883935 instance=ExtResource("1_l382l")]
 position = Vector2(93, 340)
 zone = 3
+
+[node name="Npc_positions" type="Node2D" parent="." unique_id=1925852176]
+
+[node name="Npc" parent="Npc_positions" unique_id=1133381282 instance=ExtResource("3_jvpqj")]
+position = Vector2(342, 415)
+
+[node name="Npc2" parent="Npc_positions" unique_id=1805372857 instance=ExtResource("3_jvpqj")]
+position = Vector2(564, 299)
+
+[node name="Npc3" parent="Npc_positions" unique_id=1988434145 instance=ExtResource("3_jvpqj")]
+position = Vector2(785, 551)
