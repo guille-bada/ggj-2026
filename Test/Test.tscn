@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://cwa7qgsbm0fdk"]
+
+[ext_resource type="PackedScene" uid="uid://cf1mpjui5a211" path="res://Scenes/Character.tscn" id="1_tf838"]
+
+[node name="Map" type="Node2D" unique_id=670653064]
+
+[node name="Character" parent="." unique_id=2096608912 instance=ExtResource("1_tf838")]
+position = Vector2(126, -20)
+_velocidad_maxima = 400.0
+_aceleracion = 1500.0
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1313726576]
