@@ -1,8 +1,9 @@
-[gd_scene format=3 uid="uid://cf1mpjui5a211"]
+[gd_scene load_steps=42 format=3 uid="uid://cf1mpjui5a211"]
 
 [ext_resource type="Script" uid="uid://b5yo53sk5tcfq" path="res://Scripts/character.gd" id="1_jo2ib"]
 [ext_resource type="Texture2D" uid="uid://kvconcgnovph" path="res://Place_holder/idle_down.png" id="2_jo2ib"]
 [ext_resource type="Texture2D" uid="uid://brlj0v2l2dg2a" path="res://Place_holder/run_down.png" id="2_omicx"]
+[ext_resource type="Script" uid="uid://bvupbrpiraq75" path="res://Scripts/Interaction.gd" id="6_xloa1"]
 [ext_resource type="Texture2D" uid="uid://byx05stnd3u6i" path="res://Place_holder/run_right.png" id="8_0tob0"]
 [ext_resource type="Texture2D" uid="uid://c5hae0xyn0pp6" path="res://Place_holder/run_up.png" id="9_cw27m"]
 
@@ -257,12 +258,27 @@ animations = [{
 radius = 8.0
 height = 38.0
 
-[node name="Character" type="CharacterBody2D" unique_id=2096608912]
-script = ExtResource("1_jo2ib")
+[sub_resource type="CircleShape2D" id="CircleShape2D_4b18b"]
+radius = 27.0185
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1925057120]
+[node name="Character" type="CharacterBody2D" node_paths=PackedStringArray("interaction")]
+collision_layer = 4
+collision_mask = 3
+script = ExtResource("1_jo2ib")
+_aceleracion = 1500.0
+interaction = NodePath("Area2D")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_0y7nr")
 animation = &"down"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1737112355]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_fgiha")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 16
+collision_mask = 8
+script = ExtResource("6_xloa1")
+
+[node name="Interaction" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_4b18b")
