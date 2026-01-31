@@ -2,8 +2,10 @@
 
 [ext_resource type="Script" uid="uid://dhpyg20fapnv" path="res://Scripts/Transition_Fade.gd" id="1_353a6"]
 
-[node name="Transition_Fade" type="CanvasLayer" unique_id=873741915]
+[node name="Transition_Fade" type="CanvasLayer" unique_id=873741915 node_paths=PackedStringArray("color_rect")]
 script = ExtResource("1_353a6")
+color_rect = NodePath("ColorRect")
+fade_time = 0.7
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=433441298]
 anchors_preset = 15

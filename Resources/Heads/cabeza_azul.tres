@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="Clue" format=3 uid="uid://dy2o3shdquf33"]
+
+[ext_resource type="Script" uid="uid://w27m0ui8naiv" path="res://Scripts/Resources/ResourceClue.gd" id="1_1rcyg"]
+
+[resource]
+script = ExtResource("1_1rcyg")
+name = "test cuerpo"
+clues = Array[String](["test cuerpo clue"])
+metadata/_custom_type_script = "uid://w27m0ui8naiv"

@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://pewy0cyyqt2b"]
+
+[ext_resource type="Script" uid="uid://0fcywi74lhbo" path="res://area_manager.gd" id="1_dcqxy"]
+[ext_resource type="PackedScene" uid="uid://cxbxvh1qeug6c" path="res://Scenes/zone_1.tscn" id="2_hamhk"]
+[ext_resource type="PackedScene" uid="uid://m6pfbnna3t0g" path="res://Scenes/zone_2.tscn" id="3_u5xqm"]
+[ext_resource type="PackedScene" uid="uid://be3lmhi43cseh" path="res://Scenes/zone_3.tscn" id="4_nvu1y"]
+[ext_resource type="PackedScene" uid="uid://d3w5nicrf08lt" path="res://Scenes/zone_4.tscn" id="5_gvjm0"]
+
+[node name="Area_Manager" type="Node" unique_id=638940389]
+script = ExtResource("1_dcqxy")
+zone_1 = ExtResource("2_hamhk")
+zone_2 = ExtResource("3_u5xqm")
+zone_3 = ExtResource("4_nvu1y")
+zone_4 = ExtResource("5_gvjm0")

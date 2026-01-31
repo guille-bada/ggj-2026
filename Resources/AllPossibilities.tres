@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="ResourceAllPossibilities" format=3 uid="uid://ckfq6o77hhe5j"]
+
+[ext_resource type="Script" uid="uid://w27m0ui8naiv" path="res://Scripts/Resources/ResourceClue.gd" id="1_ev7q4"]
+[ext_resource type="Resource" uid="uid://ebkrmiu8vr1f" path="res://Resources/Bodies/cuerpo_azul.tres" id="2_e3df3"]
+[ext_resource type="Script" uid="uid://dsmjdeujpahcl" path="res://Scripts/Resources/ResourceScene.gd" id="2_ipiy5"]
+[ext_resource type="Script" uid="uid://b62fn24x2icc4" path="res://Scripts/Resources/ResourceAllPossibilities.gd" id="3_6k0xf"]
+[ext_resource type="Resource" uid="uid://dy2o3shdquf33" path="res://Resources/Heads/cabeza_azul.tres" id="3_bavhp"]
+[ext_resource type="Resource" uid="uid://cmb1n27jxdnc5" path="res://Resources/Locations/ubicacion_panchos.tres" id="4_ukjua"]
+[ext_resource type="Resource" uid="uid://cekiwjjfnb4md" path="res://Resources/Scenes/escena1.tres" id="6_ugm0q"]
+
+[resource]
+resource_local_to_scene = true
+script = ExtResource("3_6k0xf")
+heads = Array[ExtResource("1_ev7q4")]([ExtResource("3_bavhp")])
+bodies = Array[ExtResource("1_ev7q4")]([ExtResource("2_e3df3")])
+scenes = Array[ExtResource("2_ipiy5")]([ExtResource("6_ugm0q")])
+locations = Array[ExtResource("1_ev7q4")]([ExtResource("4_ukjua")])
+metadata/_custom_type_script = "uid://b62fn24x2icc4"

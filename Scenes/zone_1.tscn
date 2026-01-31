@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://cxbxvh1qeug6c"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_ss133"]
+font_size = 32
+
+[node name="Zone_1" type="Node2D" unique_id=837564778]
+
+[node name="Label" type="Label" parent="." unique_id=1610399105]
+offset_left = 43.0
+offset_top = 38.0
+offset_right = 83.0
+offset_bottom = 83.0
+text = "1"
+label_settings = SubResource("LabelSettings_ss133")

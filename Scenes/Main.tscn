@@ -2,40 +2,42 @@
 
 [ext_resource type="Texture2D" uid="uid://c25x6k5dksjdo" path="res://Art/background.png" id="1_idj7w"]
 [ext_resource type="PackedScene" uid="uid://2ywuof63rfbw" path="res://Scenes/FogOfWar.tscn" id="1_r150o"]
+[ext_resource type="Script" uid="uid://dcidv8xstyeox" path="res://Scripts/SceneScript.gd" id="1_v1gob"]
 [ext_resource type="PackedScene" uid="uid://6g7e0j0ymkbd" path="res://Scenes/Npc.tscn" id="3_kln2b"]
 [ext_resource type="Script" uid="uid://dmwljtyqrk1hp" path="res://Scripts/ForceGlobalPosition.gd" id="3_pbw6q"]
 [ext_resource type="PackedScene" uid="uid://cf1mpjui5a211" path="res://Scenes/Character.tscn" id="5_v1gob"]
 
-[node name="Main" type="Node2D"]
+[node name="Main" type="Node2D" unique_id=340472100]
+script = ExtResource("1_v1gob")
 
-[node name="Camera2D" type="Camera2D" parent="."]
+[node name="Camera2D" type="Camera2D" parent="." unique_id=40090859]
 
-[node name="Background" type="Sprite2D" parent="."]
+[node name="Background" type="Sprite2D" parent="." unique_id=402353191]
 texture = ExtResource("1_idj7w")
 
-[node name="FogOfWar" parent="." node_paths=PackedStringArray("subject", "position_to_hold") instance=ExtResource("1_r150o")]
+[node name="FogOfWar" parent="." unique_id=361484850 node_paths=PackedStringArray("subject", "position_to_hold") instance=ExtResource("1_r150o")]
 scale = Vector2(0.6, 0.6)
 script = ExtResource("3_pbw6q")
 subject = NodePath(".")
 position_to_hold = NodePath("../Character")
 
-[node name="Mask" parent="FogOfWar" index="0"]
+[node name="Mask" parent="FogOfWar" index="0" unique_id=845327309]
 clip_children = 1
 
-[node name="AnimatedSprite2D" parent="FogOfWar/Mask" index="0" node_paths=PackedStringArray("subject")]
+[node name="AnimatedSprite2D" parent="FogOfWar/Mask" index="0" unique_id=2018864767 node_paths=PackedStringArray("subject")]
 script = ExtResource("3_pbw6q")
 subject = NodePath(".")
 
-[node name="Npc" parent="." instance=ExtResource("3_kln2b")]
+[node name="Npc" parent="." unique_id=540191741 instance=ExtResource("3_kln2b")]
 position = Vector2(219, 151)
 
-[node name="Mask" parent="Npc" index="1"]
+[node name="Mask" parent="Npc" index="2" unique_id=1661112244]
 clip_children = 1
 
-[node name="MaskForceGlobalPosition" parent="Npc/Scripts" index="1" node_paths=PackedStringArray("position_to_hold")]
+[node name="MaskForceGlobalPosition" parent="Npc/Scripts" parent_id_path=PackedInt32Array(540191741, 733532672) index="1" unique_id=529345963 node_paths=PackedStringArray("position_to_hold")]
 position_to_hold = NodePath("../../../FogOfWar")
 
-[node name="Character" parent="." instance=ExtResource("5_v1gob")]
+[node name="Character" parent="." unique_id=1218476076 instance=ExtResource("5_v1gob")]
 position = Vector2(-92, 70)
 scale = Vector2(2.58319, 2.58319)
 
