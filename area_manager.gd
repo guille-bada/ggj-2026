@@ -10,6 +10,7 @@ extends Node
 
 var current_zone: MapZone
 var last_zone: int = 2
+@onready var timer: Timer = $Timer
 
 func _ready() -> void:
 	transition_zone(zone_1, true)
@@ -30,6 +31,8 @@ func transition_zone(zone: PackedScene, skip_fade_in: bool = false) -> void:
 		await fade.fade_in_complete
 	else:
 		fade.fade_out()
+		timer.start()
+		await timer.timeout
 	
 	for n:MapZone in zone_container.get_children():
 		for z in n.get_transition_zones():

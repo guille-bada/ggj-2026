@@ -5,8 +5,8 @@ extends CanvasLayer
 @export var fade_time : float = 1.7
 signal fade_in_complete
 
-func _ready() -> void:
-	fade_out()
+#func _ready() -> void:
+	#fade_out()
 
 func fade_in():
 	var tween = create_tween()

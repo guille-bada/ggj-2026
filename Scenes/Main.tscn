@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://pewy0cyyqt2b" path="res://Scenes/area_manager.tscn" id="2_nurni"]
 [ext_resource type="PackedScene" uid="uid://dtndh384b372q" path="res://Scenes/Transition_Fade.tscn" id="3_0ni5v"]
-[ext_resource type="Script" uid="uid://xpwmfie2hok1" path="res://Scripts/texto_inicial.gd" id="3_kln2b"]
+[ext_resource type="Script" path="res://Scripts/texto_inicial.gd" id="3_kln2b"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_idj7w"]
 font_size = 32

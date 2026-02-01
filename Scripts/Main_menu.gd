@@ -18,3 +18,4 @@ func change_scene() -> void:
 	timer.start()
 	await timer.timeout
 	get_tree().change_scene_to_file("res://Scenes/Main.tscn")
+	queue_free()

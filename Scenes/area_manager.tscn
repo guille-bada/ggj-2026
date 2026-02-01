@@ -12,3 +12,7 @@ zone_1 = ExtResource("2_hamhk")
 zone_2 = ExtResource("3_u5xqm")
 zone_3 = ExtResource("4_nvu1y")
 zone_4 = ExtResource("5_gvjm0")
+
+[node name="Timer" type="Timer" parent="." unique_id=1046639027]
+wait_time = 0.1
+one_shot = true
