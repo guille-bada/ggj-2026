@@ -1,19 +1,46 @@
 [gd_scene format=3 uid="uid://c316m6ovwsluh"]
 
-[node name="Main_Menu" type="Control" unique_id=1042998805]
+[ext_resource type="Script" uid="uid://cjt67v6p6myp7" path="res://Scripts/Main_menu.gd" id="1_28flt"]
+[ext_resource type="Texture2D" uid="uid://dm5s7uax2y65c" path="res://Place_holder/Menu/Main.png" id="2_1ehe0"]
+[ext_resource type="PackedScene" uid="uid://dtndh384b372q" path="res://Scenes/Transition_Fade.tscn" id="2_48xlc"]
+[ext_resource type="Texture2D" uid="uid://ck2ki4sogtcsv" path="res://Place_holder/Menu/Press.png" id="4_ce3w2"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ce3w2"]
+texture = ExtResource("2_1ehe0")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_n45e2"]
+texture = ExtResource("4_ce3w2")
+
+[node name="Main_Menu" type="Control" unique_id=1042998805 node_paths=PackedStringArray("fade_menu")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_28flt")
+fade_menu = NodePath("Transition_Fade")
 metadata/_edit_use_anchors_ = true
 
-[node name="TextureRect" type="TextureRect" parent="." unique_id=1528109101]
+[node name="Panel" type="Panel" parent="." unique_id=1221424473]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_ce3w2")
+
+[node name="Transition_Fade" parent="." unique_id=873741915 instance=ExtResource("2_48xlc")]
+
+[node name="Panel2" type="Panel" parent="." unique_id=1361919119]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.20659722
+anchor_top = 0.83641976
+anchor_right = 0.8211806
+anchor_bottom = 0.9243827
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_n45e2")
 metadata/_edit_use_anchors_ = true
