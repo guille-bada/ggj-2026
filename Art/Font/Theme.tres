@@ -1,0 +1,6 @@
+[gd_resource type="Theme" format=3 uid="uid://y6viob7bsb0g"]
+
+[ext_resource type="FontFile" uid="uid://clih0lcsp8inb" path="res://Art/Font/shonen/Shonen (Namikus).otf" id="1_78mhc"]
+
+[resource]
+default_font = ExtResource("1_78mhc")

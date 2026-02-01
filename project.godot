@@ -30,6 +30,10 @@ window/size/resizable=false
 window/stretch/mode="canvas_items"
 window/stretch/aspect="keep_width"
 
+[gui]
+
+theme/custom="uid://y6viob7bsb0g"
+
 [input]
 
 Up={

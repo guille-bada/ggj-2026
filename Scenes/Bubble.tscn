@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://d4jyqsflojave" path="res://Scripts/Bubble_dialogue.gd" id="1_xlgdi"]
 [ext_resource type="Texture2D" uid="uid://c6lcwh8co6xrn" path="res://Art/globo de texto.png" id="2_xlgdi"]
+[ext_resource type="Theme" uid="uid://y6viob7bsb0g" path="res://Art/Font/Theme.tres" id="3_fu81w"]
 
 [node name="Bubble" type="Control" unique_id=1886848626 node_paths=PackedStringArray("texture_rect", "label")]
 layout_mode = 3
@@ -37,6 +38,7 @@ anchor_right = 0.9010417
 anchor_bottom = 0.3425926
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("3_fu81w")
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "fdafdsafdsafdsafdsafdsafdsafdsafdsafdsa"
 autowrap_mode = 3
