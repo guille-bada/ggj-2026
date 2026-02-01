@@ -3,11 +3,12 @@ extends Node2D
 
 var transition_zones: Array[TransitionZone]
 @export var scene_resource: ResourceScene
-@onready var npc_positions: Node2D = $Npc_positions
+@export var npc_positions: Node2D
 
 func _ready() -> void:
 	find_transition_zones()
 	get_npc_positions()
+	hide_colliders_temporarily()
 
 func find_transition_zones() -> void:
 	for n in get_children():
@@ -23,3 +24,9 @@ func get_npc_positions() -> void:
 
 func get_transition_zones() -> Array[TransitionZone]:
 	return transition_zones
+
+func hide_colliders_temporarily() -> void:
+	#hide colliders when players enters zone
+	# so it doesn't transition back again
+	for zone: TransitionZone in transition_zones:
+		zone.hide_temporarily()

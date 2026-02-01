@@ -24,9 +24,11 @@ label_settings = SubResource("LabelSettings_ss133")
 position = Vector2(536, 69)
 zone = 1
 
-[node name="Transition_Zone2" parent="." unique_id=1379750923 instance=ExtResource("1_2c4so")]
+[node name="Transition_Zone2" parent="." unique_id=1379750923 node_paths=PackedStringArray("npc_positions") instance=ExtResource("1_2c4so")]
 position = Vector2(1076, 345)
-zone = 4
+script = ExtResource("1_ljfu7")
+scene_resource = ExtResource("2_d6flo")
+npc_positions = NodePath("../Npc_positions")
 
 [node name="Npc_positions" type="Node2D" parent="." unique_id=542592775]
 

@@ -13,12 +13,11 @@
 [ext_resource type="Resource" uid="uid://cekiwjjfnb4md" path="res://Resources/Scenes/escena1.tres" id="6_ugm0q"]
 [ext_resource type="Resource" uid="uid://c0gsr674e2dit" path="res://Resources/Scenes/escena2.tres" id="11_jr7pe"]
 [ext_resource type="Resource" uid="uid://d2cqly6k2e6oh" path="res://Resources/Scenes/escena3.tres" id="12_x3vsh"]
-[ext_resource type="Resource" uid="uid://cgpkhtw5vtsx" path="res://Resources/Scenes/escena4.tres" id="13_0ml5o"]
 
 [resource]
 script = ExtResource("3_6k0xf")
 heads = Array[ExtResource("1_ev7q4")]([ExtResource("3_bavhp"), ExtResource("4_w0ob6"), ExtResource("4_ugm0q")])
 bodies = Array[ExtResource("1_ev7q4")]([ExtResource("2_e3df3"), ExtResource("3_w0ob6"), ExtResource("4_ovvt0")])
-scenes = Array[ExtResource("2_ipiy5")]([ExtResource("6_ugm0q"), ExtResource("11_jr7pe"), ExtResource("12_x3vsh"), ExtResource("13_0ml5o")])
+scenes = Array[ExtResource("2_ipiy5")]([ExtResource("6_ugm0q"), ExtResource("11_jr7pe"), ExtResource("12_x3vsh"), null])
 locations = Array[ExtResource("1_ev7q4")]([ExtResource("4_ukjua")])
 metadata/_custom_type_script = "uid://b62fn24x2icc4"
