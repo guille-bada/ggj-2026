@@ -1,9 +1,13 @@
 class_name Interactable extends Area2D
 
-signal signal_interactable
+signal signal_interact_start
+signal signal_interact_end
 
 func _ready():
 	pass
 
 func interact():
-	signal_interactable.emit()
+	signal_interact_start.emit()
+
+func interact_end():
+	signal_interact_end.emit()
