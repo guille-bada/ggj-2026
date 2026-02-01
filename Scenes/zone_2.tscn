@@ -57,23 +57,23 @@ scale = Vector2(0.4283154, 0.42142856)
 texture = ExtResource("4_vjtkv")
 
 [node name="Multitud1" type="Sprite2D" parent="assets" unique_id=1256001359]
-position = Vector2(633.00006, 130)
-scale = Vector2(0.8742855, 0.7892857)
+position = Vector2(639, 131)
+scale = Vector2(0.6705493, 0.6053571)
 texture = ExtResource("10_2rnfi")
 
 [node name="Multitud4" type="Sprite2D" parent="assets" unique_id=1569139294]
-position = Vector2(171.5, 465.5)
-scale = Vector2(0.5857143, 0.66071427)
+position = Vector2(189.78378, 482)
+scale = Vector2(0.48123556, 0.54285717)
 texture = ExtResource("10_2rnfi")
 
 [node name="Multitud2" type="Sprite2D" parent="assets" unique_id=1832566868]
-position = Vector2(21.5, 519)
-scale = Vector2(0.5742857, 0.6571429)
+position = Vector2(52, 549)
+scale = Vector2(0.5056211, 0.57857144)
 texture = ExtResource("9_e334c")
 
 [node name="Multitud3" type="Sprite2D" parent="assets" unique_id=1970064934]
-position = Vector2(146.49995, 524)
-scale = Vector2(0.56285715, 0.6642857)
+position = Vector2(157.62093, 513.5)
+scale = Vector2(0.49930874, 0.5892857)
 texture = ExtResource("10_2rnfi")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="assets" unique_id=1301098660]
@@ -94,6 +94,7 @@ shape = SubResource("SegmentShape2D_otcwd")
 
 [node name="Character" parent="." unique_id=967131426 instance=ExtResource("5_bd8ia")]
 position = Vector2(1006, 320)
+collision_layer = 5
 
 [node name="Label" type="Label" parent="." unique_id=1610399105]
 offset_left = 43.0

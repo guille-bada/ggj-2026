@@ -4,8 +4,36 @@
 [ext_resource type="Script" uid="uid://crq6qppc8tg34" path="res://Scripts/map_zone.gd" id="1_yl0l6"]
 [ext_resource type="Resource" uid="uid://cgpkhtw5vtsx" path="res://Resources/Scenes/escena4.tres" id="2_rv4do"]
 [ext_resource type="PackedScene" uid="uid://6g7e0j0ymkbd" path="res://Scenes/Npc.tscn" id="3_jvpqj"]
+[ext_resource type="Texture2D" uid="uid://cf7872daj7jo3" path="res://Place_holder/Background/GGJ2026FondoAbajo.png" id="3_lrimn"]
+[ext_resource type="Texture2D" uid="uid://b8h174yhtj7al" path="res://Place_holder/Multitumbre/turros.png" id="4_w11j0"]
+[ext_resource type="Texture2D" uid="uid://c5efm0uu36k3x" path="res://Place_holder/Multitumbre/multitud 1.png" id="5_kg3v7"]
 [ext_resource type="PackedScene" uid="uid://cf1mpjui5a211" path="res://Scenes/Character.tscn" id="5_ymh0q"]
 [ext_resource type="Script" uid="uid://3ififejb7kqd" path="res://Scripts/player_start_position.gd" id="6_nnvpj"]
+[ext_resource type="Texture2D" uid="uid://dtjaaq7hejsej" path="res://Place_holder/Multitumbre/multitud 2.png" id="7_1cidu"]
+[ext_resource type="Texture2D" uid="uid://dsiywqd0lwuid" path="res://Place_holder/Multitumbre/vedette.png" id="8_4r2ey"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_4r2ey"]
+radius = 326.24695
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uutaa"]
+size = Vector2(117, 73.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cqgaf"]
+size = Vector2(294, 160.5)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_74mjj"]
+a = Vector2(-2, 650)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_w11j0"]
+a = Vector2(0, 648)
+b = Vector2(1158, 655)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w11j0"]
+size = Vector2(221, 110)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_kg3v7"]
+a = Vector2(224, 199)
+b = Vector2(-2, 86)
 
 [sub_resource type="LabelSettings" id="LabelSettings_ss133"]
 font_size = 32
@@ -16,6 +44,83 @@ scene_resource = ExtResource("2_rv4do")
 npc_positions = NodePath("Npc_positions")
 character = NodePath("Character")
 
+[node name="assets" type="Node2D" parent="." unique_id=1276309594]
+
+[node name="Ggj2026FondoAbajo" type="Sprite2D" parent="assets" unique_id=579734102]
+position = Vector2(577.5, 326.5)
+scale = Vector2(0.60156256, 0.6064815)
+texture = ExtResource("3_lrimn")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="assets" unique_id=1237758370]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="assets/StaticBody2D" unique_id=1590959811]
+position = Vector2(913.00006, 364)
+scale = Vector2(1.5360014, 0.65375775)
+shape = SubResource("CircleShape2D_4r2ey")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="assets" unique_id=1183404646]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="assets/StaticBody2D2" unique_id=1357496816]
+position = Vector2(877, 128)
+shape = SubResource("RectangleShape2D_uutaa")
+
+[node name="Turros" type="Sprite2D" parent="assets" unique_id=780848111]
+position = Vector2(118, 553)
+scale = Vector2(0.62544805, 0.62544805)
+texture = ExtResource("4_w11j0")
+
+[node name="Multitud1" type="Sprite2D" parent="assets" unique_id=304088781]
+position = Vector2(1054, 65)
+scale = Vector2(0.5966072, 0.59660727)
+texture = ExtResource("5_kg3v7")
+
+[node name="Vedette" type="Sprite2D" parent="assets" unique_id=2137658986]
+position = Vector2(585, 167.99998)
+scale = Vector2(0.5469484, 0.5469484)
+texture = ExtResource("8_4r2ey")
+
+[node name="Multitud3" type="Sprite2D" parent="assets" unique_id=1044532229]
+position = Vector2(696, 562)
+scale = Vector2(0.7607143, 0.7607143)
+texture = ExtResource("5_kg3v7")
+
+[node name="Multitud4" type="Sprite2D" parent="assets" unique_id=1141865137]
+position = Vector2(881, 567)
+scale = Vector2(0.73571426, 0.73571426)
+texture = ExtResource("7_1cidu")
+
+[node name="Multitud5" type="Sprite2D" parent="assets" unique_id=252335551]
+position = Vector2(1042, 568)
+scale = Vector2(0.73214287, 0.73214287)
+texture = ExtResource("5_kg3v7")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="assets" unique_id=1927642590]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="assets/StaticBody2D3" unique_id=373114700]
+position = Vector2(1084, 63)
+shape = SubResource("RectangleShape2D_cqgaf")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="assets" unique_id=1078545698]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="assets/StaticBody2D4" unique_id=1204958094]
+shape = SubResource("SegmentShape2D_74mjj")
+
+[node name="StaticBody2D5" type="StaticBody2D" parent="assets" unique_id=359623369]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="assets/StaticBody2D5" unique_id=908989586]
+shape = SubResource("SegmentShape2D_w11j0")
+
+[node name="StaticBody2D6" type="StaticBody2D" parent="assets" unique_id=322822739]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="assets/StaticBody2D6" unique_id=662893190]
+position = Vector2(108, 254)
+shape = SubResource("RectangleShape2D_w11j0")
+
+[node name="StaticBody2D7" type="StaticBody2D" parent="assets" unique_id=176761338]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="assets/StaticBody2D7" unique_id=71596259]
+shape = SubResource("SegmentShape2D_kg3v7")
+
 [node name="Label" type="Label" parent="." unique_id=1610399105]
 offset_left = 43.0
 offset_top = 38.0
@@ -25,25 +130,26 @@ text = "4"
 label_settings = SubResource("LabelSettings_ss133")
 
 [node name="Transition_Zone" parent="." unique_id=1673277274 instance=ExtResource("1_l382l")]
-position = Vector2(581, 86)
+position = Vector2(353, -45)
+scale = Vector2(15.040001, 1)
 zone = 1
 
 [node name="Npc_positions" type="Node2D" parent="." unique_id=1925852176]
 
 [node name="Npc" parent="Npc_positions" unique_id=1133381282 instance=ExtResource("3_jvpqj")]
-position = Vector2(342, 415)
+position = Vector2(559, 587)
 
 [node name="Npc2" parent="Npc_positions" unique_id=1805372857 instance=ExtResource("3_jvpqj")]
-position = Vector2(564, 299)
+position = Vector2(333, 520)
 
 [node name="Npc3" parent="Npc_positions" unique_id=1988434145 instance=ExtResource("3_jvpqj")]
-position = Vector2(785, 551)
+position = Vector2(672, 91)
 
 [node name="Character" parent="." unique_id=967131426 instance=ExtResource("5_ymh0q")]
-position = Vector2(578, 162)
+position = Vector2(450, 139)
 
 [node name="player_spawn_zone" type="Node2D" parent="." unique_id=378439132]
-position = Vector2(578, -35)
+position = Vector2(346, -35)
 script = ExtResource("6_nnvpj")
 direction = 1
 zone_from = 1

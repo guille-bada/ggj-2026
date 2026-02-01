@@ -15,9 +15,8 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_q51kd"]
 size = Vector2(274, 289)
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_uuraq"]
-radius = 116.66669
-height = 290.44778
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m2dxp"]
+size = Vector2(215.38467, 292.53735)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xxf14"]
 size = Vector2(375.5, 341)
@@ -64,8 +63,8 @@ scale = Vector2(0.43189964, 0.47857141)
 texture = ExtResource("6_m2dxp")
 
 [node name="Heteros" type="Sprite2D" parent="assets" unique_id=913268784]
-position = Vector2(619, 137.99997)
-scale = Vector2(0.5480769, 0.64285713)
+position = Vector2(601.5, 165.63153)
+scale = Vector2(0.37980777, 0.4454888)
 texture = ExtResource("7_81cwy")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="assets" unique_id=1382530521]
@@ -73,36 +72,37 @@ position = Vector2(152, 72.00001)
 scale = Vector2(0.6685714, 0.7178571)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="assets/StaticBody2D" unique_id=1467811044]
-position = Vector2(643.1625, 59.55223)
-shape = SubResource("CapsuleShape2D_uuraq")
+position = Vector2(638.6753, 55.72139)
+shape = SubResource("RectangleShape2D_m2dxp")
 
 [node name="Multitud2" type="Sprite2D" parent="assets" unique_id=981649310]
-position = Vector2(165, 58)
-scale = Vector2(0.6685714, 0.7178571)
+position = Vector2(164.54475, 84.75)
+scale = Vector2(0.43739873, 0.46964285)
 texture = ExtResource("8_ue8m2")
 
 [node name="Multitud5" type="Sprite2D" parent="assets" unique_id=1075070809]
-position = Vector2(51, 76)
-scale = Vector2(0.61142856, 0.74642855)
+position = Vector2(50.875603, 99)
+scale = Vector2(0.4388243, 0.5357143)
 texture = ExtResource("9_75ahh")
 
 [node name="Multitud1" type="Sprite2D" parent="assets" unique_id=2144791548]
-position = Vector2(113, 180)
-scale = Vector2(0.74857146, 0.75357145)
+position = Vector2(143.09242, 181.75)
+scale = Vector2(0.50909954, 0.5125)
 texture = ExtResource("9_75ahh")
 
 [node name="Multitud3" type="Sprite2D" parent="assets" unique_id=2068476257]
-position = Vector2(1066, 500)
-scale = Vector2(0.67714286, 0.8642857)
+position = Vector2(1090.4835, 525)
+scale = Vector2(0.53723735, 0.6857143)
 texture = ExtResource("9_75ahh")
 
 [node name="Multitud4" type="Sprite2D" parent="assets" unique_id=153684944]
-position = Vector2(929.00006, 560)
-scale = Vector2(0.78571427, 0.7821429)
+position = Vector2(932.7363, 563.25)
+scale = Vector2(0.5327789, 0.53035724)
 texture = ExtResource("8_ue8m2")
 
 [node name="Multitud6" type="Sprite2D" parent="assets" unique_id=1877404266]
-position = Vector2(1133, 652)
+position = Vector2(1052.375, 587.5)
+scale = Vector2(0.5392857, 0.5392857)
 texture = ExtResource("9_75ahh")
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="assets" unique_id=156067286]
@@ -134,6 +134,11 @@ shape = SubResource("RectangleShape2D_wcke4")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="assets/StaticBody2D7" unique_id=844502621]
 shape = SubResource("SegmentShape2D_8bg3p")
 
+[node name="Multitud7" type="Sprite2D" parent="assets" unique_id=189548655]
+position = Vector2(37, 211)
+scale = Vector2(0.48214287, 0.48214287)
+texture = ExtResource("8_ue8m2")
+
 [node name="Label" type="Label" parent="." unique_id=1610399105]
 offset_left = 43.0
 offset_top = 38.0
@@ -143,8 +148,8 @@ text = "3"
 label_settings = SubResource("LabelSettings_ss133")
 
 [node name="Transition_Zone" parent="." unique_id=1673277274 instance=ExtResource("1_2c4so")]
-position = Vector2(-393, 208.00003)
-scale = Vector2(8.494, 6.435)
+position = Vector2(-69, 495)
+scale = Vector2(-1.4752343, -5.6589026)
 zone = 1
 
 [node name="Npc_positions" type="Node2D" parent="." unique_id=542592775]
@@ -166,3 +171,8 @@ position = Vector2(-46, 376)
 script = ExtResource("6_i4k3v")
 direction = 3
 zone_from = 1
+
+[node name="Multitud2" type="Sprite2D" parent="." unique_id=2109908832]
+position = Vector2(934.00006, 481.00003)
+scale = Vector2(0.57857144, 0.57857144)
+texture = ExtResource("8_ue8m2")

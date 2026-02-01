@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bve1eunwv2j34"]
 
 [ext_resource type="Script" uid="uid://crq6qppc8tg34" path="res://Scripts/map_zone.gd" id="1_7snvs"]
-[ext_resource type="PackedScene" path="res://Scenes/transition_zone.tscn" id="1_e6tpv"]
+[ext_resource type="PackedScene" uid="uid://dqcgxm7586jj2" path="res://Scenes/transition_zone.tscn" id="1_e6tpv"]
 [ext_resource type="Resource" uid="uid://cekiwjjfnb4md" path="res://Resources/Scenes/escena1.tres" id="2_k8yrj"]
 [ext_resource type="PackedScene" uid="uid://cf1mpjui5a211" path="res://Scenes/Character.tscn" id="3_2xp0k"]
 [ext_resource type="Texture2D" uid="uid://cqrtdbg5wlr3n" path="res://Place_holder/Background/GGJ2026FondoCentral1.png" id="3_lmly4"]
@@ -14,12 +14,14 @@
 [ext_resource type="Texture2D" uid="uid://c3rkwoxa42elv" path="res://Place_holder/Multitumbre/viejoooooo.png" id="12_8kvg6"]
 [ext_resource type="Texture2D" uid="uid://b8h174yhtj7al" path="res://Place_holder/Multitumbre/turros.png" id="13_63vam"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_5io2i"]
-radius = 520.0
-height = 1066.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qxdmk"]
+size = Vector2(574.24243, 498)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_63vam"]
-size = Vector2(316, 190)
+size = Vector2(227.5, 132.5231)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8kvg6"]
+size = Vector2(298, 259)
 
 [sub_resource type="LabelSettings" id="LabelSettings_ss133"]
 font_size = 32
@@ -37,32 +39,57 @@ position = Vector2(581.99994, 330)
 scale = Vector2(0.60312504, 0.6148148)
 texture = ExtResource("3_lmly4")
 
+[node name="Turros" type="Sprite2D" parent="assets" unique_id=759385932]
+position = Vector2(962.0001, 165)
+scale = Vector2(0.4560934, 0.45609343)
+texture = ExtResource("13_63vam")
+
 [node name="Multitud3" type="Sprite2D" parent="assets" unique_id=202244970]
-position = Vector2(650, -56)
+position = Vector2(616.75006, 30.999985)
+scale = Vector2(0.76428574, 0.76428574)
 texture = ExtResource("4_5io2i")
 
 [node name="Multitud2" type="Sprite2D" parent="assets" unique_id=472000785]
-position = Vector2(513, 75)
+position = Vector2(527.12506, 100.50001)
+scale = Vector2(0.7821429, 0.7821429)
 texture = ExtResource("5_63vam")
 
 [node name="Multitud1" type="Sprite2D" parent="assets" unique_id=1433790011]
-position = Vector2(299, 80)
+position = Vector2(345.875, 90.5)
+scale = Vector2(0.73214287, 0.73214287)
 texture = ExtResource("4_5io2i")
+
+[node name="Viejoooooo" type="Sprite2D" parent="assets" unique_id=1438227301]
+position = Vector2(411.00003, 211.00002)
+scale = Vector2(0.53784925, 0.53784925)
+texture = ExtResource("12_8kvg6")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="assets" unique_id=2078025797]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="assets/StaticBody2D" unique_id=2116990777]
-position = Vector2(359, -203)
-shape = SubResource("CapsuleShape2D_5io2i")
+position = Vector2(351, 36)
+scale = Vector2(1.3199999, 1)
+shape = SubResource("RectangleShape2D_qxdmk")
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="assets" unique_id=1071407683]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="assets/StaticBody2D2" unique_id=1055441800]
-position = Vector2(1003, 85)
+position = Vector2(933.5, 114.499985)
+scale = Vector2(2, 1.7280005)
 shape = SubResource("RectangleShape2D_63vam")
 
+[node name="StaticBody2D3" type="StaticBody2D" parent="assets" unique_id=1895493900]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="assets/StaticBody2D3" unique_id=2005380092]
+position = Vector2(1006, 440.5)
+shape = SubResource("RectangleShape2D_8kvg6")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="assets/StaticBody2D3" unique_id=1976887421]
+position = Vector2(59, 428)
+shape = SubResource("RectangleShape2D_8kvg6")
+
 [node name="Character" parent="." unique_id=967131426 instance=ExtResource("3_2xp0k")]
-position = Vector2(240, 437)
+position = Vector2(290, 541)
 
 [node name="Label" type="Label" parent="." unique_id=1610399105]
 offset_left = 43.0
@@ -78,28 +105,28 @@ label_settings = SubResource("LabelSettings_ss133")
 position = Vector2(701, 524)
 
 [node name="to_zone_2" parent="." unique_id=1673277274 instance=ExtResource("1_e6tpv")]
-position = Vector2(-98, 404)
-scale = Vector2(-2.2345562, -14.994013)
+position = Vector2(-52, 458)
+scale = Vector2(1, 5.924799)
 zone = 2
 
 [node name="to_zone_3" parent="." unique_id=646349785 instance=ExtResource("1_e6tpv")]
-position = Vector2(1211, 347)
+position = Vector2(1218.9999, 347)
 scale = Vector2(1.2295238, 12.57277)
 zone = 3
 
 [node name="to_zone_4" parent="." unique_id=2047093427 instance=ExtResource("1_e6tpv")]
-position = Vector2(565, 703)
+position = Vector2(565, 727.00006)
 scale = Vector2(-17.294672, 1.1020076)
 zone = 4
 
 [node name="player_spawn_zone_2" type="Node2D" parent="." unique_id=1509522170]
-position = Vector2(-26, 376)
+position = Vector2(-26, 600)
 script = ExtResource("6_hnd26")
 direction = 3
 zone_from = 2
 
 [node name="player_spawn_zone_3" type="Node2D" parent="." unique_id=935609745]
-position = Vector2(1179, 349)
+position = Vector2(1195, 597)
 script = ExtResource("6_hnd26")
 direction = 2
 zone_from = 3
@@ -118,13 +145,3 @@ texture = ExtResource("6_pkakm")
 position = Vector2(207, 536.5)
 scale = Vector2(0.98854166, 1.0027778)
 texture = ExtResource("5_pkakm")
-
-[node name="Viejoooooo" type="Sprite2D" parent="." unique_id=1438227301]
-position = Vector2(402, 232)
-scale = Vector2(0.53784925, 0.53784925)
-texture = ExtResource("12_8kvg6")
-
-[node name="Turros" type="Sprite2D" parent="." unique_id=759385932]
-position = Vector2(1067, 172.00002)
-scale = Vector2(0.70430106, 0.7043011)
-texture = ExtResource("13_63vam")
