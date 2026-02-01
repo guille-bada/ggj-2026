@@ -12,7 +12,7 @@ var current_zone: MapZone
 var last_zone: int = 2
 
 func _ready() -> void:
-	transition_zone(zone_1)
+	transition_zone(zone_1, true)
 
 func get_zone(zone_id: int) -> void:
 	var new_zone: PackedScene
@@ -24,9 +24,12 @@ func get_zone(zone_id: int) -> void:
 	
 	transition_zone(new_zone)
 	
-func transition_zone(zone: PackedScene) -> void:
-	fade.fade_in()
-	await fade.fade_in_complete
+func transition_zone(zone: PackedScene, skip_fade_in: bool = false) -> void:
+	if not skip_fade_in:
+		fade.fade_in()
+		await fade.fade_in_complete
+	else:
+		fade.fade_out()
 	
 	for n:MapZone in zone_container.get_children():
 		for z in n.get_transition_zones():

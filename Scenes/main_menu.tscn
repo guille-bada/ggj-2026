@@ -22,6 +22,8 @@ script = ExtResource("1_28flt")
 fade_menu = NodePath("Transition_Fade")
 metadata/_edit_use_anchors_ = true
 
+[node name="Transition_Fade" parent="." unique_id=873741915 instance=ExtResource("2_48xlc")]
+
 [node name="Panel" type="Panel" parent="." unique_id=1221424473]
 layout_mode = 1
 anchors_preset = 15
@@ -30,8 +32,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_ce3w2")
-
-[node name="Transition_Fade" parent="." unique_id=873741915 instance=ExtResource("2_48xlc")]
 
 [node name="Panel2" type="Panel" parent="." unique_id=1361919119]
 layout_mode = 1
@@ -44,3 +44,6 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_n45e2")
 metadata/_edit_use_anchors_ = true
+
+[node name="thereisnotimeandihavetofixstuff" type="Timer" parent="." unique_id=1177767440]
+wait_time = 0.2
