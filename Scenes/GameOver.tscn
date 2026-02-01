@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://bjrgwkr2oahiv"]
+
+[ext_resource type="Script" uid="uid://7hwa8y315s10" path="res://Scripts/GameOver.gd" id="1_k52d1"]
+[ext_resource type="Texture2D" uid="uid://cmn1vqubvsvmh" path="res://Art/square.png" id="1_m5628"]
+
+[node name="GameOver" type="Control" unique_id=452953012]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_k52d1")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=375894305]
+self_modulate = Color(1, 1, 1, 0.23529412)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_m5628")
+
+[node name="Label" type="Label" parent="TextureRect" unique_id=662891311]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 42
+text = "¡Acá estabas! 
+¡Te ando buscando de hace rato, bo!"
+horizontal_alignment = 1
+vertical_alignment = 1

@@ -5,7 +5,8 @@ extends Node
 @export var all_possibilities: ResourceAllPossibilities = preload("uid://ckfq6o77hhe5j")
 var non_solution_possibilities: ResourceAllPossibilities
 
-var clues_collected: int
+var clues_count: int
+var clues_count_needed: int = 5
 var can_solution_spawn: bool
 
 func _ready() -> void:

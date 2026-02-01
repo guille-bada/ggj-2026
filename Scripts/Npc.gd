@@ -3,6 +3,7 @@ class_name Npc extends Node2D
 @export var interactable: Interactable
 @export var head: Sprite2D
 @export var body: Sprite2D
+@export var game_over: GameOver
 
 var is_manually_set: bool
 
@@ -21,6 +22,9 @@ func _ready():
 
 func on_interact_start():
 	print("%s: on_interact" % [name])
+	LogicSingleton.clues_count += 1
+	if is_manually_set:
+		game_over.interact()
 
 func on_interact_end():
 	print("%s: on_interact_end" % [name])

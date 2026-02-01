@@ -7,5 +7,5 @@
 script = ExtResource("2_40wm8")
 name = "test cuerpo"
 image = ExtResource("1_1dxke")
-clues = Array[String](["test cuerpo clue"])
+clues = Array[String](["¡Jajaja! ¡No sabés, anda con toda la cabeza llena de yuyos!", "Con su sombrero me daban altas ganas de hacerme un mate."])
 metadata/_custom_type_script = "uid://w27m0ui8naiv"
