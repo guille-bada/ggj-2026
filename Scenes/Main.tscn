@@ -1,12 +1,8 @@
 [gd_scene format=3 uid="uid://b70j0crn5ovw8"]
 
-[ext_resource type="Texture2D" uid="uid://c25x6k5dksjdo" path="res://Art/background.png" id="1_idj7w"]
-[ext_resource type="PackedScene" path="res://Scenes/FogOfWar.tscn" id="1_r150o"]
-[ext_resource type="Script" uid="uid://dcidv8xstyeox" path="res://Scripts/SceneScript.gd" id="1_v1gob"]
-[ext_resource type="PackedScene" uid="uid://6g7e0j0ymkbd" path="res://Scenes/Npc.tscn" id="3_kln2b"]
-[ext_resource type="Script" uid="uid://dmwljtyqrk1hp" path="res://Scripts/ForceGlobalPosition.gd" id="3_pbw6q"]
-[ext_resource type="PackedScene" uid="uid://cf1mpjui5a211" path="res://Scenes/Character.tscn" id="5_v1gob"]
-[ext_resource type="Texture2D" uid="uid://d3v8eynat77lb" path="res://icon.svg" id="6_jw32o"]
+[ext_resource type="PackedScene" uid="uid://cf1mpjui5a211" path="res://Scenes/Character.tscn" id="1_blhev"]
+[ext_resource type="PackedScene" uid="uid://pewy0cyyqt2b" path="res://Scenes/area_manager.tscn" id="2_nurni"]
+[ext_resource type="PackedScene" uid="uid://dtndh384b372q" path="res://Scenes/Transition_Fade.tscn" id="3_0ni5v"]
 
 [node name="Main" type="Node2D" unique_id=670653064]
 
@@ -21,30 +17,4 @@ fade = NodePath("../Transition_Fade")
 
 [node name="zone_container" type="Node2D" parent="." unique_id=770947426]
 
-[node name="Mask" parent="FogOfWar" index="0" unique_id=845327309]
-clip_children = 1
-
-[node name="AnimatedSprite2D" parent="FogOfWar/Mask" index="0" unique_id=2018864767 node_paths=PackedStringArray("subject")]
-script = ExtResource("3_pbw6q")
-subject = NodePath(".")
-
-[node name="Npc" parent="." unique_id=540191741 instance=ExtResource("3_kln2b")]
-position = Vector2(219, 151)
-
-[node name="Body" parent="Npc/Mask/Node2D" parent_id_path=PackedInt32Array(540191741, 613458749) index="0" unique_id=1732621489]
-position = Vector2(-8.33334, -163.33333)
-scale = Vector2(2.361979, 1)
-texture = ExtResource("6_jw32o")
-
-[node name="Head" parent="Npc/Mask/Node2D" parent_id_path=PackedInt32Array(540191741, 613458749) index="1" unique_id=1234273306]
-position = Vector2(0, 4.7683716e-06)
-
-[node name="MaskForceGlobalPosition" parent="Npc/Scripts" parent_id_path=PackedInt32Array(540191741, 733532672) index="1" unique_id=529345963 node_paths=PackedStringArray("position_to_hold")]
-position_to_hold = NodePath("../../../FogOfWar")
-
-[node name="Character" parent="." unique_id=1218476076 instance=ExtResource("5_v1gob")]
-position = Vector2(-92, 70)
-scale = Vector2(2.58319, 2.58319)
-
-[editable path="FogOfWar"]
-[editable path="Npc"]
+[node name="Transition_Fade" parent="." unique_id=873741915 instance=ExtResource("3_0ni5v")]
