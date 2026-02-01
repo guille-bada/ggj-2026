@@ -1,7 +1,7 @@
-[gd_scene format=3 uid="uid://cxbxvh1qeug6c"]
+[gd_scene format=3 uid="uid://bve1eunwv2j34"]
 
 [ext_resource type="Script" uid="uid://crq6qppc8tg34" path="res://Scripts/map_zone.gd" id="1_7snvs"]
-[ext_resource type="PackedScene" uid="uid://dqcgxm7586jj2" path="res://Scenes/transition_zone.tscn" id="1_e6tpv"]
+[ext_resource type="PackedScene" path="res://Scenes/transition_zone.tscn" id="1_e6tpv"]
 [ext_resource type="Resource" uid="uid://cekiwjjfnb4md" path="res://Resources/Scenes/escena1.tres" id="2_k8yrj"]
 [ext_resource type="PackedScene" uid="uid://cf1mpjui5a211" path="res://Scenes/Character.tscn" id="3_2xp0k"]
 [ext_resource type="PackedScene" uid="uid://6g7e0j0ymkbd" path="res://Scenes/Npc.tscn" id="3_uflgu"]

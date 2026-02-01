@@ -1,9 +1,0 @@
-[gd_resource type="Resource" script_class="Clue" format=3 uid="uid://cmb1n27jxdnc5"]
-
-[ext_resource type="Script" uid="uid://w27m0ui8naiv" path="res://Scripts/Resources/ResourceClue.gd" id="1_6076m"]
-
-[resource]
-script = ExtResource("1_6076m")
-name = "test ubicacion"
-clues = Array[String](["test ubicacion clue"])
-metadata/_custom_type_script = "uid://w27m0ui8naiv"

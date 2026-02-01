@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="ResourceLocation" format=3 uid="uid://cbodemyx6wx6p"]
+
+[ext_resource type="Script" path="res://Scripts/Resources/ResourceLocation.gd" id="1_s1ayt"]
+
+[resource]
+script = ExtResource("1_s1ayt")
+clues = Array[String](["Le toca conducir el carro asi que la produ lo mando directo pa ahí.", "Sabés que creo que lo vi diciendo algo de cambiar una llanta, debe andar por donde el carro de desfile.", "Estaba ayudando por ahi a las vedettes a subir al camión.", "Vio las cámaras y salio rajando para el camión.", "Ah, ¿el Momo tiene amigos? Estaba por ahí en donde el camión."])
+metadata/_custom_type_script = "uid://d4gooov6o58k"

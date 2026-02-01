@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="ResourceLocation" format=3 uid="uid://db1gp14w6l6io"]
+
+[ext_resource type="Script" path="res://Scripts/Resources/ResourceLocation.gd" id="1_jyxic"]
+
+[resource]
+script = ExtResource("1_jyxic")
+clues = Array[String](["Buscalo en la fila del carrito que seguro se fue a encajar un Smeck."])
+metadata/_custom_type_script = "uid://d4gooov6o58k"

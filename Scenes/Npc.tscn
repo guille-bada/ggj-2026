@@ -5,8 +5,7 @@
 [ext_resource type="Script" uid="uid://dugywm4y4rsf8" path="res://Scripts/Npc.gd" id="1_lvqg6"]
 [ext_resource type="Texture2D" uid="uid://cqgx3cf6h4744" path="res://Art/circle.png" id="1_m7bvo"]
 [ext_resource type="Script" uid="uid://dmwljtyqrk1hp" path="res://Scripts/ForceGlobalPosition.gd" id="2_c8tqv"]
-[ext_resource type="Resource" uid="uid://ckfq6o77hhe5j" path="res://Resources/AllPossibilities.tres" id="2_ileeb"]
-[ext_resource type="PackedScene" uid="uid://boxifofs6hm1n" path="res://Scenes/Bubble.tscn" id="4_7c57i"]
+[ext_resource type="PackedScene" uid="uid://cd2pbea0rc3in" path="res://Scenes/Bubble.tscn" id="4_7c57i"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_m7bvo"]
 radius = 67.0075
@@ -16,11 +15,21 @@ script = ExtResource("1_lvqg6")
 interactable = NodePath("Interactable")
 head = NodePath("Mask/Node2D/Head")
 body = NodePath("Mask/Node2D/Body")
-AllPosibilities = ExtResource("2_ileeb")
 
-[node name="Bubble" parent="." unique_id=545403182 node_paths=PackedStringArray("interactable") instance=ExtResource("4_7c57i")]
+[node name="BubblePosition" type="Node2D" parent="." unique_id=813284153]
+
+[node name="Bubble" parent="." unique_id=545403182 node_paths=PackedStringArray("target_position", "interactable") instance=ExtResource("4_7c57i")]
+offset_left = -39.915
+offset_top = -191.255
+offset_right = 341.61398
+offset_bottom = 30.543991
 scale = Vector2(0.745, 0.745)
+target_position = NodePath("../BubblePosition")
 interactable = NodePath("../Interactable")
+metadata/_edit_use_anchors_ = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=655585307]
+follow_viewport_enabled = true
 
 [node name="Obstacle" type="Area2D" parent="." unique_id=348511785]
 scale = Vector2(0.745, 0.745)
@@ -66,3 +75,6 @@ subject = NodePath("../../Mask/Node2D")
 [node name="MaskForceGlobalPosition" type="Node" parent="Scripts" unique_id=529345963 node_paths=PackedStringArray("subject")]
 script = ExtResource("2_c8tqv")
 subject = NodePath("../../Mask")
+
+[node name="CanvasLayerForceGlobalPosition" type="Node" parent="Scripts" unique_id=1066467032]
+script = ExtResource("2_c8tqv")

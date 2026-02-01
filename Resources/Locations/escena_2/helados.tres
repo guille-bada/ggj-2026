@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="ResourceLocation" format=3 uid="uid://cs1wqf32od8mo"]
+
+[ext_resource type="Script" path="res://Scripts/Resources/ResourceLocation.gd" id="1_h7n0w"]
+
+[resource]
+script = ExtResource("1_h7n0w")
+clues = Array[String](["Deja, no se aguanta nada el calor, fue a ver si conseguía algo fresco."])
+metadata/_custom_type_script = "uid://d4gooov6o58k"
