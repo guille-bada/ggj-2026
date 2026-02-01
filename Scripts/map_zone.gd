@@ -29,7 +29,11 @@ func get_transition_zones() -> Array[TransitionZone]:
 	return transition_zones
 
 func spawn_player(zone_from: int) -> void:
+	hide_colliders_temporarily()
 	for n in player_start_positions:
-		print("spawn zone from: %s, player zone from: %s" % [n.zone_from, zone_from])
 		if n.zone_from == zone_from:
 			character.enter_zone(n.global_position, n.direction_vector)
+
+func hide_colliders_temporarily() -> void:
+	for n in transition_zones:
+		n.hide_colliders_temporarily()

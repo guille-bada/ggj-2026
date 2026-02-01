@@ -280,4 +280,4 @@ scale = Vector2(0.165, 0.165)
 shape = SubResource("CircleShape2D_4b18b")
 
 [node name="Timer" type="Timer" parent="." unique_id=1163831293]
-wait_time = 2.0
+wait_time = 0.5
