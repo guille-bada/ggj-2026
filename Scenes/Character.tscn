@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://dmxt5napv81tl" path="res://Place_holder/Sprite/Anim Frente/armatureName-animtion0_1.png" id="4_xloa1"]
 [ext_resource type="Texture2D" uid="uid://bvbax8y8i6ugu" path="res://Place_holder/Sprite/Anim Frente/armatureName-animtion0_2.png" id="5_nxr2n"]
 [ext_resource type="Texture2D" uid="uid://cos0lfcxkb6q4" path="res://Place_holder/Sprite/Anim Frente/armatureName-animtion0_3.png" id="6_uis85"]
-[ext_resource type="Script" path="res://Scripts/Interaction.gd" id="6_xloa1"]
+[ext_resource type="Script" uid="uid://bvupbrpiraq75" path="res://Scripts/Interaction.gd" id="6_xloa1"]
 [ext_resource type="Texture2D" uid="uid://3l8kq7yowfii" path="res://Place_holder/Sprite/Anim Frente/armatureName-animtion0_4.png" id="7_d4e0j"]
 [ext_resource type="Texture2D" uid="uid://b5u1k77c5586a" path="res://Place_holder/Sprite/Anim Frente/armatureName-animtion0_5.png" id="8_nn15e"]
 [ext_resource type="Texture2D" uid="uid://c568pe82pia0g" path="res://Place_holder/Sprite/Anim Frente/armatureName-animtion0_6.png" id="9_wcxyp"]
@@ -72,49 +72,49 @@ region = Rect2(0, 0, 378, 611)
 [sub_resource type="SpriteFrames" id="SpriteFrames_0y7nr"]
 animations = [{
 "frames": [{
-"duration": 1.0,
+"duration": 0.1,
 "texture": SubResource("AtlasTexture_4b18b")
 }, {
-"duration": 1.0,
+"duration": 0.1,
 "texture": SubResource("AtlasTexture_peemv")
 }, {
-"duration": 1.0,
+"duration": 0.1,
 "texture": SubResource("AtlasTexture_7hvrm")
 }, {
-"duration": 1.0,
+"duration": 0.1,
 "texture": ExtResource("6_uis85")
 }, {
-"duration": 1.0,
+"duration": 0.1,
 "texture": ExtResource("7_d4e0j")
 }, {
-"duration": 1.0,
+"duration": 0.1,
 "texture": ExtResource("8_nn15e")
 }, {
-"duration": 1.0,
+"duration": 0.1,
 "texture": ExtResource("9_wcxyp")
 }, {
-"duration": 1.0,
+"duration": 0.1,
 "texture": ExtResource("10_wjmpa")
 }, {
-"duration": 1.0,
+"duration": 0.1,
 "texture": ExtResource("11_b611v")
 }, {
-"duration": 1.0,
+"duration": 0.1,
 "texture": ExtResource("12_khphl")
 }, {
-"duration": 1.0,
+"duration": 0.1,
 "texture": ExtResource("13_fdd6p")
 }, {
-"duration": 1.0,
+"duration": 0.1,
 "texture": ExtResource("14_mogpt")
 }, {
-"duration": 1.0,
+"duration": 0.1,
 "texture": ExtResource("15_yw36p")
 }, {
-"duration": 1.0,
+"duration": 0.1,
 "texture": ExtResource("16_g0or5")
 }, {
-"duration": 1.0,
+"duration": 0.1,
 "texture": ExtResource("17_k0a7x")
 }],
 "loop": true,
@@ -130,49 +130,49 @@ animations = [{
 "speed": 5.0
 }, {
 "frames": [{
-"duration": 1.0,
+"duration": 0.1,
 "texture": ExtResource("2_677pu")
 }, {
-"duration": 1.0,
+"duration": 0.1,
 "texture": ExtResource("18_a8x11")
 }, {
-"duration": 1.0,
+"duration": 0.1,
 "texture": ExtResource("19_6hs50")
 }, {
-"duration": 1.0,
+"duration": 0.1,
 "texture": ExtResource("20_7k0wp")
 }, {
-"duration": 1.0,
+"duration": 0.1,
 "texture": ExtResource("21_sxn4t")
 }, {
-"duration": 1.0,
+"duration": 0.1,
 "texture": ExtResource("22_enuvu")
 }, {
-"duration": 1.0,
+"duration": 0.1,
 "texture": ExtResource("23_50154")
 }, {
-"duration": 1.0,
+"duration": 0.1,
 "texture": ExtResource("24_fcd2d")
 }, {
-"duration": 1.0,
+"duration": 0.1,
 "texture": ExtResource("25_be0b7")
 }, {
-"duration": 1.0,
+"duration": 0.1,
 "texture": ExtResource("26_blhj7")
 }, {
-"duration": 1.0,
+"duration": 0.1,
 "texture": ExtResource("27_yostx")
 }, {
-"duration": 1.0,
+"duration": 0.1,
 "texture": ExtResource("28_eyghb")
 }, {
-"duration": 1.0,
+"duration": 0.1,
 "texture": ExtResource("29_pwbhs")
 }, {
-"duration": 1.0,
+"duration": 0.1,
 "texture": ExtResource("30_brybf")
 }, {
-"duration": 1.0,
+"duration": 0.1,
 "texture": ExtResource("31_2f2hq")
 }],
 "loop": true,
@@ -180,64 +180,64 @@ animations = [{
 "speed": 5.0
 }, {
 "frames": [{
-"duration": 1.0,
+"duration": 0.1,
 "texture": ExtResource("17_8b443")
 }, {
-"duration": 1.0,
+"duration": 0.1,
 "texture": ExtResource("18_rqw21")
 }, {
-"duration": 1.0,
+"duration": 0.1,
 "texture": ExtResource("19_vhue7")
 }, {
-"duration": 1.0,
+"duration": 0.1,
 "texture": ExtResource("20_li3sm")
 }, {
-"duration": 1.0,
+"duration": 0.1,
 "texture": ExtResource("21_s4a37")
 }, {
-"duration": 1.0,
+"duration": 0.1,
 "texture": ExtResource("22_ootlh")
 }, {
-"duration": 1.0,
+"duration": 0.1,
 "texture": ExtResource("23_4hk41")
 }, {
-"duration": 1.0,
+"duration": 0.1,
 "texture": ExtResource("24_23ofh")
 }, {
-"duration": 1.0,
+"duration": 0.1,
 "texture": ExtResource("25_4m1h7")
 }, {
-"duration": 1.0,
+"duration": 0.1,
 "texture": ExtResource("26_2clai")
 }, {
-"duration": 1.0,
+"duration": 0.1,
 "texture": ExtResource("27_aebgv")
 }, {
-"duration": 1.0,
+"duration": 0.1,
 "texture": ExtResource("28_1y70o")
 }, {
-"duration": 1.0,
+"duration": 0.1,
 "texture": ExtResource("29_ru3wn")
 }, {
-"duration": 1.0,
+"duration": 0.1,
 "texture": ExtResource("30_1wumo")
 }, {
-"duration": 1.0,
+"duration": 0.1,
 "texture": ExtResource("31_50mmf")
 }, {
-"duration": 1.0,
+"duration": 0.1,
 "texture": ExtResource("32_a8x11")
 }, {
-"duration": 1.0,
+"duration": 0.1,
 "texture": ExtResource("33_6hs50")
 }, {
-"duration": 1.0,
+"duration": 0.1,
 "texture": ExtResource("34_7k0wp")
 }, {
-"duration": 1.0,
+"duration": 0.1,
 "texture": ExtResource("35_sxn4t")
 }, {
-"duration": 1.0,
+"duration": 0.1,
 "texture": ExtResource("36_enuvu")
 }],
 "loop": true,
@@ -250,29 +250,31 @@ radius = 117.0
 height = 276.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_4b18b"]
-radius = 400.47595
+radius = 2152.4458
 
 [node name="Character" type="CharacterBody2D" unique_id=967131426 node_paths=PackedStringArray("interaction")]
 collision_layer = 5
 collision_mask = 3
 script = ExtResource("1_jo2ib")
-_velocidad_maxima = 400.0
-_aceleracion = 1500.0
 interaction = NodePath("Area2D")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=510864161]
+scale = Vector2(0.165, 0.165)
 sprite_frames = SubResource("SpriteFrames_0y7nr")
-animation = &"up"
+animation = &"walk"
+speed_scale = 0.5
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=426823844]
-position = Vector2(6, 170)
+position = Vector2(2.000001, 31.00003)
+scale = Vector2(0.165, 0.165)
 shape = SubResource("CapsuleShape2D_vdqda")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1466619867]
+scale = Vector2(0.165, 0.165)
 collision_layer = 16
 collision_mask = 8
 script = ExtResource("6_xloa1")
 
 [node name="Interaction" type="CollisionShape2D" parent="Area2D" unique_id=184791542]
-position = Vector2(0, 64)
+scale = Vector2(0.165, 0.165)
 shape = SubResource("CircleShape2D_4b18b")

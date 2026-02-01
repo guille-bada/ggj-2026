@@ -6,11 +6,6 @@
 
 [node name="Main" type="Node2D" unique_id=670653064]
 
-[node name="Character" parent="." unique_id=2096608912 instance=ExtResource("1_blhev")]
-position = Vector2(565, 332)
-scale = Vector2(3, 3)
-_velocidad_maxima = 400.0
-
 [node name="Area_Manager" parent="." unique_id=638940389 node_paths=PackedStringArray("zone_container", "fade") instance=ExtResource("2_nurni")]
 zone_container = NodePath("../zone_container")
 fade = NodePath("../Transition_Fade")
@@ -18,3 +13,5 @@ fade = NodePath("../Transition_Fade")
 [node name="zone_container" type="Node2D" parent="." unique_id=770947426]
 
 [node name="Transition_Fade" parent="." unique_id=873741915 instance=ExtResource("3_0ni5v")]
+
+[node name="Character" parent="." unique_id=967131426 instance=ExtResource("1_blhev")]

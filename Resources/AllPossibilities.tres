@@ -1,23 +1,29 @@
 [gd_resource type="Resource" script_class="ResourceAllPossibilities" format=3 uid="uid://ckfq6o77hhe5j"]
 
 [ext_resource type="Script" uid="uid://w27m0ui8naiv" path="res://Scripts/Resources/ResourceClue.gd" id="1_ev7q4"]
-[ext_resource type="Resource" uid="uid://ebkrmiu8vr1f" path="res://Resources/Bodies/cuerpo_azul.tres" id="2_e3df3"]
 [ext_resource type="Script" uid="uid://dsmjdeujpahcl" path="res://Scripts/Resources/ResourceScene.gd" id="2_ipiy5"]
+[ext_resource type="Resource" uid="uid://ebkrmiu8vr1f" path="res://Resources/Bodies/cuerpo_1B.tres" id="2_kfyqd"]
 [ext_resource type="Script" uid="uid://b62fn24x2icc4" path="res://Scripts/Resources/ResourceAllPossibilities.gd" id="3_6k0xf"]
-[ext_resource type="Resource" uid="uid://dy2o3shdquf33" path="res://Resources/Heads/cabeza_azul.tres" id="3_bavhp"]
-[ext_resource type="Resource" uid="uid://dkxbvjsn6441w" path="res://Resources/Bodies/cuerpo_rojo.tres" id="3_w0ob6"]
-[ext_resource type="Resource" uid="uid://d04kvmcn13ax8" path="res://Resources/Bodies/cuerpo_verde.tres" id="4_ovvt0"]
-[ext_resource type="Resource" uid="uid://gwmbvsanqric" path="res://Resources/Heads/cabeza_verde.tres" id="4_ugm0q"]
+[ext_resource type="Resource" uid="uid://bldb5cwnetkki" path="res://Resources/Bodies/cuerpo_1A.tres" id="3_rvsws"]
+[ext_resource type="Resource" uid="uid://gwmbvsanqric" path="res://Resources/Heads/cabeza_2A.tres" id="4_48mgk"]
+[ext_resource type="Resource" uid="uid://dkxbvjsn6441w" path="res://Resources/Bodies/cuerpo_2A.tres" id="4_rvsws"]
 [ext_resource type="Resource" uid="uid://cmb1n27jxdnc5" path="res://Resources/Locations/ubicacion_panchos.tres" id="4_ukjua"]
-[ext_resource type="Resource" uid="uid://vovs0fd2vvbv" path="res://Resources/Heads/cabeza_roja.tres" id="4_w0ob6"]
+[ext_resource type="Resource" uid="uid://bmbchvbtu1h4w" path="res://Resources/Heads/cabeza_2B.tres" id="5_mstlc"]
+[ext_resource type="Resource" uid="uid://bal2wbxdopqo6" path="res://Resources/Bodies/cuerpo_3A.tres" id="6_7d4t5"]
 [ext_resource type="Resource" uid="uid://cekiwjjfnb4md" path="res://Resources/Scenes/escena1.tres" id="6_ugm0q"]
+[ext_resource type="Resource" uid="uid://bmggbbkud1wxe" path="res://Resources/Bodies/cuerpo_3B.tres" id="7_663rb"]
+[ext_resource type="Resource" uid="uid://dy2o3shdquf33" path="res://Resources/Heads/cabeza_1A.tres" id="8_7ct6f"]
+[ext_resource type="Resource" uid="uid://vovs0fd2vvbv" path="res://Resources/Heads/cabeza_1B.tres" id="9_q027q"]
+[ext_resource type="Resource" uid="uid://d04kvmcn13ax8" path="res://Resources/Bodies/cuerpo_2B.tres" id="10_fic0c"]
+[ext_resource type="Resource" uid="uid://cihwqojtnd4ot" path="res://Resources/Heads/cabeza_3A.tres" id="11_b0bah"]
 [ext_resource type="Resource" uid="uid://c0gsr674e2dit" path="res://Resources/Scenes/escena2.tres" id="11_jr7pe"]
 [ext_resource type="Resource" uid="uid://d2cqly6k2e6oh" path="res://Resources/Scenes/escena3.tres" id="12_x3vsh"]
+[ext_resource type="Resource" uid="uid://x8ugxam4ygom" path="res://Resources/Heads/cabeza_3B.tres" id="12_yaf6r"]
 
 [resource]
 script = ExtResource("3_6k0xf")
-heads = Array[ExtResource("1_ev7q4")]([ExtResource("3_bavhp"), ExtResource("4_w0ob6"), ExtResource("4_ugm0q")])
-bodies = Array[ExtResource("1_ev7q4")]([ExtResource("2_e3df3"), ExtResource("3_w0ob6"), ExtResource("4_ovvt0")])
+heads = Array[ExtResource("1_ev7q4")]([ExtResource("8_7ct6f"), ExtResource("9_q027q"), ExtResource("4_48mgk"), ExtResource("5_mstlc"), ExtResource("11_b0bah"), ExtResource("12_yaf6r")])
+bodies = Array[ExtResource("1_ev7q4")]([ExtResource("2_kfyqd"), ExtResource("3_rvsws"), ExtResource("4_rvsws"), ExtResource("10_fic0c"), ExtResource("6_7d4t5"), ExtResource("7_663rb")])
 scenes = Array[ExtResource("2_ipiy5")]([ExtResource("6_ugm0q"), ExtResource("11_jr7pe"), ExtResource("12_x3vsh"), null])
 locations = Array[ExtResource("1_ev7q4")]([ExtResource("4_ukjua")])
 metadata/_custom_type_script = "uid://b62fn24x2icc4"

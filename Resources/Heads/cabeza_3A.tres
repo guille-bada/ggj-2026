@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="ResourceClue" format=3 uid="uid://cihwqojtnd4ot"]
+
+[ext_resource type="Script" uid="uid://w27m0ui8naiv" path="res://Scripts/Resources/ResourceClue.gd" id="1_7cdt6"]
+[ext_resource type="Texture2D" uid="uid://cx0ikuogo5f2h" path="res://Place_holder/Murga Sprite OUTLINEAO/cabeza 3 a.png" id="1_u4f2r"]
+
+[resource]
+script = ExtResource("1_7cdt6")
+name = "test cuerpo"
+image = ExtResource("1_u4f2r")
+clues = Array[String](["test cuerpo clue"])
+metadata/_custom_type_script = "uid://w27m0ui8naiv"

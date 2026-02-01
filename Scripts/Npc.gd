@@ -9,8 +9,8 @@ func _ready():
 	interactable.signal_interact_start.connect(on_interact_start)
 	interactable.signal_interact_end.connect(on_interact_end)
 	
-	head.texture = AllPosibilities.heads[randi_range(0, 2)].image
-	body.texture = AllPosibilities.bodies[randi_range(0, 2)].image
+	head.texture = AllPosibilities.heads[randi_range(0, 5)].image
+	body.texture = AllPosibilities.bodies[randi_range(0, 5)].image
 	
 
 func on_interact_start():
