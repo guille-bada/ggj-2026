@@ -9,7 +9,7 @@ extends Node
 @export var zone_4: PackedScene
 
 var current_zone: MapZone
-var last_zone: int = 2
+var last_zone: int = 4
 @onready var timer: Timer = $Timer
 
 func _ready() -> void:
