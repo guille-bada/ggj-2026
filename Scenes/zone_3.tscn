@@ -3,9 +3,38 @@
 [ext_resource type="PackedScene" uid="uid://dqcgxm7586jj2" path="res://Scenes/transition_zone.tscn" id="1_2c4so"]
 [ext_resource type="Script" uid="uid://crq6qppc8tg34" path="res://Scripts/map_zone.gd" id="1_ljfu7"]
 [ext_resource type="Resource" uid="uid://d2cqly6k2e6oh" path="res://Resources/Scenes/escena3.tres" id="2_d6flo"]
+[ext_resource type="Texture2D" uid="uid://canensnxloty3" path="res://Place_holder/Background/GGJ2026FondoDerecha2Camaras.png" id="3_2osqr"]
 [ext_resource type="PackedScene" uid="uid://6g7e0j0ymkbd" path="res://Scenes/Npc.tscn" id="3_ilits"]
 [ext_resource type="PackedScene" uid="uid://cf1mpjui5a211" path="res://Scenes/Character.tscn" id="5_kek7l"]
 [ext_resource type="Script" uid="uid://3ififejb7kqd" path="res://Scripts/player_start_position.gd" id="6_i4k3v"]
+[ext_resource type="Texture2D" uid="uid://bh2rc1ie8sy54" path="res://Place_holder/Multitumbre/viejA.png" id="6_m2dxp"]
+[ext_resource type="Texture2D" uid="uid://bgqtkowclt268" path="res://Place_holder/Multitumbre/heteros.png" id="7_81cwy"]
+[ext_resource type="Texture2D" uid="uid://dtjaaq7hejsej" path="res://Place_holder/Multitumbre/multitud 2.png" id="8_ue8m2"]
+[ext_resource type="Texture2D" uid="uid://c5efm0uu36k3x" path="res://Place_holder/Multitumbre/multitud 1.png" id="9_75ahh"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q51kd"]
+size = Vector2(274, 289)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_uuraq"]
+radius = 116.66669
+height = 290.44778
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xxf14"]
+size = Vector2(375.5, 341)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_bcvf8"]
+a = Vector2(639, 203)
+b = Vector2(-507, 203)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2osqr"]
+size = Vector2(158, 167)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wcke4"]
+size = Vector2(317.5, 423)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_8bg3p"]
+a = Vector2(999, 199)
+b = Vector2(388, 49)
 
 [sub_resource type="LabelSettings" id="LabelSettings_ss133"]
 font_size = 32
@@ -16,6 +45,95 @@ scene_resource = ExtResource("2_d6flo")
 npc_positions = NodePath("Npc_positions")
 character = NodePath("Character")
 
+[node name="assets" type="Node2D" parent="." unique_id=2136960626]
+
+[node name="Ggj2026FondoDerecha2Camaras" type="Sprite2D" parent="assets" unique_id=1433631669]
+position = Vector2(576.015, 324.25)
+scale = Vector2(0.6026042, 0.6004629)
+texture = ExtResource("3_2osqr")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="assets" unique_id=1166899934]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="assets/StaticBody2D4" unique_id=554294851]
+position = Vector2(127, 134.5)
+shape = SubResource("RectangleShape2D_q51kd")
+
+[node name="ViejA" type="Sprite2D" parent="assets" unique_id=1862855977]
+position = Vector2(1101.9999, 237)
+scale = Vector2(0.43189964, 0.47857141)
+texture = ExtResource("6_m2dxp")
+
+[node name="Heteros" type="Sprite2D" parent="assets" unique_id=913268784]
+position = Vector2(619, 137.99997)
+scale = Vector2(0.5480769, 0.64285713)
+texture = ExtResource("7_81cwy")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="assets" unique_id=1382530521]
+position = Vector2(152, 72.00001)
+scale = Vector2(0.6685714, 0.7178571)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="assets/StaticBody2D" unique_id=1467811044]
+position = Vector2(643.1625, 59.55223)
+shape = SubResource("CapsuleShape2D_uuraq")
+
+[node name="Multitud2" type="Sprite2D" parent="assets" unique_id=981649310]
+position = Vector2(165, 58)
+scale = Vector2(0.6685714, 0.7178571)
+texture = ExtResource("8_ue8m2")
+
+[node name="Multitud5" type="Sprite2D" parent="assets" unique_id=1075070809]
+position = Vector2(51, 76)
+scale = Vector2(0.61142856, 0.74642855)
+texture = ExtResource("9_75ahh")
+
+[node name="Multitud1" type="Sprite2D" parent="assets" unique_id=2144791548]
+position = Vector2(113, 180)
+scale = Vector2(0.74857146, 0.75357145)
+texture = ExtResource("9_75ahh")
+
+[node name="Multitud3" type="Sprite2D" parent="assets" unique_id=2068476257]
+position = Vector2(1066, 500)
+scale = Vector2(0.67714286, 0.8642857)
+texture = ExtResource("9_75ahh")
+
+[node name="Multitud4" type="Sprite2D" parent="assets" unique_id=153684944]
+position = Vector2(929.00006, 560)
+scale = Vector2(0.78571427, 0.7821429)
+texture = ExtResource("8_ue8m2")
+
+[node name="Multitud6" type="Sprite2D" parent="assets" unique_id=1877404266]
+position = Vector2(1133, 652)
+texture = ExtResource("9_75ahh")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="assets" unique_id=156067286]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="assets/StaticBody2D2" unique_id=992612028]
+position = Vector2(1050.75, 585.5)
+shape = SubResource("RectangleShape2D_xxf14")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="assets" unique_id=28816976]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="assets/StaticBody2D3" unique_id=1720627502]
+position = Vector2(507, 445)
+shape = SubResource("SegmentShape2D_bcvf8")
+
+[node name="StaticBody2D5" type="StaticBody2D" parent="assets" unique_id=1038766114]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="assets/StaticBody2D5" unique_id=622179623]
+position = Vector2(311, 81.5)
+shape = SubResource("RectangleShape2D_2osqr")
+
+[node name="StaticBody2D6" type="StaticBody2D" parent="assets" unique_id=1055880137]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="assets/StaticBody2D6" unique_id=1233042401]
+position = Vector2(1157.75, 200.5)
+shape = SubResource("RectangleShape2D_wcke4")
+
+[node name="StaticBody2D7" type="StaticBody2D" parent="assets" unique_id=431806147]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="assets/StaticBody2D7" unique_id=844502621]
+shape = SubResource("SegmentShape2D_8bg3p")
+
 [node name="Label" type="Label" parent="." unique_id=1610399105]
 offset_left = 43.0
 offset_top = 38.0
@@ -25,25 +143,26 @@ text = "3"
 label_settings = SubResource("LabelSettings_ss133")
 
 [node name="Transition_Zone" parent="." unique_id=1673277274 instance=ExtResource("1_2c4so")]
-position = Vector2(67, 364)
+position = Vector2(-393, 208.00003)
+scale = Vector2(8.494, 6.435)
 zone = 1
 
 [node name="Npc_positions" type="Node2D" parent="." unique_id=542592775]
 
 [node name="Npc" parent="Npc_positions" unique_id=1133381282 instance=ExtResource("3_ilits")]
-position = Vector2(165, 409)
+position = Vector2(352, 238)
 
 [node name="Npc2" parent="Npc_positions" unique_id=800548489 instance=ExtResource("3_ilits")]
-position = Vector2(387, 293)
+position = Vector2(709, 574)
 
 [node name="Npc3" parent="Npc_positions" unique_id=1633046215 instance=ExtResource("3_ilits")]
-position = Vector2(608, 545)
+position = Vector2(978, 288)
 
 [node name="Character" parent="." unique_id=967131426 instance=ExtResource("5_kek7l")]
 position = Vector2(162, 261)
 
 [node name="player_spawn_zone" type="Node2D" parent="." unique_id=1910280667]
-position = Vector2(-31, 376)
+position = Vector2(-46, 376)
 script = ExtResource("6_i4k3v")
 direction = 3
 zone_from = 1
