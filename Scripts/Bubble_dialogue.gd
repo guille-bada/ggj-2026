@@ -16,8 +16,10 @@ func _ready() -> void:
 		label.text = LogicSingleton.solution.location.clues.pick_random()
 	
 	texture_rect.modulate.a = 0
-	
+
+
 func show_dialogue():
+	if LogicSingleton.is_solution_found: return
 	var tween: Tween = create_tween()
 	tween.tween_property(texture_rect, "modulate:a", 1, fade_duration)
 

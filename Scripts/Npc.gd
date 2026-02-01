@@ -18,7 +18,8 @@ func _ready():
 		else:
 			body.texture = LogicSingleton.all_possibilities.bodies.pick_random().image
 		head.texture = head_selected.image
-	
+	else:
+		LogicSingleton.is_solution_found = true
 
 func on_interact_start():
 	print("%s: on_interact" % [name])

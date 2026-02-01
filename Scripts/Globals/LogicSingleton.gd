@@ -8,6 +8,7 @@ var non_solution_possibilities: ResourceAllPossibilities
 var clues_count: int
 var clues_count_needed: int = 5
 var can_solution_spawn: bool
+var is_solution_found: bool
 
 func _ready() -> void:
 	var head: ResourceClue = all_possibilities.heads.pick_random()
