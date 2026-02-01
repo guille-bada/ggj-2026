@@ -18,8 +18,8 @@ func _ready():
 		else:
 			body.texture = LogicSingleton.all_possibilities.bodies.pick_random().image
 		head.texture = head_selected.image
-	# else:
-	# 	LogicSingleton.is_solution_found = true
+	else:
+		LogicSingleton.is_solution_found = true
 
 func on_interact_start():
 	print("%s: on_interact" % [name])
@@ -35,3 +35,4 @@ func set_npc(head_texture: Texture2D, body_texture: Texture2D):
 	head.texture = head_texture
 	body.texture = body_texture
 	is_manually_set = true
+	LogicSingleton.solution_node = self

@@ -19,7 +19,7 @@ func _ready() -> void:
 
 
 func show_dialogue():
-	if LogicSingleton.is_solution_found: return
+	if LogicSingleton.solution_node and LogicSingleton.solution_node.get_instance_id() == owner.get_instance_id(): return
 	var tween: Tween = create_tween()
 	tween.tween_property(texture_rect, "modulate:a", 1, fade_duration)
 
