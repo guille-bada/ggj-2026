@@ -4,5 +4,6 @@
 
 [resource]
 script = ExtResource("1_oltwm")
+position = Vector2(313, 418)
 clues = Array[String](["¿El Momo? Creo que fue a comerse un chori.", "¿Momo? Morfando. Cuando lo veas decile que venga pa'cá."])
 metadata/_custom_type_script = "uid://d4gooov6o58k"

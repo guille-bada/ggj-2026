@@ -14,11 +14,12 @@ radius = 67.0075
 [sub_resource type="CircleShape2D" id="CircleShape2D_ileeb"]
 radius = 57.271286
 
-[node name="Npc" type="Node2D" unique_id=1133381282 node_paths=PackedStringArray("interactable", "head", "body")]
+[node name="Npc" type="Node2D" unique_id=1133381282 node_paths=PackedStringArray("interactable", "head", "body", "game_over")]
 script = ExtResource("1_lvqg6")
 interactable = NodePath("Interactable")
 head = NodePath("Mask/Node2D/Head")
 body = NodePath("Mask/Node2D/Body")
+game_over = NodePath("CanvasLayer/GameOver")
 
 [node name="BubblePosition" type="Node2D" parent="." unique_id=813284153]
 
@@ -38,8 +39,8 @@ follow_viewport_enabled = true
 
 [node name="Obstacle" type="Area2D" parent="." unique_id=348511785]
 scale = Vector2(0.745, 0.745)
-collision_layer = 2
-collision_mask = 3
+collision_layer = 0
+collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Obstacle" unique_id=1352492645]
 scale = Vector2(0.745, 0.745)
@@ -82,6 +83,8 @@ script = ExtResource("2_c8tqv")
 subject = NodePath("../../Mask")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=859082263]
+collision_layer = 0
+collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=671818039]
 shape = SubResource("CircleShape2D_ileeb")

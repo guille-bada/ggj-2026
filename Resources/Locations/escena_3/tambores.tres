@@ -4,5 +4,6 @@
 
 [resource]
 script = ExtResource("1_b8r70")
+position = Vector2(978, 288)
 clues = Array[String](["Habia dejado sus tambor por ahí, fue a buscarlo.", "El colgado se dejó la bandera tirada donde los baños."])
 metadata/_custom_type_script = "uid://d4gooov6o58k"

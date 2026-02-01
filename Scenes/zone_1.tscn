@@ -9,7 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://c5efm0uu36k3x" path="res://Place_holder/Multitumbre/multitud 1.png" id="4_5io2i"]
 [ext_resource type="Texture2D" uid="uid://dtjaaq7hejsej" path="res://Place_holder/Multitumbre/multitud 2.png" id="5_63vam"]
 [ext_resource type="Texture2D" uid="uid://dlew0tvc1yra8" path="res://Place_holder/Background/Luces (Izquierdas).png" id="5_pkakm"]
-[ext_resource type="Script" uid="uid://3ififejb7kqd" path="res://Scripts/player_start_position.gd" id="6_hnd26"]
+[ext_resource type="Script" path="res://Scripts/player_start_position.gd" id="6_hnd26"]
 [ext_resource type="Texture2D" uid="uid://dp4w7bi104c5a" path="res://Place_holder/Background/Luces (derechas).png" id="6_pkakm"]
 [ext_resource type="Texture2D" uid="uid://c3rkwoxa42elv" path="res://Place_holder/Multitumbre/viejoooooo.png" id="12_8kvg6"]
 [ext_resource type="Texture2D" uid="uid://b8h174yhtj7al" path="res://Place_holder/Multitumbre/turros.png" id="13_63vam"]
@@ -103,6 +103,12 @@ label_settings = SubResource("LabelSettings_ss133")
 
 [node name="Npc" parent="Npc_positions" unique_id=1133381282 instance=ExtResource("3_uflgu")]
 position = Vector2(701, 524)
+
+[node name="Npc2" parent="Npc_positions" unique_id=936253480 instance=ExtResource("3_uflgu")]
+position = Vector2(127, 603)
+
+[node name="Npc3" parent="Npc_positions" unique_id=1229214800 instance=ExtResource("3_uflgu")]
+position = Vector2(335, 305)
 
 [node name="to_zone_2" parent="." unique_id=1673277274 instance=ExtResource("1_e6tpv")]
 position = Vector2(-52, 458)

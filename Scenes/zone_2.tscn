@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://6g7e0j0ymkbd" path="res://Scenes/Npc.tscn" id="3_ivmmj"]
 [ext_resource type="Texture2D" uid="uid://bh2rc1ie8sy54" path="res://Place_holder/Multitumbre/viejA.png" id="4_vjtkv"]
 [ext_resource type="PackedScene" uid="uid://cf1mpjui5a211" path="res://Scenes/Character.tscn" id="5_bd8ia"]
-[ext_resource type="Script" uid="uid://3ififejb7kqd" path="res://Scripts/player_start_position.gd" id="6_gcqhp"]
+[ext_resource type="Script" path="res://Scripts/player_start_position.gd" id="6_gcqhp"]
 [ext_resource type="Texture2D" uid="uid://dsiywqd0lwuid" path="res://Place_holder/Multitumbre/vedette.png" id="7_b1slf"]
 [ext_resource type="Texture2D" uid="uid://b8h174yhtj7al" path="res://Place_holder/Multitumbre/turros.png" id="8_vjtkv"]
 [ext_resource type="Texture2D" uid="uid://dtjaaq7hejsej" path="res://Place_holder/Multitumbre/multitud 2.png" id="9_e334c"]
@@ -94,7 +94,6 @@ shape = SubResource("SegmentShape2D_otcwd")
 
 [node name="Character" parent="." unique_id=967131426 instance=ExtResource("5_bd8ia")]
 position = Vector2(1006, 320)
-collision_layer = 5
 
 [node name="Label" type="Label" parent="." unique_id=1610399105]
 offset_left = 43.0

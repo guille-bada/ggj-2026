@@ -30,7 +30,7 @@ func get_npc_positions() -> void:
 		var child: Node2D = npc_positions.get_child(i)
 		if i >= scene_resource.locations.size() - 1:
 			printerr("%s: get_npc_positions: %s out of range of ResourceLocations. Ignoring" % [name, child.name])
-		scene_resource.locations[i].position = child.global_position
+		# scene_resource.locations[i].position = child.global_position
 	
 	# LogicSingleton.all_possibilities.scenes[scene_resource.index] = scene_resource
 

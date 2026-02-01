@@ -4,5 +4,6 @@
 
 [resource]
 script = ExtResource("1_jyxic")
+position = Vector2(335, 305)
 clues = Array[String](["Buscalo en la fila del carrito que seguro se fue a encajar un Smeck."])
 metadata/_custom_type_script = "uid://d4gooov6o58k"

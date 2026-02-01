@@ -8,7 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://b8h174yhtj7al" path="res://Place_holder/Multitumbre/turros.png" id="4_w11j0"]
 [ext_resource type="Texture2D" uid="uid://c5efm0uu36k3x" path="res://Place_holder/Multitumbre/multitud 1.png" id="5_kg3v7"]
 [ext_resource type="PackedScene" uid="uid://cf1mpjui5a211" path="res://Scenes/Character.tscn" id="5_ymh0q"]
-[ext_resource type="Script" uid="uid://3ififejb7kqd" path="res://Scripts/player_start_position.gd" id="6_nnvpj"]
+[ext_resource type="Script" path="res://Scripts/player_start_position.gd" id="6_nnvpj"]
 [ext_resource type="Texture2D" uid="uid://dtjaaq7hejsej" path="res://Place_holder/Multitumbre/multitud 2.png" id="7_1cidu"]
 [ext_resource type="Texture2D" uid="uid://dsiywqd0lwuid" path="res://Place_holder/Multitumbre/vedette.png" id="8_4r2ey"]
 
@@ -137,13 +137,7 @@ zone = 1
 [node name="Npc_positions" type="Node2D" parent="." unique_id=1925852176]
 
 [node name="Npc" parent="Npc_positions" unique_id=1133381282 instance=ExtResource("3_jvpqj")]
-position = Vector2(559, 587)
-
-[node name="Npc2" parent="Npc_positions" unique_id=1805372857 instance=ExtResource("3_jvpqj")]
-position = Vector2(333, 520)
-
-[node name="Npc3" parent="Npc_positions" unique_id=1988434145 instance=ExtResource("3_jvpqj")]
-position = Vector2(672, 91)
+position = Vector2(329, 409)
 
 [node name="Character" parent="." unique_id=967131426 instance=ExtResource("5_ymh0q")]
 position = Vector2(450, 139)
