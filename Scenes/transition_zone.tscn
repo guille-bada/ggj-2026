@@ -12,6 +12,3 @@ script = ExtResource("1_5o7va")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=2008384986]
 shape = SubResource("RectangleShape2D_tautj")
-
-[node name="ReenableTimer" type="Timer" parent="Area2D/CollisionShape2D" unique_id=1726407960]
-one_shot = true

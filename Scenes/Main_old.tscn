@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://cmlolo1fbbm2h"]
+[gd_scene format=3 uid="uid://bxstrw104oxfg"]
 
 [ext_resource type="Texture2D" uid="uid://c25x6k5dksjdo" path="res://Art/background.png" id="1_idj7w"]
 [ext_resource type="PackedScene" path="res://Scenes/FogOfWar.tscn" id="1_r150o"]

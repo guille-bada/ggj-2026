@@ -1,8 +1,7 @@
 [gd_scene format=3 uid="uid://b70j0crn5ovw8"]
 
-[ext_resource type="PackedScene" uid="uid://cf1mpjui5a211" path="res://Scenes/Character.tscn" id="1_blhev"]
-[ext_resource type="PackedScene" path="res://Scenes/area_manager.tscn" id="2_nurni"]
-[ext_resource type="PackedScene" path="res://Scenes/Transition_Fade.tscn" id="3_0ni5v"]
+[ext_resource type="PackedScene" uid="uid://pewy0cyyqt2b" path="res://Scenes/area_manager.tscn" id="2_nurni"]
+[ext_resource type="PackedScene" uid="uid://dtndh384b372q" path="res://Scenes/Transition_Fade.tscn" id="3_0ni5v"]
 
 [node name="Main" type="Node2D" unique_id=670653064]
 
@@ -13,5 +12,3 @@ fade = NodePath("../Transition_Fade")
 [node name="zone_container" type="Node2D" parent="." unique_id=770947426]
 
 [node name="Transition_Fade" parent="." unique_id=873741915 instance=ExtResource("3_0ni5v")]
-
-[node name="Character" parent="." unique_id=967131426 instance=ExtResource("1_blhev")]
