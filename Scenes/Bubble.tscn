@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cd2pbea0rc3in"]
 
-[ext_resource type="Texture2D" uid="uid://cmn1vqubvsvmh" path="res://Art/square.png" id="1_fy1yr"]
 [ext_resource type="Script" uid="uid://d4jyqsflojave" path="res://Scripts/Bubble_dialogue.gd" id="1_xlgdi"]
+[ext_resource type="Texture2D" uid="uid://c6lcwh8co6xrn" path="res://Art/globo de texto.png" id="2_xlgdi"]
 
 [node name="Bubble" type="Control" unique_id=1886848626 node_paths=PackedStringArray("texture_rect", "label")]
 layout_mode = 3
@@ -16,23 +16,28 @@ label = NodePath("TextureRect/Label")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1688097927]
 layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.234375
-anchor_top = 0.31790122
-anchor_right = 0.765625
-anchor_bottom = 0.68209875
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("1_fy1yr")
-metadata/_edit_use_anchors_ = true
-
-[node name="Label" type="Label" parent="TextureRect" unique_id=1830057120]
-layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+texture = ExtResource("2_xlgdi")
+expand_mode = 3
+stretch_mode = 4
+flip_h = true
+flip_v = true
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="TextureRect" unique_id=1830057120]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.09288195
+anchor_top = 0.12345679
+anchor_right = 0.9010417
+anchor_bottom = 0.3425926
+grow_horizontal = 2
+grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "fdafdsafdsafdsafdsafdsafdsafdsafdsafdsa"
 autowrap_mode = 3
 metadata/_edit_use_anchors_ = true
