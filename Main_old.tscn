@@ -1,25 +1,26 @@
-[gd_scene format=3 uid="uid://b70j0crn5ovw8"]
+[gd_scene format=3 uid="uid://cmlolo1fbbm2h"]
 
 [ext_resource type="Texture2D" uid="uid://c25x6k5dksjdo" path="res://Art/background.png" id="1_idj7w"]
 [ext_resource type="PackedScene" path="res://Scenes/FogOfWar.tscn" id="1_r150o"]
 [ext_resource type="Script" uid="uid://dcidv8xstyeox" path="res://Scripts/SceneScript.gd" id="1_v1gob"]
-[ext_resource type="PackedScene" uid="uid://6g7e0j0ymkbd" path="res://Scenes/Npc.tscn" id="3_kln2b"]
-[ext_resource type="Script" uid="uid://dmwljtyqrk1hp" path="res://Scripts/ForceGlobalPosition.gd" id="3_pbw6q"]
+[ext_resource type="PackedScene" uid="uid://ntjcnxsmrybi" path="res://Scenes/Npc.tscn" id="3_kln2b"]
+[ext_resource type="Script" path="res://Scripts/ForceGlobalPosition.gd" id="3_pbw6q"]
 [ext_resource type="PackedScene" uid="uid://cf1mpjui5a211" path="res://Scenes/Character.tscn" id="5_v1gob"]
 [ext_resource type="Texture2D" uid="uid://d3v8eynat77lb" path="res://icon.svg" id="6_jw32o"]
 
-[node name="Main" type="Node2D" unique_id=670653064]
+[node name="Main" type="Node2D" unique_id=340472100]
+script = ExtResource("1_v1gob")
 
-[node name="Character" parent="." unique_id=2096608912 instance=ExtResource("1_blhev")]
-position = Vector2(565, 332)
-scale = Vector2(3, 3)
-_velocidad_maxima = 400.0
+[node name="Camera2D" type="Camera2D" parent="." unique_id=40090859]
 
-[node name="Area_Manager" parent="." unique_id=638940389 node_paths=PackedStringArray("zone_container", "fade") instance=ExtResource("2_nurni")]
-zone_container = NodePath("../zone_container")
-fade = NodePath("../Transition_Fade")
+[node name="Background" type="Sprite2D" parent="." unique_id=402353191]
+texture = ExtResource("1_idj7w")
 
-[node name="zone_container" type="Node2D" parent="." unique_id=770947426]
+[node name="FogOfWar" parent="." unique_id=361484850 node_paths=PackedStringArray("subject", "position_to_hold") instance=ExtResource("1_r150o")]
+scale = Vector2(0.6, 0.6)
+script = ExtResource("3_pbw6q")
+subject = NodePath(".")
+position_to_hold = NodePath("../Character")
 
 [node name="Mask" parent="FogOfWar" index="0" unique_id=845327309]
 clip_children = 1
@@ -30,6 +31,9 @@ subject = NodePath(".")
 
 [node name="Npc" parent="." unique_id=540191741 instance=ExtResource("3_kln2b")]
 position = Vector2(219, 151)
+
+[node name="Mask" parent="Npc" index="2" unique_id=1661112244]
+clip_children = 1
 
 [node name="Body" parent="Npc/Mask/Node2D" parent_id_path=PackedInt32Array(540191741, 613458749) index="0" unique_id=1732621489]
 position = Vector2(-8.33334, -163.33333)

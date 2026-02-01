@@ -8,9 +8,10 @@
 [sub_resource type="LabelSettings" id="LabelSettings_ss133"]
 font_size = 32
 
-[node name="Zone_2" type="Node2D" unique_id=837564778]
+[node name="Zone_2" type="Node2D" unique_id=837564778 node_paths=PackedStringArray("npc_positions")]
 script = ExtResource("1_5qs5h")
 scene_resource = ExtResource("2_jw8f5")
+npc_positions = NodePath("Npc_positions")
 
 [node name="Label" type="Label" parent="." unique_id=1610399105]
 offset_left = 43.0
