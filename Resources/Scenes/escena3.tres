@@ -1,10 +1,10 @@
 [gd_resource type="Resource" script_class="ResourceScene" format=3 uid="uid://d2cqly6k2e6oh"]
 
-[ext_resource type="Script" uid="uid://d4gooov6o58k" path="res://Scripts/Resources/ResourceLocation.gd" id="1_c1ptg"]
+[ext_resource type="Script" path="res://Scripts/Resources/ResourceLocation.gd" id="1_c1ptg"]
 [ext_resource type="Script" uid="uid://dsmjdeujpahcl" path="res://Scripts/Resources/ResourceScene.gd" id="1_gro1o"]
-[ext_resource type="Resource" uid="uid://dgy4j5vg166t7" path="res://Resources/Locations/escena_3/location1.tres" id="2_yibb6"]
-[ext_resource type="Resource" uid="uid://dnb7bkpgkamb1" path="res://Resources/Locations/escena_3/location2.tres" id="3_x0bh6"]
-[ext_resource type="Resource" uid="uid://c1m521s4s1s3" path="res://Resources/Locations/escena_3/location3.tres" id="4_n0im5"]
+[ext_resource type="Resource" uid="uid://dgy4j5vg166t7" path="res://Resources/Locations/escena_3/banos.tres" id="2_yibb6"]
+[ext_resource type="Resource" uid="uid://dnb7bkpgkamb1" path="res://Resources/Locations/escena_3/camara.tres" id="3_x0bh6"]
+[ext_resource type="Resource" uid="uid://c1m521s4s1s3" path="res://Resources/Locations/escena_3/tambores.tres" id="4_n0im5"]
 
 [resource]
 script = ExtResource("1_gro1o")

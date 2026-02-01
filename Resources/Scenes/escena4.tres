@@ -1,8 +1,8 @@
 [gd_resource type="Resource" script_class="ResourceScene" format=3 uid="uid://cgpkhtw5vtsx"]
 
-[ext_resource type="Script" uid="uid://d4gooov6o58k" path="res://Scripts/Resources/ResourceLocation.gd" id="1_aejou"]
+[ext_resource type="Script" path="res://Scripts/Resources/ResourceLocation.gd" id="1_aejou"]
 [ext_resource type="Script" uid="uid://dsmjdeujpahcl" path="res://Scripts/Resources/ResourceScene.gd" id="1_lmibd"]
-[ext_resource type="Resource" uid="uid://cbodemyx6wx6p" path="res://Resources/Locations/escena_4/location1.tres" id="2_acf71"]
+[ext_resource type="Resource" uid="uid://cbodemyx6wx6p" path="res://Resources/Locations/escena_4/camion.tres" id="2_acf71"]
 [ext_resource type="Resource" uid="uid://dtlkbb7pd11k2" path="res://Resources/Locations/escena_4/location2.tres" id="3_6qmtt"]
 [ext_resource type="Resource" uid="uid://dj4af4jlvhbrf" path="res://Resources/Locations/escena_4/location3.tres" id="4_c7gtx"]
 
