@@ -15,6 +15,7 @@ func populate_arrays() -> void:
 	for n in get_children():
 		if n is TransitionZone:
 			transition_zones.append(n)
+			n.transition_triggered.connect(disable_controls)
 		if n is PlayerStartPosition:
 			player_start_positions.append(n)
 
@@ -37,3 +38,6 @@ func spawn_player(zone_from: int) -> void:
 func hide_colliders_temporarily() -> void:
 	for n in transition_zones:
 		n.hide_colliders_temporarily()
+
+func disable_controls(_zone: int) -> void:
+	character.disable_controls()

@@ -55,3 +55,7 @@ func enter_zone(spawn_pos: Vector2, direction: Vector2) -> void:
 	timer.start()
 	await timer.timeout
 	controls_disabled = false
+
+func disable_controls() -> void:
+	auto_walk_direction = Vector2.ZERO
+	controls_disabled = true
