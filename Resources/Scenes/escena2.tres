@@ -1,8 +1,13 @@
 [gd_resource type="Resource" script_class="ResourceScene" format=3 uid="uid://c0gsr674e2dit"]
 
 [ext_resource type="Script" uid="uid://dsmjdeujpahcl" path="res://Scripts/Resources/ResourceScene.gd" id="1_gn88j"]
+[ext_resource type="Script" uid="uid://d4gooov6o58k" path="res://Scripts/Resources/ResourceLocation.gd" id="1_kl4cg"]
+[ext_resource type="Resource" uid="uid://dm7w0yd8rvwob" path="res://Resources/Locations/escena_2/location1.tres" id="2_fv4iy"]
+[ext_resource type="Resource" uid="uid://dq6evw4naroyx" path="res://Resources/Locations/escena_2/location2.tres" id="3_crh4m"]
+[ext_resource type="Resource" uid="uid://cs1wqf32od8mo" path="res://Resources/Locations/escena_2/location3.tres" id="4_ghesx"]
 
 [resource]
 script = ExtResource("1_gn88j")
 name = "1"
+locations = Array[ExtResource("1_kl4cg")]([ExtResource("2_fv4iy"), ExtResource("3_crh4m"), ExtResource("4_ghesx")])
 metadata/_custom_type_script = "uid://dsmjdeujpahcl"

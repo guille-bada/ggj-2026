@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="ResourceLocation" format=3 uid="uid://dgy4j5vg166t7"]
+
+[ext_resource type="Script" uid="uid://d4gooov6o58k" path="res://Scripts/Resources/ResourceLocation.gd" id="1_e5w5d"]
+
+[resource]
+script = ExtResource("1_e5w5d")
+clues = Array[String]([""])
+metadata/_custom_type_script = "uid://d4gooov6o58k"

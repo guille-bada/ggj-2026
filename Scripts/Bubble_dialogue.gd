@@ -7,13 +7,13 @@ extends Node
 func _ready() -> void:
 	interactable.signal_interact_start.connect(show_dialogue)
 	interactable.signal_interact_end.connect(hide_dialogue)
-	var selection: int = randi_range(0, 3)
+	var selection: int = randi_range(0, 2)
 	if selection == 0:
-		label.text = LogicSingleton.solution.head.clues[randi_range(0, LogicSingleton.solution.head.clues.size() - 1)]
+		label.text = LogicSingleton.solution.head.clues.pick_random()
 	elif selection == 1:
-		label.text = LogicSingleton.solution.body.clues[randi_range(0, LogicSingleton.solution.body.clues.size() - 1)]
+		label.text = LogicSingleton.solution.body.clues.pick_random()
 	elif selection == 2:
-		label.text = LogicSingleton.solution.location.clues[randi_range(0, LogicSingleton.solution.location.clues.size() - 1)]
+		label.text = LogicSingleton.solution.location.clues.pick_random()
 	
 	texture_rect.modulate.a = 0
 	
