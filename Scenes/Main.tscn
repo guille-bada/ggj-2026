@@ -2,6 +2,10 @@
 
 [ext_resource type="PackedScene" uid="uid://pewy0cyyqt2b" path="res://Scenes/area_manager.tscn" id="2_nurni"]
 [ext_resource type="PackedScene" uid="uid://dtndh384b372q" path="res://Scenes/Transition_Fade.tscn" id="3_0ni5v"]
+[ext_resource type="Script" uid="uid://xpwmfie2hok1" path="res://Scripts/texto_inicial.gd" id="3_kln2b"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_idj7w"]
+font_size = 32
 
 [node name="Main" type="Node2D" unique_id=670653064]
 
@@ -12,3 +16,26 @@ fade = NodePath("../Transition_Fade")
 [node name="zone_container" type="Node2D" parent="." unique_id=770947426]
 
 [node name="Transition_Fade" parent="." unique_id=873741915 instance=ExtResource("3_0ni5v")]
+
+[node name="texto_inicial" type="Label" parent="." unique_id=1816959589]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 9.0
+offset_top = 253.0
+offset_right = 826.0
+offset_bottom = 394.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(0.44, 0.44)
+text = "¡Perdí a mi amigo!
+La gente podría saber donde está. 
+¿Me ayudás a encontrarlo?"
+label_settings = SubResource("LabelSettings_idj7w")
+horizontal_alignment = 1
+script = ExtResource("3_kln2b")
+
+[node name="Timer" type="Timer" parent="texto_inicial" unique_id=578266919]
+wait_time = 3.0

@@ -18,6 +18,9 @@ character = NodePath("Character")
 
 [node name="Character" parent="." unique_id=967131426 instance=ExtResource("3_2xp0k")]
 position = Vector2(240, 437)
+_velocidad_maxima = 400.0
+_aceleracion = 1400.0
+_friccion = 2000.0
 
 [node name="Label" type="Label" parent="." unique_id=1610399105]
 offset_left = 43.0
@@ -30,7 +33,7 @@ label_settings = SubResource("LabelSettings_ss133")
 [node name="Npc_positions" type="Node2D" parent="." unique_id=780772487]
 
 [node name="Npc" parent="Npc_positions" unique_id=1133381282 instance=ExtResource("3_uflgu")]
-position = Vector2(365, 340)
+position = Vector2(371, 341)
 
 [node name="Npc2" parent="Npc_positions" unique_id=900310448 instance=ExtResource("3_uflgu")]
 position = Vector2(587, 224)

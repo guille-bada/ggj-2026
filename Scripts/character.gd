@@ -21,7 +21,7 @@ func _physics_process(delta: float) -> void:
 	else:
 		input_direction = auto_walk_direction
 	move_character(input_direction, delta)
-
+	
 func move_character(direction: Vector2, delta: float) -> void:
 	var target_velocity = direction * _velocidad_maxima
 	
