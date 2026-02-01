@@ -12,6 +12,7 @@ func _ready() -> void:
 	area_2d.body_entered.connect(trigger_transition)
 
 func trigger_transition(_body:Node2D) -> void:
+	print("here " + name)
 	transition_triggered.emit(zone)
 
 func hide_colliders_temporarily() -> void:
