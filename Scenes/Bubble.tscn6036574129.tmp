@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://boxifofs6hm1n"]
+
+[ext_resource type="Texture2D" uid="uid://cmn1vqubvsvmh" path="res://Art/square.png" id="1_fy1yr"]
+[ext_resource type="Script" uid="uid://d4jyqsflojave" path="res://Scripts/Bubble_dialogue.gd" id="1_xlgdi"]
+
+[node name="Bubble" type="Control" unique_id=545403182 node_paths=PackedStringArray("texture_rect", "label")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_xlgdi")
+texture_rect = NodePath("TextureRect")
+fade_text = null
+label = NodePath("TextureRect/Label")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1688097927]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -246.0
+offset_top = -100.0
+offset_right = 246.0
+grow_horizontal = 2
+grow_vertical = 0
+texture = ExtResource("1_fy1yr")
+
+[node name="Label" type="Label" parent="TextureRect" unique_id=1830057120]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+autowrap_mode = 3
+metadata/_edit_use_anchors_ = true
