@@ -7,7 +7,8 @@ extends CharacterBody2D
 @export var interaction: Interaction
 
 func _ready():
-	interaction.signal_interaction_trigger.connect(on_interaction_trigger)
+	interaction.signal_interaction_enter.connect(on_interaction_enter)
+	interaction.signal_interaction_exit.connect(on_interact_exit)
 
 func _physics_process(delta):
 	var input_direction = Input.get_vector("Left", "Right", "Up", "Down").normalized()
@@ -31,7 +32,10 @@ func _physics_process(delta):
 	move_and_slide()
 
 
-func on_interaction_trigger(interactable: Interactable):
-	print("%s: on_interaction_trigger: %s" % [name, interactable])
+func on_interaction_enter(interactable: Interactable):
+	print("%s: on_interaction_enter: %s" % [name, interactable])
 	interactable.interact()
 	pass
+
+func on_interact_exit(interactable: Interactable):
+	interactable.interact_end()
