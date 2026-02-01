@@ -23,6 +23,13 @@ config/icon="res://icon.svg"
 
 LogicSingleton="*uid://d3n8qpk5vsymv"
 
+[display]
+
+window/size/mode=3
+window/size/resizable=false
+window/stretch/mode="canvas_items"
+window/stretch/aspect="keep_width"
+
 [input]
 
 Up={
