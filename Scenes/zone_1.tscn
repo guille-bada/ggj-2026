@@ -1,11 +1,17 @@
-[gd_scene format=3 uid="uid://cxbxvh1qeug6c"]
+[gd_scene format=3 uid="uid://kcr2ckop40ly"]
 
-[ext_resource type="Script" uid="uid://crq6qppc8tg34" path="res://Scripts/map_zone.gd" id="1_7snvs"]
-[ext_resource type="PackedScene" uid="uid://dqcgxm7586jj2" path="res://Scenes/transition_zone.tscn" id="1_e6tpv"]
+[ext_resource type="Script" path="res://Scripts/map_zone.gd" id="1_7snvs"]
+[ext_resource type="PackedScene" uid="uid://dqcgxm7586jj2" path="res://Test/transition_zone.tscn" id="1_e6tpv"]
 [ext_resource type="Resource" uid="uid://cekiwjjfnb4md" path="res://Resources/Scenes/escena1.tres" id="2_k8yrj"]
 [ext_resource type="PackedScene" uid="uid://cf1mpjui5a211" path="res://Scenes/Character.tscn" id="3_2xp0k"]
-[ext_resource type="PackedScene" uid="uid://6g7e0j0ymkbd" path="res://Scenes/Npc.tscn" id="3_uflgu"]
-[ext_resource type="Script" uid="uid://3ififejb7kqd" path="res://Scripts/player_start_position.gd" id="6_hnd26"]
+[ext_resource type="Texture2D" uid="uid://dbhmr50mg47s6" path="res://Place_holder/Fondos/GGJ2026FondoCentral1.png" id="3_63vam"]
+[ext_resource type="PackedScene" uid="uid://ev24gck8ncs4" path="res://Scenes/Npc.tscn" id="3_uflgu"]
+[ext_resource type="Script" path="res://Scripts/player_start_position.gd" id="6_hnd26"]
+[ext_resource type="Texture2D" uid="uid://0vhwqu5wg3rv" path="res://Place_holder/multitud/multitud 1.png" id="8_5io2i"]
+[ext_resource type="Texture2D" uid="uid://bosifd3v0xevg" path="res://Place_holder/multitud/multitud 2.png" id="9_63vam"]
+[ext_resource type="Texture2D" uid="uid://cu0jicmcsw35m" path="res://Place_holder/multitud/viejA.png" id="10_8kvg6"]
+[ext_resource type="Texture2D" uid="uid://cnp8drksgihqa" path="res://Place_holder/multitud/viejoooooo.png" id="11_qxdmk"]
+[ext_resource type="Texture2D" uid="uid://bjuw3av775ft5" path="res://Place_holder/multitud/turros.png" id="12_86pxw"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_ss133"]
 font_size = 32
@@ -16,11 +22,13 @@ scene_resource = ExtResource("2_k8yrj")
 npc_positions = NodePath("Npc_positions")
 character = NodePath("Character")
 
+[node name="Ggj2026FondoCentral1" type="Sprite2D" parent="." unique_id=285725148]
+position = Vector2(580, 329)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("3_63vam")
+
 [node name="Character" parent="." unique_id=967131426 instance=ExtResource("3_2xp0k")]
 position = Vector2(240, 437)
-_velocidad_maxima = 400.0
-_aceleracion = 1400.0
-_friccion = 2000.0
 
 [node name="Label" type="Label" parent="." unique_id=1610399105]
 offset_left = 43.0
@@ -33,13 +41,7 @@ label_settings = SubResource("LabelSettings_ss133")
 [node name="Npc_positions" type="Node2D" parent="." unique_id=780772487]
 
 [node name="Npc" parent="Npc_positions" unique_id=1133381282 instance=ExtResource("3_uflgu")]
-position = Vector2(371, 341)
-
-[node name="Npc2" parent="Npc_positions" unique_id=900310448 instance=ExtResource("3_uflgu")]
-position = Vector2(587, 224)
-
-[node name="Npc3" parent="Npc_positions" unique_id=1741814570 instance=ExtResource("3_uflgu")]
-position = Vector2(808, 476)
+position = Vector2(844, 489)
 
 [node name="to_zone_2" parent="." unique_id=1673277274 instance=ExtResource("1_e6tpv")]
 position = Vector2(70, 371)
@@ -69,3 +71,43 @@ zone_from = 3
 position = Vector2(580, 682)
 script = ExtResource("6_hnd26")
 zone_from = 4
+
+[node name="Multitud1" type="Sprite2D" parent="." unique_id=69515293]
+position = Vector2(273, 30)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("8_5io2i")
+
+[node name="Multitud2" type="Sprite2D" parent="." unique_id=1968690249]
+position = Vector2(385, 38)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("8_5io2i")
+
+[node name="Multitud3" type="Sprite2D" parent="." unique_id=2062433241]
+position = Vector2(513, 7)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("8_5io2i")
+
+[node name="Multitud4" type="Sprite2D" parent="." unique_id=95306203]
+position = Vector2(478, 69)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("9_63vam")
+
+[node name="Multitud5" type="Sprite2D" parent="." unique_id=955265356]
+position = Vector2(308, 106)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("9_63vam")
+
+[node name="ViejA" type="Sprite2D" parent="." unique_id=265685251]
+position = Vector2(286, 180)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("10_8kvg6")
+
+[node name="Viejoooooo" type="Sprite2D" parent="." unique_id=1211342055]
+position = Vector2(404, 224)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("11_qxdmk")
+
+[node name="Turros" type="Sprite2D" parent="." unique_id=1314303082]
+position = Vector2(1042, 160)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("12_86pxw")
