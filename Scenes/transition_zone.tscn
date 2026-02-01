@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://crvpy1b5r601d" path="res://Scripts/transition_zone.gd" id="1_5o7va"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tautj"]
-size = Vector2(96, 80)
+size = Vector2(76, 72)
 
 [node name="Transition_Zone" type="Node2D" unique_id=1673277274]
 script = ExtResource("1_5o7va")

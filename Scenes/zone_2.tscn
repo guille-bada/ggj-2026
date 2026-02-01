@@ -3,9 +3,27 @@
 [ext_resource type="Script" uid="uid://crq6qppc8tg34" path="res://Scripts/map_zone.gd" id="1_5qs5h"]
 [ext_resource type="PackedScene" uid="uid://dqcgxm7586jj2" path="res://Scenes/transition_zone.tscn" id="1_vcykl"]
 [ext_resource type="Resource" uid="uid://c0gsr674e2dit" path="res://Resources/Scenes/escena2.tres" id="2_jw8f5"]
+[ext_resource type="Texture2D" uid="uid://cinum7bvdk0vd" path="res://Place_holder/Background/GGJ2026FondoIzquierdaPlazaComidas.png" id="3_10pbl"]
 [ext_resource type="PackedScene" uid="uid://6g7e0j0ymkbd" path="res://Scenes/Npc.tscn" id="3_ivmmj"]
+[ext_resource type="Texture2D" uid="uid://bh2rc1ie8sy54" path="res://Place_holder/Multitumbre/viejA.png" id="4_vjtkv"]
 [ext_resource type="PackedScene" uid="uid://cf1mpjui5a211" path="res://Scenes/Character.tscn" id="5_bd8ia"]
 [ext_resource type="Script" uid="uid://3ififejb7kqd" path="res://Scripts/player_start_position.gd" id="6_gcqhp"]
+[ext_resource type="Texture2D" uid="uid://dsiywqd0lwuid" path="res://Place_holder/Multitumbre/vedette.png" id="7_b1slf"]
+[ext_resource type="Texture2D" uid="uid://b8h174yhtj7al" path="res://Place_holder/Multitumbre/turros.png" id="8_vjtkv"]
+[ext_resource type="Texture2D" uid="uid://dtjaaq7hejsej" path="res://Place_holder/Multitumbre/multitud 2.png" id="9_e334c"]
+[ext_resource type="Texture2D" uid="uid://c5efm0uu36k3x" path="res://Place_holder/Multitumbre/multitud 1.png" id="10_2rnfi"]
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_2rnfi"]
+a = Vector2(126, 415)
+b = Vector2(389, -19)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_qgqmo"]
+a = Vector2(448, 208)
+b = Vector2(1156, 210)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_otcwd"]
+a = Vector2(8, 647)
+b = Vector2(1138, 639)
 
 [sub_resource type="LabelSettings" id="LabelSettings_ss133"]
 font_size = 32
@@ -15,6 +33,64 @@ script = ExtResource("1_5qs5h")
 scene_resource = ExtResource("2_jw8f5")
 npc_positions = NodePath("Npc_positions")
 character = NodePath("Character")
+
+[node name="assets" type="Node2D" parent="." unique_id=491279855]
+
+[node name="Ggj2026FondoIzquierdaPlazaComidas" type="Sprite2D" parent="assets" unique_id=1987692822]
+position = Vector2(578.5, 323)
+scale = Vector2(0.5973958, 0.5962963)
+texture = ExtResource("3_10pbl")
+
+[node name="Vedette" type="Sprite2D" parent="assets" unique_id=1624079623]
+position = Vector2(177.99998, 158)
+scale = Vector2(0.46713614, 0.51428574)
+texture = ExtResource("7_b1slf")
+
+[node name="Turros" type="Sprite2D" parent="assets" unique_id=721866356]
+position = Vector2(490.99997, 173)
+scale = Vector2(0.3987455, 0.5321428)
+texture = ExtResource("8_vjtkv")
+
+[node name="ViejA" type="Sprite2D" parent="assets" unique_id=2130159867]
+position = Vector2(815.75, 148)
+scale = Vector2(0.4283154, 0.42142856)
+texture = ExtResource("4_vjtkv")
+
+[node name="Multitud1" type="Sprite2D" parent="assets" unique_id=1256001359]
+position = Vector2(633.00006, 130)
+scale = Vector2(0.8742855, 0.7892857)
+texture = ExtResource("10_2rnfi")
+
+[node name="Multitud4" type="Sprite2D" parent="assets" unique_id=1569139294]
+position = Vector2(171.5, 465.5)
+scale = Vector2(0.5857143, 0.66071427)
+texture = ExtResource("10_2rnfi")
+
+[node name="Multitud2" type="Sprite2D" parent="assets" unique_id=1832566868]
+position = Vector2(21.5, 519)
+scale = Vector2(0.5742857, 0.6571429)
+texture = ExtResource("9_e334c")
+
+[node name="Multitud3" type="Sprite2D" parent="assets" unique_id=1970064934]
+position = Vector2(146.49995, 524)
+scale = Vector2(0.56285715, 0.6642857)
+texture = ExtResource("10_2rnfi")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="assets" unique_id=1301098660]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="assets/StaticBody2D" unique_id=1235115347]
+position = Vector2(56, 224)
+shape = SubResource("SegmentShape2D_2rnfi")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="assets" unique_id=1703127146]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="assets/StaticBody2D2" unique_id=1287166248]
+shape = SubResource("SegmentShape2D_qgqmo")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="assets" unique_id=1752957270]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="assets/StaticBody2D3" unique_id=1326210412]
+shape = SubResource("SegmentShape2D_otcwd")
 
 [node name="Character" parent="." unique_id=967131426 instance=ExtResource("5_bd8ia")]
 position = Vector2(1006, 320)
@@ -28,22 +104,23 @@ text = "2"
 label_settings = SubResource("LabelSettings_ss133")
 
 [node name="Transition_Zone" parent="." unique_id=1673277274 instance=ExtResource("1_vcykl")]
-position = Vector2(1100, 342)
+position = Vector2(1217.0001, 350)
+scale = Vector2(1.2183471, 10.379976)
 zone = 1
 
 [node name="Npc_positions" type="Node2D" parent="." unique_id=816851761]
 
 [node name="Npc" parent="Npc_positions" unique_id=1133381282 instance=ExtResource("3_ivmmj")]
-position = Vector2(528, 306)
+position = Vector2(538, 563)
 
 [node name="Npc2" parent="Npc_positions" unique_id=1386470388 instance=ExtResource("3_ivmmj")]
-position = Vector2(750, 190)
+position = Vector2(313, 418)
 
 [node name="Npc3" parent="Npc_positions" unique_id=1894142051 instance=ExtResource("3_ivmmj")]
-position = Vector2(971, 442)
+position = Vector2(989, 138)
 
 [node name="player_spawn_zone" type="Node2D" parent="." unique_id=390790631]
-position = Vector2(1188, 376)
+position = Vector2(1286, 346)
 script = ExtResource("6_gcqhp")
 direction = 2
 zone_from = 1
