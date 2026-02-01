@@ -10,6 +10,9 @@ var player_start_positions: Array[PlayerStartPosition]
 func _ready() -> void:
 	populate_arrays()
 	get_npc_positions()
+	if LogicSingleton.clues_count >= LogicSingleton.clues_count_needed:
+		LogicSingleton.can_solution_spawn = true
+		spawn_solution()
 
 func populate_arrays() -> void:
 	for n in get_children():

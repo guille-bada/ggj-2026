@@ -5,7 +5,8 @@
 [ext_resource type="Script" uid="uid://dugywm4y4rsf8" path="res://Scripts/Npc.gd" id="1_lvqg6"]
 [ext_resource type="Texture2D" uid="uid://cqgx3cf6h4744" path="res://Art/circle.png" id="1_m7bvo"]
 [ext_resource type="Script" uid="uid://dmwljtyqrk1hp" path="res://Scripts/ForceGlobalPosition.gd" id="2_c8tqv"]
-[ext_resource type="PackedScene" uid="uid://boxifofs6hm1n" path="res://Scenes/Bubble.tscn" id="4_7c57i"]
+[ext_resource type="PackedScene" uid="uid://bjrgwkr2oahiv" path="res://Scenes/GameOver.tscn" id="3_7c57i"]
+[ext_resource type="PackedScene" uid="uid://cd2pbea0rc3in" path="res://Scenes/Bubble.tscn" id="4_7c57i"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_m7bvo"]
 radius = 67.0075
@@ -21,18 +22,19 @@ body = NodePath("Mask/Node2D/Body")
 
 [node name="BubblePosition" type="Node2D" parent="." unique_id=813284153]
 
-[node name="Bubble" parent="." unique_id=545403182 node_paths=PackedStringArray("target_position", "interactable") instance=ExtResource("4_7c57i")]
+[node name="Bubble" parent="." unique_id=545403182 node_paths=PackedStringArray("interactable") instance=ExtResource("4_7c57i")]
 offset_left = -39.915
 offset_top = -191.255
 offset_right = 341.61398
 offset_bottom = 30.543991
 scale = Vector2(0.745, 0.745)
-target_position = NodePath("../BubblePosition")
 interactable = NodePath("../Interactable")
 metadata/_edit_use_anchors_ = true
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=655585307]
 follow_viewport_enabled = true
+
+[node name="GameOver" parent="CanvasLayer" unique_id=452953012 instance=ExtResource("3_7c57i")]
 
 [node name="Obstacle" type="Area2D" parent="." unique_id=348511785]
 scale = Vector2(0.745, 0.745)

@@ -7,5 +7,5 @@
 script = ExtResource("1_s0fgq")
 name = "test cabeza"
 image = ExtResource("1_p5dxt")
-clues = Array[String](["test cabeza clue", "", "", "", ""])
+clues = Array[String](["¿Al Momo? Con los firuletes que le encajaron en las patas parecía un duende.", "Parecía que en vez de acá se iba pal carnaval carioca."])
 metadata/_custom_type_script = "uid://w27m0ui8naiv"
