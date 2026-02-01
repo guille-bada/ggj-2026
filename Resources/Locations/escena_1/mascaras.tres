@@ -4,5 +4,6 @@
 
 [resource]
 script = ExtResource("1_klqwu")
+position = Vector2(127, 603)
 clues = Array[String](["Andaba viendo de comprarse una máscara para halloween. No, ni idea yo tampoco por qué, estamos en febrero. ", "Le andaba haciendo ojitos a uno de los globos que venden ahí nomás."])
 metadata/_custom_type_script = "uid://d4gooov6o58k"

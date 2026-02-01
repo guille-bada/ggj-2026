@@ -4,5 +4,6 @@
 
 [resource]
 script = ExtResource("1_wdr4k")
+position = Vector2(989, 138)
 clues = Array[String](["Lo mandamos a buscar unas birras, que si no no desfilamos un carajo."])
 metadata/_custom_type_script = "uid://d4gooov6o58k"

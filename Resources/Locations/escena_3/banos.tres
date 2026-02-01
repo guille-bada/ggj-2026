@@ -4,5 +4,6 @@
 
 [resource]
 script = ExtResource("1_38n37")
+position = Vector2(352, 238)
 clues = Array[String](["¿Y dónde mas va a estar el momo? Siempre va al baño cuando nos toca salir.", "El abombado se tomó un litro de cerveza y ahora anda haciendo fila pa' desagotar."])
 metadata/_custom_type_script = "uid://d4gooov6o58k"
