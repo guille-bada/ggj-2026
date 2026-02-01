@@ -1,9 +1,13 @@
 [gd_scene format=3 uid="uid://b70j0crn5ovw8"]
 
-[ext_resource type="PackedScene" path="res://Scenes/area_manager.tscn" id="2_nurni"]
-[ext_resource type="PackedScene" path="res://Scenes/Transition_Fade.tscn" id="3_0ni5v"]
+[ext_resource type="PackedScene" uid="uid://pewy0cyyqt2b" path="res://Scenes/area_manager.tscn" id="2_nurni"]
+[ext_resource type="PackedScene" uid="uid://dtndh384b372q" path="res://Scenes/Transition_Fade.tscn" id="3_0ni5v"]
 [ext_resource type="Script" uid="uid://xpwmfie2hok1" path="res://Scripts/texto_inicial.gd" id="3_kln2b"]
 [ext_resource type="Texture2D" uid="uid://c6lcwh8co6xrn" path="res://Art/globo de texto.png" id="3_rgh2o"]
+[ext_resource type="FontFile" uid="uid://clih0lcsp8inb" path="res://Art/Font/shonen/Shonen (Namikus).otf" id="5_pbw6q"]
+
+[sub_resource type="Theme" id="Theme_v1gob"]
+default_font = ExtResource("5_pbw6q")
 
 [node name="Main" type="Node2D" unique_id=670653064]
 
@@ -37,6 +41,7 @@ anchor_right = 0.9010417
 anchor_bottom = 0.3425926
 grow_horizontal = 2
 grow_vertical = 2
+theme = SubResource("Theme_v1gob")
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "¡Perdí a mi amigo! La gente podría saber donde está ¿Me ayudás a encontrarlo?"
 autowrap_mode = 3
