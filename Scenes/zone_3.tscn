@@ -14,6 +14,9 @@
 [ext_resource type="Texture2D" uid="uid://c5efm0uu36k3x" path="res://Place_holder/Multitumbre/multitud 1.png" id="9_75ahh"]
 [ext_resource type="AudioStream" uid="uid://cncl04jh4h63j" path="res://Art/Sounds/Ambientes/AmbienteC - baños y prensa.wav" id="12_m2dxp"]
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_81cwy"]
+radius = 72.96974
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_q51kd"]
 size = Vector2(274, 289)
 
@@ -58,6 +61,17 @@ texture = ExtResource("3_2osqr")
 position = Vector2(705, 325)
 scale = Vector2(0.6043896, 0.6043896)
 texture = ExtResource("4_m2dxp")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="assets/Camaras" unique_id=1542094185]
+collision_layer = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="assets/Camaras/StaticBody2D" unique_id=247703059]
+position = Vector2(-254.80254, 431.84064)
+shape = SubResource("CircleShape2D_81cwy")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="assets/Camaras/StaticBody2D" unique_id=1737035694]
+position = Vector2(-9.927383, 208.47478)
+shape = SubResource("CircleShape2D_81cwy")
 
 [node name="StaticBody2D4" type="StaticBody2D" parent="assets" unique_id=1166899934]
 
