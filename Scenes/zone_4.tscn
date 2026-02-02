@@ -12,6 +12,9 @@
 [ext_resource type="Texture2D" uid="uid://dtjaaq7hejsej" path="res://Place_holder/Multitumbre/multitud 2.png" id="7_1cidu"]
 [ext_resource type="Texture2D" uid="uid://dsiywqd0lwuid" path="res://Place_holder/Multitumbre/vedette.png" id="8_4r2ey"]
 [ext_resource type="AudioStream" uid="uid://conj1gxex1npc" path="res://Art/Sounds/Ambientes/AmbienteR - camión.wav" id="12_kg3v7"]
+[ext_resource type="PackedScene" uid="uid://2ywuof63rfbw" path="res://Scenes/FogOfWar.tscn" id="13_74mjj"]
+[ext_resource type="Texture2D" uid="uid://d31crmcb33q8r" path="res://Art/circle 2.png" id="14_n2e02"]
+[ext_resource type="Texture2D" uid="uid://cu82tpov8asys" path="res://Art/Fog of war/GGJ2026FondoAbajoFOGOFWAR.png" id="15_wlt57"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_4r2ey"]
 radius = 326.24695
@@ -50,7 +53,7 @@ audio_player = NodePath("AudioStreamPlayer")
 
 [node name="Ggj2026FondoAbajo" type="Sprite2D" parent="assets" unique_id=579734102]
 position = Vector2(577.5, 326.5)
-scale = Vector2(0.60156256, 0.6064815)
+scale = Vector2(0.6, 0.6)
 texture = ExtResource("3_lrimn")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="assets" unique_id=1237758370]
@@ -138,8 +141,9 @@ zone = 1
 
 [node name="Npc_positions" type="Node2D" parent="." unique_id=1925852176]
 
-[node name="Npc" parent="Npc_positions" unique_id=1133381282 instance=ExtResource("3_jvpqj")]
+[node name="Npc" parent="Npc_positions" unique_id=1133381282 node_paths=PackedStringArray("fog_of_war") instance=ExtResource("3_jvpqj")]
 position = Vector2(329, 409)
+fog_of_war = NodePath("../../FogOfWar")
 
 [node name="Character" parent="." unique_id=967131426 instance=ExtResource("5_ymh0q")]
 position = Vector2(450, 139)
@@ -154,3 +158,19 @@ zone_from = 1
 stream = ExtResource("12_kg3v7")
 volume_db = -10.0
 autoplay = true
+
+[node name="FogOfWar" parent="." unique_id=1566624927 node_paths=PackedStringArray("position_to_hold") instance=ExtResource("13_74mjj")]
+position = Vector2(577.5, 326.5)
+position_to_hold = NodePath("../Character")
+
+[node name="Mask" parent="FogOfWar" index="0" unique_id=845327309]
+self_modulate = Color(1, 1, 1, 0.62352943)
+clip_children = 1
+scale = Vector2(3, 3)
+texture = ExtResource("14_n2e02")
+
+[node name="Sprite2D" parent="FogOfWar/Mask" index="0" unique_id=936184579]
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("15_wlt57")
+
+[editable path="FogOfWar"]

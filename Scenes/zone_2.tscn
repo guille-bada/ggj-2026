@@ -13,9 +13,12 @@
 [ext_resource type="Texture2D" uid="uid://dtjaaq7hejsej" path="res://Place_holder/Multitumbre/multitud 2.png" id="9_e334c"]
 [ext_resource type="Texture2D" uid="uid://c5efm0uu36k3x" path="res://Place_holder/Multitumbre/multitud 1.png" id="10_2rnfi"]
 [ext_resource type="AudioStream" uid="uid://dwajsggu3bhsi" path="res://Art/Sounds/Ambientes/AmbienteP - Plaza de comidas.wav" id="13_qgqmo"]
+[ext_resource type="PackedScene" uid="uid://2ywuof63rfbw" path="res://Scenes/FogOfWar.tscn" id="14_2jvbe"]
+[ext_resource type="Texture2D" uid="uid://d31crmcb33q8r" path="res://Art/circle 2.png" id="15_jebsn"]
+[ext_resource type="Texture2D" uid="uid://cbaobx056o3w2" path="res://Art/Fog of war/GGJ2026FondoPlazadecomidasFOGOFWAR.png" id="16_y0i0s"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_2rnfi"]
-a = Vector2(126, 415)
+a = Vector2(-58, 427)
 b = Vector2(389, -19)
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_qgqmo"]
@@ -39,8 +42,8 @@ audio_player = NodePath("AudioStreamPlayer")
 [node name="assets" type="Node2D" parent="." unique_id=491279855]
 
 [node name="Ggj2026FondoIzquierdaPlazaComidas" type="Sprite2D" parent="assets" unique_id=1987692822]
-position = Vector2(578.5, 323)
-scale = Vector2(0.5973958, 0.5962963)
+position = Vector2(576, 324)
+scale = Vector2(0.6, 0.6)
 texture = ExtResource("3_10pbl")
 
 [node name="Vedette" type="Sprite2D" parent="assets" unique_id=1624079623]
@@ -107,20 +110,17 @@ label_settings = SubResource("LabelSettings_ss133")
 
 [node name="Npc_positions" type="Node2D" parent="." unique_id=816851761]
 
-[node name="Npc" parent="Npc_positions" unique_id=1133381282 instance=ExtResource("3_ivmmj")]
+[node name="Npc" parent="Npc_positions" unique_id=1133381282 node_paths=PackedStringArray("fog_of_war") instance=ExtResource("3_ivmmj")]
 position = Vector2(538, 563)
+fog_of_war = NodePath("../../FogOfWar")
 
-[node name="Npc2" parent="Npc_positions" unique_id=1386470388 instance=ExtResource("3_ivmmj")]
+[node name="Npc2" parent="Npc_positions" unique_id=1386470388 node_paths=PackedStringArray("fog_of_war") instance=ExtResource("3_ivmmj")]
 position = Vector2(313, 418)
+fog_of_war = NodePath("../../FogOfWar")
 
-[node name="Npc3" parent="Npc_positions" unique_id=1894142051 instance=ExtResource("3_ivmmj")]
-position = Vector2(989, 138)
-
-[node name="Bubble" parent="Npc_positions/Npc3" index="1" unique_id=545403182]
-offset_left = -124.0
-offset_top = -138.00002
-offset_right = 257.529
-offset_bottom = 83.79898
+[node name="Npc3" parent="Npc_positions" unique_id=1894142051 node_paths=PackedStringArray("fog_of_war") instance=ExtResource("3_ivmmj")]
+position = Vector2(962, 192)
+fog_of_war = NodePath("../../FogOfWar")
 
 [node name="player_spawn_zone" type="Node2D" parent="." unique_id=390790631]
 position = Vector2(1183, 346)
@@ -138,4 +138,17 @@ stream = ExtResource("13_qgqmo")
 volume_db = -10.0
 autoplay = true
 
-[editable path="Npc_positions/Npc3"]
+[node name="FogOfWar" parent="." unique_id=1566624927 node_paths=PackedStringArray("position_to_hold") instance=ExtResource("14_2jvbe")]
+position = Vector2(576, 324)
+position_to_hold = NodePath("../Character")
+
+[node name="Mask" parent="FogOfWar" index="0" unique_id=845327309]
+self_modulate = Color(1, 1, 1, 0.62352943)
+scale = Vector2(3, 3)
+texture = ExtResource("15_jebsn")
+
+[node name="Sprite2D" parent="FogOfWar/Mask" index="0" unique_id=936184579]
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("16_y0i0s")
+
+[editable path="FogOfWar"]

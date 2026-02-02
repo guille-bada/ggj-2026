@@ -5,12 +5,16 @@ class_name Npc extends Node2D
 @export var body: Sprite2D
 @export var game_over: GameOver
 @export var audio_player: AudioStreamPlayer
+@export var fog_of_war: Node2D
+@export var mask_force_position_script: ForceGlobalPosition
 
 var is_manually_set: bool
 
 func _ready():
 	interactable.signal_interact_start.connect(on_interact_start)
 	interactable.signal_interact_end.connect(on_interact_end)
+
+	mask_force_position_script.position_to_hold = fog_of_war
 
 	
 	if not is_manually_set:

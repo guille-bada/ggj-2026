@@ -1,27 +1,19 @@
 [gd_scene format=3 uid="uid://2ywuof63rfbw"]
 
 [ext_resource type="Texture2D" uid="uid://clejpgok16tp4" path="res://Art/crowd mask.png" id="1_jky6d"]
-[ext_resource type="Texture2D" uid="uid://bc1k1bravwvgp" path="res://Art/crowd.jpg" id="2_87cp5"]
+[ext_resource type="Texture2D" uid="uid://bucnh1mclyv14" path="res://Art/Fog of war/GGJ2026FondoCentralFOGOFWAR.png" id="2_jky6d"]
+[ext_resource type="Script" uid="uid://dmwljtyqrk1hp" path="res://Scripts/ForceGlobalPosition.gd" id="3_87cp5"]
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_x648n"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("2_87cp5")
-}],
-"loop": true,
-"name": &"default",
-"speed": 5.0
-}]
-
-[node name="FogOfWar" type="Node2D" unique_id=1566624927]
+[node name="FogOfWar" type="Node2D" unique_id=1566624927 node_paths=PackedStringArray("subject")]
+script = ExtResource("3_87cp5")
+subject = NodePath(".")
 
 [node name="Mask" type="Sprite2D" parent="." unique_id=845327309]
-self_modulate = Color(1, 1, 1, 0.3137255)
 clip_children = 2
 texture = ExtResource("1_jky6d")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Mask" unique_id=2018864767]
-position = Vector2(-0.00012207031, -6.1035156e-05)
-scale = Vector2(4.682926, 2.5)
-sprite_frames = SubResource("SpriteFrames_x648n")
+[node name="Sprite2D" type="Sprite2D" parent="Mask" unique_id=936184579 node_paths=PackedStringArray("subject")]
+scale = Vector2(2.2729135, 2.2729135)
+texture = ExtResource("2_jky6d")
+script = ExtResource("3_87cp5")
+subject = NodePath(".")

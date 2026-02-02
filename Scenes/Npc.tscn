@@ -1,12 +1,13 @@
 [gd_scene format=3 uid="uid://6g7e0j0ymkbd"]
 
-[ext_resource type="Texture2D" uid="uid://d3v8eynat77lb" path="res://icon.svg" id="1_b5x2e"]
 [ext_resource type="Script" uid="uid://doavdufk2awuh" path="res://Scripts/Interactable.gd" id="1_gejva"]
 [ext_resource type="Script" uid="uid://dugywm4y4rsf8" path="res://Scripts/Npc.gd" id="1_lvqg6"]
 [ext_resource type="Texture2D" uid="uid://cqgx3cf6h4744" path="res://Art/circle.png" id="1_m7bvo"]
 [ext_resource type="Script" uid="uid://dmwljtyqrk1hp" path="res://Scripts/ForceGlobalPosition.gd" id="2_c8tqv"]
 [ext_resource type="PackedScene" uid="uid://bjrgwkr2oahiv" path="res://Scenes/GameOver.tscn" id="3_7c57i"]
 [ext_resource type="PackedScene" uid="uid://cd2pbea0rc3in" path="res://Scenes/Bubble.tscn" id="4_7c57i"]
+[ext_resource type="Texture2D" uid="uid://cgmka4v800mct" path="res://Place_holder/Murga Sprite OUTLINEAO/cuerpo 1 a.png" id="6_v745g"]
+[ext_resource type="Texture2D" uid="uid://clllhi83rksdm" path="res://Place_holder/Murga Sprite OUTLINEAO/cabeza 1 a.png" id="7_w55hv"]
 [ext_resource type="AudioStream" uid="uid://befb7yei1a46c" path="res://Resources/AudioNpcDialogue.tres" id="8_d01td"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_m7bvo"]
@@ -15,13 +16,14 @@ radius = 67.0075
 [sub_resource type="CircleShape2D" id="CircleShape2D_ileeb"]
 radius = 57.271286
 
-[node name="Npc" type="Node2D" unique_id=1133381282 node_paths=PackedStringArray("interactable", "head", "body", "game_over", "audio_player")]
+[node name="Npc" type="Node2D" unique_id=1133381282 node_paths=PackedStringArray("interactable", "head", "body", "game_over", "audio_player", "mask_force_position_script")]
 script = ExtResource("1_lvqg6")
 interactable = NodePath("Interactable")
 head = NodePath("Mask/Node2D/Head")
 body = NodePath("Mask/Node2D/Body")
 game_over = NodePath("CanvasLayer/GameOver")
 audio_player = NodePath("AudioStreamPlayer")
+mask_force_position_script = NodePath("Scripts/MaskForceGlobalPosition")
 
 [node name="BubblePosition" type="Node2D" parent="." unique_id=813284153]
 
@@ -60,19 +62,20 @@ shape = SubResource("CircleShape2D_m7bvo")
 
 [node name="Mask" type="Sprite2D" parent="." unique_id=1661112244]
 clip_children = 1
-scale = Vector2(0.745, 0.745)
+scale = Vector2(0.385, 0.385)
 texture = ExtResource("1_m7bvo")
 
 [node name="Node2D" type="Node2D" parent="Mask" unique_id=613458749]
-scale = Vector2(0.745, 0.745)
+scale = Vector2(1.385, 1.385)
 
 [node name="Body" type="Sprite2D" parent="Mask/Node2D" unique_id=1732621489]
 scale = Vector2(0.745, 0.745)
+texture = ExtResource("6_v745g")
 
 [node name="Head" type="Sprite2D" parent="Mask/Node2D" unique_id=1234273306]
 position = Vector2(0, -68.5)
 scale = Vector2(0.745, 0.745)
-texture = ExtResource("1_b5x2e")
+texture = ExtResource("7_w55hv")
 
 [node name="Scripts" type="Node" parent="." unique_id=733532672]
 

@@ -13,6 +13,9 @@
 [ext_resource type="Texture2D" uid="uid://dtjaaq7hejsej" path="res://Place_holder/Multitumbre/multitud 2.png" id="8_ue8m2"]
 [ext_resource type="Texture2D" uid="uid://c5efm0uu36k3x" path="res://Place_holder/Multitumbre/multitud 1.png" id="9_75ahh"]
 [ext_resource type="AudioStream" uid="uid://cncl04jh4h63j" path="res://Art/Sounds/Ambientes/AmbienteC - baños y prensa.wav" id="12_m2dxp"]
+[ext_resource type="PackedScene" uid="uid://2ywuof63rfbw" path="res://Scenes/FogOfWar.tscn" id="14_q51kd"]
+[ext_resource type="Texture2D" uid="uid://d31crmcb33q8r" path="res://Art/circle 2.png" id="15_uuraq"]
+[ext_resource type="Texture2D" uid="uid://cgl7t8tdutkom" path="res://Art/Fog of war/GGJ2026FondoPrensaFOGOFWAR.png" id="16_xxf14"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_81cwy"]
 radius = 72.96974
@@ -53,12 +56,12 @@ audio_player = NodePath("AudioStreamPlayer")
 [node name="assets" type="Node2D" parent="." unique_id=2136960626]
 
 [node name="Ggj2026FondoDerecha2Camaras" type="Sprite2D" parent="assets" unique_id=1433631669]
-position = Vector2(576.015, 324.25)
-scale = Vector2(0.6026042, 0.6004629)
+position = Vector2(576, 324)
+scale = Vector2(0.6, 0.6)
 texture = ExtResource("3_2osqr")
 
 [node name="Camaras" type="Sprite2D" parent="assets" unique_id=151041124]
-position = Vector2(705, 325)
+position = Vector2(577, 323)
 scale = Vector2(0.6043896, 0.6043896)
 texture = ExtResource("4_m2dxp")
 
@@ -176,14 +179,17 @@ zone = 1
 
 [node name="Npc_positions" type="Node2D" parent="." unique_id=542592775]
 
-[node name="Npc" parent="Npc_positions" unique_id=1133381282 instance=ExtResource("3_ilits")]
+[node name="Npc" parent="Npc_positions" unique_id=1133381282 node_paths=PackedStringArray("fog_of_war") instance=ExtResource("3_ilits")]
 position = Vector2(352, 238)
+fog_of_war = NodePath("../../FogOfWar")
 
-[node name="Npc2" parent="Npc_positions" unique_id=800548489 instance=ExtResource("3_ilits")]
-position = Vector2(709, 574)
+[node name="Npc2" parent="Npc_positions" unique_id=800548489 node_paths=PackedStringArray("fog_of_war") instance=ExtResource("3_ilits")]
+position = Vector2(584, 571)
+fog_of_war = NodePath("../../FogOfWar")
 
-[node name="Npc3" parent="Npc_positions" unique_id=1633046215 instance=ExtResource("3_ilits")]
+[node name="Npc3" parent="Npc_positions" unique_id=1633046215 node_paths=PackedStringArray("fog_of_war") instance=ExtResource("3_ilits")]
 position = Vector2(978, 288)
+fog_of_war = NodePath("../../FogOfWar")
 
 [node name="Character" parent="." unique_id=967131426 instance=ExtResource("5_kek7l")]
 position = Vector2(162, 261)
@@ -203,3 +209,19 @@ texture = ExtResource("8_ue8m2")
 stream = ExtResource("12_m2dxp")
 volume_db = -10.0
 autoplay = true
+
+[node name="FogOfWar" parent="." unique_id=1566624927 node_paths=PackedStringArray("position_to_hold") instance=ExtResource("14_q51kd")]
+position = Vector2(576, 324)
+position_to_hold = NodePath("../Character")
+
+[node name="Mask" parent="FogOfWar" index="0" unique_id=845327309]
+self_modulate = Color(1, 1, 1, 0.62352943)
+clip_children = 1
+scale = Vector2(3, 3)
+texture = ExtResource("15_uuraq")
+
+[node name="Sprite2D" parent="FogOfWar/Mask" index="0" unique_id=936184579]
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("16_xxf14")
+
+[editable path="FogOfWar"]
