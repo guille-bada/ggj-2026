@@ -16,7 +16,6 @@
 [ext_resource type="AudioStream" uid="uid://dnnfrf1kolphu" path="res://Art/Sounds/Ambientes/Ambiente0.wav" id="14_8kvg6"]
 [ext_resource type="PackedScene" uid="uid://2ywuof63rfbw" path="res://Scenes/FogOfWar.tscn" id="15_86pxw"]
 [ext_resource type="Texture2D" uid="uid://d31crmcb33q8r" path="res://Art/circle 2.png" id="16_cm7sq"]
-[ext_resource type="Script" uid="uid://dmwljtyqrk1hp" path="res://Scripts/ForceGlobalPosition.gd" id="16_frco7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qxdmk"]
 size = Vector2(574.24243, 498)
@@ -40,7 +39,7 @@ audio_player = NodePath("AudioStreamPlayer")
 [node name="assets" type="Node2D" parent="." unique_id=2028303463]
 
 [node name="Ggj2026FondoCentral1" type="Sprite2D" parent="assets" unique_id=925119268]
-position = Vector2(581.99994, 330)
+position = Vector2(576, 324)
 scale = Vector2(0.6, 0.6)
 texture = ExtResource("3_lmly4")
 
@@ -165,10 +164,8 @@ stream = ExtResource("14_8kvg6")
 volume_db = -10.0
 autoplay = true
 
-[node name="FogOfWar" parent="." unique_id=1566624927 node_paths=PackedStringArray("subject", "position_to_hold") instance=ExtResource("15_86pxw")]
-position = Vector2(581.99994, 330)
-script = ExtResource("16_frco7")
-subject = NodePath(".")
+[node name="FogOfWar" parent="." unique_id=1566624927 node_paths=PackedStringArray("position_to_hold") instance=ExtResource("15_86pxw")]
+position = Vector2(576, 324)
 position_to_hold = NodePath("../Character")
 
 [node name="Mask" parent="FogOfWar" index="0" unique_id=845327309]
@@ -176,9 +173,7 @@ self_modulate = Color(1, 1, 1, 0.62352943)
 scale = Vector2(3, 3)
 texture = ExtResource("16_cm7sq")
 
-[node name="Sprite2D" parent="FogOfWar/Mask" index="0" unique_id=936184579 node_paths=PackedStringArray("subject")]
+[node name="Sprite2D" parent="FogOfWar/Mask" index="0" unique_id=936184579]
 scale = Vector2(0.2, 0.2)
-script = ExtResource("16_frco7")
-subject = NodePath(".")
 
 [editable path="FogOfWar"]

@@ -52,7 +52,7 @@ audio_player = NodePath("AudioStreamPlayer")
 [node name="assets" type="Node2D" parent="." unique_id=1276309594]
 
 [node name="Ggj2026FondoAbajo" type="Sprite2D" parent="assets" unique_id=579734102]
-position = Vector2(577.5, 326.5)
+position = Vector2(576, 324)
 scale = Vector2(0.6, 0.6)
 texture = ExtResource("3_lrimn")
 
@@ -160,7 +160,7 @@ volume_db = -10.0
 autoplay = true
 
 [node name="FogOfWar" parent="." unique_id=1566624927 node_paths=PackedStringArray("position_to_hold") instance=ExtResource("13_74mjj")]
-position = Vector2(577.5, 326.5)
+position = Vector2(576, 324)
 position_to_hold = NodePath("../Character")
 
 [node name="Mask" parent="FogOfWar" index="0" unique_id=845327309]

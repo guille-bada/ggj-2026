@@ -2,8 +2,9 @@
 
 [ext_resource type="Script" uid="uid://7hwa8y315s10" path="res://Scripts/GameOver.gd" id="1_k52d1"]
 [ext_resource type="Texture2D" uid="uid://cmn1vqubvsvmh" path="res://Art/square.png" id="1_m5628"]
+[ext_resource type="AudioStream" uid="uid://bcyyx5il0qwcw" path="res://Art/Sounds/Efectos/Fin.wav" id="3_ktc4i"]
 
-[node name="GameOver" type="Control" unique_id=452953012]
+[node name="GameOver" type="Control" unique_id=452953012 node_paths=PackedStringArray("audio_player")]
 modulate = Color(1, 1, 1, 0)
 layout_mode = 3
 anchors_preset = 15
@@ -12,6 +13,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_k52d1")
+audio_player = NodePath("AudioStreamPlayer")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=375894305]
 self_modulate = Color(0.5921569, 0.60784316, 1, 0.5411765)
@@ -35,3 +37,6 @@ text = "¡Acá estabas!
 ¡Te ando buscando de hace rato, bo!"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=2131412128]
+stream = ExtResource("3_ktc4i")
