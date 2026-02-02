@@ -26,10 +26,10 @@ audio_player = NodePath("AudioStreamPlayer")
 [node name="BubblePosition" type="Node2D" parent="." unique_id=813284153]
 
 [node name="Bubble" parent="." unique_id=545403182 node_paths=PackedStringArray("interactable") instance=ExtResource("4_7c57i")]
-offset_left = -39.915
-offset_top = -191.255
-offset_right = 341.61398
-offset_bottom = 30.543991
+offset_left = -55.000004
+offset_top = -144.0
+offset_right = 326.529
+offset_bottom = 77.798996
 scale = Vector2(0.745, 0.745)
 interactable = NodePath("../Interactable")
 metadata/_edit_use_anchors_ = true

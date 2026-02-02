@@ -116,6 +116,12 @@ position = Vector2(313, 418)
 [node name="Npc3" parent="Npc_positions" unique_id=1894142051 instance=ExtResource("3_ivmmj")]
 position = Vector2(989, 138)
 
+[node name="Bubble" parent="Npc_positions/Npc3" index="1" unique_id=545403182]
+offset_left = -124.0
+offset_top = -138.00002
+offset_right = 257.529
+offset_bottom = 83.79898
+
 [node name="player_spawn_zone" type="Node2D" parent="." unique_id=390790631]
 position = Vector2(1183, 346)
 script = ExtResource("6_gcqhp")
@@ -131,3 +137,5 @@ zone = 1
 stream = ExtResource("13_qgqmo")
 volume_db = -10.0
 autoplay = true
+
+[editable path="Npc_positions/Npc3"]
