@@ -1,8 +1,8 @@
-[gd_scene format=3 uid="uid://c316m6ovwsluh"]
+[gd_scene format=3 uid="uid://cqtjfqb646ium"]
 
-[ext_resource type="Script" uid="uid://cjt67v6p6myp7" path="res://Scripts/Main_menu.gd" id="1_28flt"]
+[ext_resource type="Script" path="res://Scripts/Main_menu.gd" id="1_28flt"]
 [ext_resource type="Texture2D" uid="uid://dm5s7uax2y65c" path="res://Place_holder/Menu/Main.png" id="2_1ehe0"]
-[ext_resource type="PackedScene" uid="uid://dtndh384b372q" path="res://Scenes/Transition_Fade.tscn" id="2_48xlc"]
+[ext_resource type="PackedScene" path="res://Scenes/Transition_Fade.tscn" id="2_48xlc"]
 [ext_resource type="Texture2D" uid="uid://ck2ki4sogtcsv" path="res://Place_holder/Menu/Press.png" id="4_ce3w2"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ce3w2"]
