@@ -6,6 +6,7 @@ var player_start_positions: Array[PlayerStartPosition]
 @export var scene_resource: ResourceScene
 @export var npc_positions: Node2D
 @export var character: MainCharacter
+@export var audio_player: AudioStreamPlayer
 
 func _ready() -> void:
 	populate_arrays()
@@ -13,6 +14,9 @@ func _ready() -> void:
 	if LogicSingleton.clues_count >= LogicSingleton.clues_count_needed:
 		LogicSingleton.can_solution_spawn = true
 		spawn_solution()
+	
+	audio_player.volume_linear = 0
+	create_tween().tween_property(audio_player, "volume_linear", 1, 1)
 
 func populate_arrays() -> void:
 	for n in get_children():

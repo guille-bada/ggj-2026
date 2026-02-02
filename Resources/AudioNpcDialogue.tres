@@ -1,0 +1,15 @@
+[gd_resource type="AudioStreamRandomizer" format=3 uid="uid://befb7yei1a46c"]
+
+[ext_resource type="AudioStream" uid="uid://cyhhyse8i1bff" path="res://Art/Sounds/Efectos/Diálogo1 agudo.wav" id="1_p300m"]
+[ext_resource type="AudioStream" uid="uid://bi0s620tgblc2" path="res://Art/Sounds/Efectos/Diálogo2 agudo.wav" id="2_m2l8q"]
+[ext_resource type="AudioStream" uid="uid://drbg4m52uayf6" path="res://Art/Sounds/Efectos/Diálogo3 grave.wav" id="3_4b5iy"]
+[ext_resource type="AudioStream" uid="uid://b2bj2wud3x6wa" path="res://Art/Sounds/Efectos/Diálogo4 grave.wav" id="4_igy1g"]
+[ext_resource type="AudioStream" uid="uid://cvjg6b74kl8tm" path="res://Art/Sounds/Efectos/Diálogo5 agudo.wav" id="5_2yhkh"]
+
+[resource]
+streams_count = 5
+stream_0/stream = ExtResource("1_p300m")
+stream_1/stream = ExtResource("2_m2l8q")
+stream_2/stream = ExtResource("3_4b5iy")
+stream_3/stream = ExtResource("4_igy1g")
+stream_4/stream = ExtResource("5_2yhkh")

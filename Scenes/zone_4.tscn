@@ -11,6 +11,7 @@
 [ext_resource type="Script" path="res://Scripts/player_start_position.gd" id="6_nnvpj"]
 [ext_resource type="Texture2D" uid="uid://dtjaaq7hejsej" path="res://Place_holder/Multitumbre/multitud 2.png" id="7_1cidu"]
 [ext_resource type="Texture2D" uid="uid://dsiywqd0lwuid" path="res://Place_holder/Multitumbre/vedette.png" id="8_4r2ey"]
+[ext_resource type="AudioStream" uid="uid://conj1gxex1npc" path="res://Art/Sounds/Ambientes/AmbienteR - camión.wav" id="12_kg3v7"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_4r2ey"]
 radius = 326.24695
@@ -38,11 +39,12 @@ b = Vector2(-2, 86)
 [sub_resource type="LabelSettings" id="LabelSettings_ss133"]
 font_size = 32
 
-[node name="Zone_4" type="Node2D" unique_id=837564778 node_paths=PackedStringArray("npc_positions", "character")]
+[node name="Zone_4" type="Node2D" unique_id=837564778 node_paths=PackedStringArray("npc_positions", "character", "audio_player")]
 script = ExtResource("1_yl0l6")
 scene_resource = ExtResource("2_rv4do")
 npc_positions = NodePath("Npc_positions")
 character = NodePath("Character")
+audio_player = NodePath("AudioStreamPlayer")
 
 [node name="assets" type="Node2D" parent="." unique_id=1276309594]
 
@@ -147,3 +149,8 @@ position = Vector2(346, -35)
 script = ExtResource("6_nnvpj")
 direction = 1
 zone_from = 1
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1231694784]
+stream = ExtResource("12_kg3v7")
+volume_db = -10.0
+autoplay = true
