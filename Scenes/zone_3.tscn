@@ -12,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://bgqtkowclt268" path="res://Place_holder/Multitumbre/heteros.png" id="7_81cwy"]
 [ext_resource type="Texture2D" uid="uid://dtjaaq7hejsej" path="res://Place_holder/Multitumbre/multitud 2.png" id="8_ue8m2"]
 [ext_resource type="Texture2D" uid="uid://c5efm0uu36k3x" path="res://Place_holder/Multitumbre/multitud 1.png" id="9_75ahh"]
+[ext_resource type="AudioStream" uid="uid://cncl04jh4h63j" path="res://Art/Sounds/Ambientes/AmbienteC - baños y prensa.wav" id="12_m2dxp"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_q51kd"]
 size = Vector2(274, 289)
@@ -39,11 +40,12 @@ b = Vector2(388, 49)
 [sub_resource type="LabelSettings" id="LabelSettings_ss133"]
 font_size = 32
 
-[node name="Zone_3" type="Node2D" unique_id=837564778 node_paths=PackedStringArray("npc_positions", "character")]
+[node name="Zone_3" type="Node2D" unique_id=837564778 node_paths=PackedStringArray("npc_positions", "character", "audio_player")]
 script = ExtResource("1_ljfu7")
 scene_resource = ExtResource("2_d6flo")
 npc_positions = NodePath("Npc_positions")
 character = NodePath("Character")
+audio_player = NodePath("AudioStreamPlayer")
 
 [node name="assets" type="Node2D" parent="." unique_id=2136960626]
 
@@ -182,3 +184,8 @@ zone_from = 1
 position = Vector2(934.00006, 481.00003)
 scale = Vector2(0.57857144, 0.57857144)
 texture = ExtResource("8_ue8m2")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=275288770]
+stream = ExtResource("12_m2dxp")
+volume_db = -10.0
+autoplay = true

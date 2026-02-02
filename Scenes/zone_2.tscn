@@ -12,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://b8h174yhtj7al" path="res://Place_holder/Multitumbre/turros.png" id="8_vjtkv"]
 [ext_resource type="Texture2D" uid="uid://dtjaaq7hejsej" path="res://Place_holder/Multitumbre/multitud 2.png" id="9_e334c"]
 [ext_resource type="Texture2D" uid="uid://c5efm0uu36k3x" path="res://Place_holder/Multitumbre/multitud 1.png" id="10_2rnfi"]
+[ext_resource type="AudioStream" uid="uid://dwajsggu3bhsi" path="res://Art/Sounds/Ambientes/AmbienteP - Plaza de comidas.wav" id="13_qgqmo"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_2rnfi"]
 a = Vector2(126, 415)
@@ -28,11 +29,12 @@ b = Vector2(1156, 647)
 [sub_resource type="LabelSettings" id="LabelSettings_ss133"]
 font_size = 32
 
-[node name="Zone_2" type="Node2D" unique_id=837564778 node_paths=PackedStringArray("npc_positions", "character")]
+[node name="Zone_2" type="Node2D" unique_id=837564778 node_paths=PackedStringArray("npc_positions", "character", "audio_player")]
 script = ExtResource("1_5qs5h")
 scene_resource = ExtResource("2_jw8f5")
 npc_positions = NodePath("Npc_positions")
 character = NodePath("Character")
+audio_player = NodePath("AudioStreamPlayer")
 
 [node name="assets" type="Node2D" parent="." unique_id=491279855]
 
@@ -124,3 +126,8 @@ zone_from = 1
 position = Vector2(1203, 350.00003)
 scale = Vector2(1.2183471, 10.379976)
 zone = 1
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1256048085]
+stream = ExtResource("13_qgqmo")
+volume_db = -10.0
+autoplay = true

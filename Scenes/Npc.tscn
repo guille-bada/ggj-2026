@@ -7,6 +7,7 @@
 [ext_resource type="Script" uid="uid://dmwljtyqrk1hp" path="res://Scripts/ForceGlobalPosition.gd" id="2_c8tqv"]
 [ext_resource type="PackedScene" uid="uid://bjrgwkr2oahiv" path="res://Scenes/GameOver.tscn" id="3_7c57i"]
 [ext_resource type="PackedScene" uid="uid://cd2pbea0rc3in" path="res://Scenes/Bubble.tscn" id="4_7c57i"]
+[ext_resource type="AudioStream" uid="uid://befb7yei1a46c" path="res://Resources/AudioNpcDialogue.tres" id="8_d01td"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_m7bvo"]
 radius = 67.0075
@@ -14,12 +15,13 @@ radius = 67.0075
 [sub_resource type="CircleShape2D" id="CircleShape2D_ileeb"]
 radius = 57.271286
 
-[node name="Npc" type="Node2D" unique_id=1133381282 node_paths=PackedStringArray("interactable", "head", "body", "game_over")]
+[node name="Npc" type="Node2D" unique_id=1133381282 node_paths=PackedStringArray("interactable", "head", "body", "game_over", "audio_player")]
 script = ExtResource("1_lvqg6")
 interactable = NodePath("Interactable")
 head = NodePath("Mask/Node2D/Head")
 body = NodePath("Mask/Node2D/Body")
 game_over = NodePath("CanvasLayer/GameOver")
+audio_player = NodePath("AudioStreamPlayer")
 
 [node name="BubblePosition" type="Node2D" parent="." unique_id=813284153]
 
@@ -88,3 +90,7 @@ collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=671818039]
 shape = SubResource("CircleShape2D_ileeb")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1810750768]
+stream = ExtResource("8_d01td")
+volume_db = -10.0

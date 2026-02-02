@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://conj1gxex1npc"
+path="res://.godot/imported/AmbienteR - camión.wav-ea7381af01e13c89248360396761e6ca.sample"
+
+[deps]
+
+source_file="res://Art/Sounds/Ambientes/AmbienteR - camión.wav"
+dest_files=["res://.godot/imported/AmbienteR - camión.wav-ea7381af01e13c89248360396761e6ca.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

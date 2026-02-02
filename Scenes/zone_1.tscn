@@ -9,10 +9,11 @@
 [ext_resource type="Texture2D" uid="uid://c5efm0uu36k3x" path="res://Place_holder/Multitumbre/multitud 1.png" id="4_5io2i"]
 [ext_resource type="Texture2D" uid="uid://dtjaaq7hejsej" path="res://Place_holder/Multitumbre/multitud 2.png" id="5_63vam"]
 [ext_resource type="Texture2D" uid="uid://dlew0tvc1yra8" path="res://Place_holder/Background/Luces (Izquierdas).png" id="5_pkakm"]
-[ext_resource type="Script" uid="uid://3ififejb7kqd" path="res://Scripts/player_start_position.gd" id="6_hnd26"]
+[ext_resource type="Script" path="res://Scripts/player_start_position.gd" id="6_hnd26"]
 [ext_resource type="Texture2D" uid="uid://dp4w7bi104c5a" path="res://Place_holder/Background/Luces (derechas).png" id="6_pkakm"]
 [ext_resource type="Texture2D" uid="uid://c3rkwoxa42elv" path="res://Place_holder/Multitumbre/viejoooooo.png" id="12_8kvg6"]
 [ext_resource type="Texture2D" uid="uid://b8h174yhtj7al" path="res://Place_holder/Multitumbre/turros.png" id="13_63vam"]
+[ext_resource type="AudioStream" uid="uid://dnnfrf1kolphu" path="res://Art/Sounds/Ambientes/Ambiente0.wav" id="14_8kvg6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qxdmk"]
 size = Vector2(574.24243, 498)
@@ -26,11 +27,12 @@ size = Vector2(298, 259)
 [sub_resource type="LabelSettings" id="LabelSettings_ss133"]
 font_size = 32
 
-[node name="Zone_1" type="Node2D" unique_id=837564778 node_paths=PackedStringArray("npc_positions", "character")]
+[node name="Zone_1" type="Node2D" unique_id=837564778 node_paths=PackedStringArray("npc_positions", "character", "audio_player")]
 script = ExtResource("1_7snvs")
 scene_resource = ExtResource("2_k8yrj")
 npc_positions = NodePath("Npc_positions")
 character = NodePath("Character")
+audio_player = NodePath("AudioStreamPlayer")
 
 [node name="assets" type="Node2D" parent="." unique_id=2028303463]
 
@@ -151,3 +153,8 @@ texture = ExtResource("6_pkakm")
 position = Vector2(207, 536.5)
 scale = Vector2(0.98854166, 1.0027778)
 texture = ExtResource("5_pkakm")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=478491248]
+stream = ExtResource("14_8kvg6")
+volume_db = -10.0
+autoplay = true

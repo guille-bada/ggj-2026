@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cvjg6b74kl8tm"
+path="res://.godot/imported/Diálogo5 agudo.wav-2bc3f661615ae7dd6a23ff0b873a1586.sample"
+
+[deps]
+
+source_file="res://Art/Sounds/Efectos/Diálogo5 agudo.wav"
+dest_files=["res://.godot/imported/Diálogo5 agudo.wav-2bc3f661615ae7dd6a23ff0b873a1586.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2
