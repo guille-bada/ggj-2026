@@ -4,6 +4,6 @@
 
 [resource]
 script = ExtResource("1_q2kbv")
-position = Vector2(701, 524)
+position = Vector2(790, 508)
 clues = Array[String](["¿Momito? Estaba paveando ahi con las doñas que trajeron las sillas.", "Creo que lo vi intentando adueñarse de una silla de playa. Decime pa que si vamos a desfilar en nada. "])
 metadata/_custom_type_script = "uid://d4gooov6o58k"

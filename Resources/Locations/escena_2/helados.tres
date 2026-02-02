@@ -4,6 +4,6 @@
 
 [resource]
 script = ExtResource("1_h7n0w")
-position = Vector2(538, 563)
+position = Vector2(582, 229)
 clues = Array[String](["Dejá, no se aguanta nada el calor, fue a ver si conseguía algo fresco."])
 metadata/_custom_type_script = "uid://d4gooov6o58k"

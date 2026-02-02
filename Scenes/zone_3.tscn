@@ -201,6 +201,7 @@ direction = 3
 zone_from = 1
 
 [node name="Multitud2" type="Sprite2D" parent="." unique_id=2109908832]
+visible = false
 position = Vector2(934.00006, 481.00003)
 scale = Vector2(0.57857144, 0.57857144)
 texture = ExtResource("8_ue8m2")

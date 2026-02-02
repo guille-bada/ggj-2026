@@ -106,7 +106,7 @@ label_settings = SubResource("LabelSettings_ss133")
 [node name="Npc_positions" type="Node2D" parent="." unique_id=780772487]
 
 [node name="Npc" parent="Npc_positions" unique_id=1133381282 node_paths=PackedStringArray("fog_of_war") instance=ExtResource("3_uflgu")]
-position = Vector2(701, 524)
+position = Vector2(790, 508)
 fog_of_war = NodePath("../../FogOfWar")
 
 [node name="Npc2" parent="Npc_positions" unique_id=936253480 node_paths=PackedStringArray("fog_of_war") instance=ExtResource("3_uflgu")]
