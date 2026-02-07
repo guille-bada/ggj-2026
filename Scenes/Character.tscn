@@ -245,9 +245,8 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_vdqda"]
-radius = 117.0
-height = 276.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_a8x11"]
+size = Vector2(46, 98)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_4b18b"]
 radius = 2152.4458
@@ -266,9 +265,7 @@ animation = &"walk"
 speed_scale = 0.5
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=426823844]
-position = Vector2(2.000001, 31.00003)
-scale = Vector2(0.165, 0.165)
-shape = SubResource("CapsuleShape2D_vdqda")
+shape = SubResource("RectangleShape2D_a8x11")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1466619867]
 scale = Vector2(0.165, 0.165)

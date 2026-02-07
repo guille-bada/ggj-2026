@@ -20,14 +20,38 @@
 [ext_resource type="PackedScene" uid="uid://2ywuof63rfbw" path="res://Scenes/FogOfWar.tscn" id="15_86pxw"]
 [ext_resource type="Texture2D" uid="uid://d31crmcb33q8r" path="res://Art/circle 2.png" id="16_cm7sq"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_qxdmk"]
-size = Vector2(574.24243, 498)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d1b3w"]
+size = Vector2(211, 55.70021)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h063w"]
+size = Vector2(54, 55.70021)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_63vam"]
-size = Vector2(227.5, 132.5231)
+size = Vector2(19.704918, 137.57248)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y1dqb"]
+size = Vector2(298.93335, 498)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qxdmk"]
+size = Vector2(898.01996, 427.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8ths1"]
+size = Vector2(151.2969, 413)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8kvg6"]
-size = Vector2(298, 259)
+size = Vector2(71.5, 149)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l2oda"]
+size = Vector2(104.75, 110.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ahvge"]
+size = Vector2(194.13919, 19.091797)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5wpgb"]
+size = Vector2(159, 61)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_clk0c"]
+size = Vector2(206, 78)
 
 [sub_resource type="Theme" id="Theme_clk0c"]
 default_font = ExtResource("11_5wpgb")
@@ -35,9 +59,6 @@ default_font = ExtResource("11_5wpgb")
 [sub_resource type="LabelSettings" id="LabelSettings_l2oda"]
 font_color = Color(0, 0, 0, 1)
 shadow_color = Color(0, 0, 0, 0.1764706)
-
-[sub_resource type="LabelSettings" id="LabelSettings_ss133"]
-font_size = 32
 
 [node name="Zone_1" type="Node2D" unique_id=837564778 node_paths=PackedStringArray("npc_positions", "character", "audio_player")]
 script = ExtResource("1_7snvs")
@@ -78,32 +99,62 @@ position = Vector2(411.00003, 211.00002)
 scale = Vector2(0.53784925, 0.53784925)
 texture = ExtResource("12_8kvg6")
 
-[node name="StaticBody2D" type="StaticBody2D" parent="assets" unique_id=2078025797]
+[node name="CollisionBoxes" type="StaticBody2D" parent="assets" unique_id=1895493900]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="assets/StaticBody2D" unique_id=2116990777]
-position = Vector2(351, 36)
-scale = Vector2(1.3199999, 1)
-shape = SubResource("RectangleShape2D_qxdmk")
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="assets/CollisionBoxes" unique_id=907449373]
+position = Vector2(955, 40.875004)
+scale = Vector2(2, 1.7280005)
+shape = SubResource("RectangleShape2D_d1b3w")
 
-[node name="StaticBody2D2" type="StaticBody2D" parent="assets" unique_id=1071407683]
+[node name="CollisionShape2D11" type="CollisionShape2D" parent="assets/CollisionBoxes" unique_id=957849698]
+position = Vector2(961, 108)
+scale = Vector2(2, 1.7280005)
+shape = SubResource("RectangleShape2D_h063w")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="assets/StaticBody2D2" unique_id=1055441800]
-position = Vector2(933.5, 114.499985)
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="assets/CollisionBoxes" unique_id=1055441800]
+position = Vector2(723.15515, 112.371765)
+rotation = 0.3018939
 scale = Vector2(2, 1.7280005)
 shape = SubResource("RectangleShape2D_63vam")
 
-[node name="StaticBody2D3" type="StaticBody2D" parent="assets" unique_id=1895493900]
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="assets/CollisionBoxes" unique_id=1474340396]
+position = Vector2(95.499954, -54)
+scale = Vector2(0.8195809, 1)
+shape = SubResource("RectangleShape2D_y1dqb")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="assets/StaticBody2D3" unique_id=2005380092]
-position = Vector2(1006, 440.5)
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="assets/CollisionBoxes" unique_id=1888780684]
+position = Vector2(369.99997, -88.75)
+scale = Vector2(0.8195809, 1)
+shape = SubResource("RectangleShape2D_qxdmk")
+
+[node name="CollisionShape2D10" type="CollisionShape2D" parent="assets/CollisionBoxes" unique_id=1889476399]
+position = Vector2(411, -8)
+scale = Vector2(0.8195809, 1)
+shape = SubResource("RectangleShape2D_8ths1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="assets/CollisionBoxes" unique_id=2005380092]
+position = Vector2(1118.75, 374.5)
 shape = SubResource("RectangleShape2D_8kvg6")
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="assets/StaticBody2D3" unique_id=1976887421]
-position = Vector2(59, 428)
-shape = SubResource("RectangleShape2D_8kvg6")
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="assets/CollisionBoxes" unique_id=1687923117]
+position = Vector2(1088.625, 394.75)
+shape = SubResource("RectangleShape2D_l2oda")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="assets/CollisionBoxes" unique_id=2015725037]
+position = Vector2(881.8999, 386.2763)
+rotation = 0.4657099
+shape = SubResource("RectangleShape2D_ahvge")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="assets/CollisionBoxes" unique_id=1976887421]
+position = Vector2(60.5, 414.5)
+shape = SubResource("RectangleShape2D_5wpgb")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="assets/CollisionBoxes" unique_id=912446962]
+position = Vector2(84, 351)
+shape = SubResource("RectangleShape2D_clk0c")
 
 [node name="Character" parent="." unique_id=967131426 instance=ExtResource("3_2xp0k")]
-position = Vector2(290, 541)
+position = Vector2(290, 542)
 
 [node name="TextureRect" type="TextureRect" parent="Character" unique_id=1096181352]
 z_index = 1
@@ -137,14 +188,6 @@ vertical_alignment = 1
 autowrap_mode = 3
 metadata/_edit_use_anchors_ = true
 
-[node name="Label" type="Label" parent="." unique_id=1610399105]
-offset_left = 43.0
-offset_top = 38.0
-offset_right = 83.0
-offset_bottom = 83.0
-text = "1"
-label_settings = SubResource("LabelSettings_ss133")
-
 [node name="Npc_positions" type="Node2D" parent="." unique_id=780772487]
 
 [node name="Npc" parent="Npc_positions" unique_id=1133381282 node_paths=PackedStringArray("fog_of_war") instance=ExtResource("3_uflgu")]
@@ -160,8 +203,8 @@ position = Vector2(335, 305)
 fog_of_war = NodePath("../../FogOfWar")
 
 [node name="to_zone_2" parent="." unique_id=1673277274 instance=ExtResource("1_e6tpv")]
-position = Vector2(-52, 458)
-scale = Vector2(1, 5.924799)
+position = Vector2(-52, 401.00003)
+scale = Vector2(1, 7.724799)
 zone = 2
 
 [node name="to_zone_3" parent="." unique_id=646349785 instance=ExtResource("1_e6tpv")]
@@ -177,6 +220,7 @@ zone = 4
 
 [node name="player_spawn_zone_2" type="Node2D" parent="." unique_id=1509522170]
 position = Vector2(-26, 600)
+scale = Vector2(1e-05, inf_neg)
 script = ExtResource("6_hnd26")
 direction = 3
 zone_from = 2
