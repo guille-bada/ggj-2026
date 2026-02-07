@@ -1,14 +1,8 @@
 [gd_scene format=3 uid="uid://b70j0crn5ovw8"]
 
-[ext_resource type="PackedScene" path="res://Scenes/area_manager.tscn" id="2_nurni"]
-[ext_resource type="PackedScene" path="res://Scenes/Transition_Fade.tscn" id="3_0ni5v"]
-[ext_resource type="Script" uid="uid://xpwmfie2hok1" path="res://Scripts/texto_inicial.gd" id="3_kln2b"]
-[ext_resource type="Texture2D" uid="uid://c6lcwh8co6xrn" path="res://Art/globo de texto.png" id="3_rgh2o"]
-[ext_resource type="FontFile" uid="uid://clih0lcsp8inb" path="res://Art/Font/shonen/Shonen (Namikus).otf" id="5_pbw6q"]
+[ext_resource type="PackedScene" uid="uid://pewy0cyyqt2b" path="res://Scenes/area_manager.tscn" id="2_nurni"]
+[ext_resource type="PackedScene" uid="uid://dtndh384b372q" path="res://Scenes/Transition_Fade.tscn" id="3_0ni5v"]
 [ext_resource type="AudioStream" uid="uid://cad606j8n6gme" path="res://Art/Sounds/Efectos/Start.wav" id="6_v1gob"]
-
-[sub_resource type="Theme" id="Theme_v1gob"]
-default_font = ExtResource("5_pbw6q")
 
 [node name="Main" type="Node2D" unique_id=670653064]
 
@@ -19,34 +13,6 @@ fade = NodePath("../Transition_Fade")
 [node name="zone_container" type="Node2D" parent="." unique_id=770947426]
 
 [node name="Transition_Fade" parent="." unique_id=873741915 instance=ExtResource("3_0ni5v")]
-
-[node name="TextureRect" type="TextureRect" parent="." unique_id=693292545]
-offset_left = 389.0
-offset_top = 224.0
-offset_right = 799.3822
-offset_bottom = 454.83997
-texture = ExtResource("3_rgh2o")
-expand_mode = 3
-stretch_mode = 4
-flip_h = true
-flip_v = true
-script = ExtResource("3_kln2b")
-metadata/_edit_use_anchors_ = true
-
-[node name="Label" type="Label" parent="TextureRect" unique_id=1774310932]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.09288195
-anchor_top = 0.12345679
-anchor_right = 0.9010417
-anchor_bottom = 0.3425926
-grow_horizontal = 2
-grow_vertical = 2
-theme = SubResource("Theme_v1gob")
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-text = "¡Perdí a mi amigo! La gente podría saber donde está ¿Me ayudás a encontrarlo?"
-autowrap_mode = 3
-metadata/_edit_use_anchors_ = true
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=767605134]
 stream = ExtResource("6_v1gob")

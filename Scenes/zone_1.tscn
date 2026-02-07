@@ -9,8 +9,11 @@
 [ext_resource type="Texture2D" uid="uid://c5efm0uu36k3x" path="res://Place_holder/Multitumbre/multitud 1.png" id="4_5io2i"]
 [ext_resource type="Texture2D" uid="uid://dtjaaq7hejsej" path="res://Place_holder/Multitumbre/multitud 2.png" id="5_63vam"]
 [ext_resource type="Texture2D" uid="uid://dlew0tvc1yra8" path="res://Place_holder/Background/Luces (Izquierdas).png" id="5_pkakm"]
-[ext_resource type="Script" path="res://Scripts/player_start_position.gd" id="6_hnd26"]
+[ext_resource type="Script" uid="uid://3ififejb7kqd" path="res://Scripts/player_start_position.gd" id="6_hnd26"]
 [ext_resource type="Texture2D" uid="uid://dp4w7bi104c5a" path="res://Place_holder/Background/Luces (derechas).png" id="6_pkakm"]
+[ext_resource type="Texture2D" uid="uid://c6lcwh8co6xrn" path="res://Art/globo de texto.png" id="9_d1b3w"]
+[ext_resource type="Script" uid="uid://xpwmfie2hok1" path="res://Scripts/texto_inicial.gd" id="10_ahvge"]
+[ext_resource type="FontFile" uid="uid://clih0lcsp8inb" path="res://Art/Font/shonen/Shonen (Namikus).otf" id="11_5wpgb"]
 [ext_resource type="Texture2D" uid="uid://c3rkwoxa42elv" path="res://Place_holder/Multitumbre/viejoooooo.png" id="12_8kvg6"]
 [ext_resource type="Texture2D" uid="uid://b8h174yhtj7al" path="res://Place_holder/Multitumbre/turros.png" id="13_63vam"]
 [ext_resource type="AudioStream" uid="uid://dnnfrf1kolphu" path="res://Art/Sounds/Ambientes/Ambiente0.wav" id="14_8kvg6"]
@@ -25,6 +28,13 @@ size = Vector2(227.5, 132.5231)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8kvg6"]
 size = Vector2(298, 259)
+
+[sub_resource type="Theme" id="Theme_clk0c"]
+default_font = ExtResource("11_5wpgb")
+
+[sub_resource type="LabelSettings" id="LabelSettings_l2oda"]
+font_color = Color(0, 0, 0, 1)
+shadow_color = Color(0, 0, 0, 0.1764706)
 
 [sub_resource type="LabelSettings" id="LabelSettings_ss133"]
 font_size = 32
@@ -95,6 +105,38 @@ shape = SubResource("RectangleShape2D_8kvg6")
 [node name="Character" parent="." unique_id=967131426 instance=ExtResource("3_2xp0k")]
 position = Vector2(290, 541)
 
+[node name="TextureRect" type="TextureRect" parent="Character" unique_id=1096181352]
+z_index = 1
+offset_left = -84.0
+offset_top = -166.0
+offset_right = 326.3822
+offset_bottom = 64.839966
+texture = ExtResource("9_d1b3w")
+expand_mode = 3
+stretch_mode = 4
+flip_h = true
+flip_v = true
+script = ExtResource("10_ahvge")
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="Character/TextureRect" unique_id=1539586741]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.09288195
+anchor_top = 0.12345679
+anchor_right = 0.9010417
+anchor_bottom = 0.3425926
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_clk0c")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "¡Perdí a mi amigo! La gente podría saber donde está ¿Me ayudás a encontrarlo?"
+label_settings = SubResource("LabelSettings_l2oda")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+metadata/_edit_use_anchors_ = true
+
 [node name="Label" type="Label" parent="." unique_id=1610399105]
 offset_left = 43.0
 offset_top = 38.0
@@ -129,7 +171,8 @@ zone = 3
 
 [node name="to_zone_4" parent="." unique_id=2047093427 instance=ExtResource("1_e6tpv")]
 position = Vector2(565, 727.00006)
-scale = Vector2(-17.294672, 1.1020076)
+rotation = -3.1415927
+scale = Vector2(17.294672, -1.1020076)
 zone = 4
 
 [node name="player_spawn_zone_2" type="Node2D" parent="." unique_id=1509522170]

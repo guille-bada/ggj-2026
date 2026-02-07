@@ -9,6 +9,7 @@ var clues_count: int
 var clues_count_needed: int = 5
 var can_solution_spawn: bool
 var solution_node: Npc
+var initial_bubble_shown: bool = false
 
 func _ready() -> void:
 	var head: ResourceClue = all_possibilities.heads.pick_random()
