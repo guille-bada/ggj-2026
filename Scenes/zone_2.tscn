@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://6g7e0j0ymkbd" path="res://Scenes/Npc.tscn" id="3_ivmmj"]
 [ext_resource type="Texture2D" uid="uid://bh2rc1ie8sy54" path="res://Place_holder/Multitumbre/viejA.png" id="4_vjtkv"]
 [ext_resource type="PackedScene" uid="uid://cf1mpjui5a211" path="res://Scenes/Character.tscn" id="5_bd8ia"]
-[ext_resource type="Script" path="res://Scripts/player_start_position.gd" id="6_gcqhp"]
+[ext_resource type="Script" uid="uid://3ififejb7kqd" path="res://Scripts/player_start_position.gd" id="6_gcqhp"]
 [ext_resource type="Texture2D" uid="uid://dsiywqd0lwuid" path="res://Place_holder/Multitumbre/vedette.png" id="7_b1slf"]
 [ext_resource type="Texture2D" uid="uid://b8h174yhtj7al" path="res://Place_holder/Multitumbre/turros.png" id="8_vjtkv"]
 [ext_resource type="Texture2D" uid="uid://dtjaaq7hejsej" path="res://Place_holder/Multitumbre/multitud 2.png" id="9_e334c"]
@@ -19,18 +19,43 @@
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_2rnfi"]
 a = Vector2(-58, 427)
-b = Vector2(389, -19)
+b = Vector2(185, 212)
 
-[sub_resource type="SegmentShape2D" id="SegmentShape2D_qgqmo"]
-a = Vector2(448, 208)
-b = Vector2(1156, 210)
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_incow"]
+a = Vector2(-70, 400)
+b = Vector2(1105, 398)
 
-[sub_resource type="SegmentShape2D" id="SegmentShape2D_otcwd"]
-a = Vector2(8, 647)
-b = Vector2(1156, 647)
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_2jvbe"]
+a = Vector2(102, 155)
+b = Vector2(181, 221)
 
-[sub_resource type="LabelSettings" id="LabelSettings_ss133"]
-font_size = 32
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_y0i0s"]
+a = Vector2(102, 155)
+b = Vector2(98, 83)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_jebsn"]
+a = Vector2(92, 87)
+b = Vector2(304, -100)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_3l2uf"]
+a = Vector2(456, -59)
+b = Vector2(295, -100)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_7mp66"]
+a = Vector2(500, -93)
+b = Vector2(455, -58)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_tw03g"]
+a = Vector2(500, -93)
+b = Vector2(804, -94)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_umvm6"]
+a = Vector2(803, -94)
+b = Vector2(842, -162)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_ahglf"]
+a = Vector2(1087, -162)
+b = Vector2(842, -162)
 
 [node name="Zone_2" type="Node2D" unique_id=837564778 node_paths=PackedStringArray("npc_positions", "character", "audio_player")]
 script = ExtResource("1_5qs5h")
@@ -81,32 +106,54 @@ position = Vector2(157.62093, 513.5)
 scale = Vector2(0.49930874, 0.5892857)
 texture = ExtResource("10_2rnfi")
 
-[node name="StaticBody2D" type="StaticBody2D" parent="assets" unique_id=1301098660]
+[node name="CollisionBoxes" type="StaticBody2D" parent="assets" unique_id=1301098660]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="assets/StaticBody2D" unique_id=1235115347]
-position = Vector2(56, 224)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="assets/CollisionBoxes" unique_id=1235115347]
+position = Vector2(70, 248)
 shape = SubResource("SegmentShape2D_2rnfi")
 
-[node name="StaticBody2D2" type="StaticBody2D" parent="assets" unique_id=1703127146]
+[node name="CollisionShape2D10" type="CollisionShape2D" parent="assets/CollisionBoxes" unique_id=250246670]
+position = Vector2(70, 248)
+shape = SubResource("SegmentShape2D_incow")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="assets/StaticBody2D2" unique_id=1287166248]
-shape = SubResource("SegmentShape2D_qgqmo")
+[node name="CollisionShape2D11" type="CollisionShape2D" parent="assets/CollisionBoxes" unique_id=102803356]
+position = Vector2(70, 248)
+shape = SubResource("SegmentShape2D_incow")
 
-[node name="StaticBody2D3" type="StaticBody2D" parent="assets" unique_id=1752957270]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="assets/CollisionBoxes" unique_id=969456624]
+position = Vector2(74, 240)
+shape = SubResource("SegmentShape2D_2jvbe")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="assets/StaticBody2D3" unique_id=1326210412]
-shape = SubResource("SegmentShape2D_otcwd")
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="assets/CollisionBoxes" unique_id=108771197]
+position = Vector2(74, 240)
+shape = SubResource("SegmentShape2D_y0i0s")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="assets/CollisionBoxes" unique_id=652308370]
+position = Vector2(74, 240)
+shape = SubResource("SegmentShape2D_jebsn")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="assets/CollisionBoxes" unique_id=2094017527]
+position = Vector2(82, 241)
+shape = SubResource("SegmentShape2D_3l2uf")
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="assets/CollisionBoxes" unique_id=467134023]
+position = Vector2(82, 241)
+shape = SubResource("SegmentShape2D_7mp66")
+
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="assets/CollisionBoxes" unique_id=810158729]
+position = Vector2(82, 241)
+shape = SubResource("SegmentShape2D_tw03g")
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="assets/CollisionBoxes" unique_id=213387115]
+position = Vector2(82, 241)
+shape = SubResource("SegmentShape2D_umvm6")
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="assets/CollisionBoxes" unique_id=2011928212]
+position = Vector2(82, 241)
+shape = SubResource("SegmentShape2D_ahglf")
 
 [node name="Character" parent="." unique_id=967131426 instance=ExtResource("5_bd8ia")]
 position = Vector2(1006, 320)
-
-[node name="Label" type="Label" parent="." unique_id=1610399105]
-offset_left = 43.0
-offset_top = 38.0
-offset_right = 83.0
-offset_bottom = 83.0
-text = "2"
-label_settings = SubResource("LabelSettings_ss133")
 
 [node name="Npc_positions" type="Node2D" parent="." unique_id=816851761]
 
