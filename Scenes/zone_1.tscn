@@ -47,11 +47,13 @@ size = Vector2(104.75, 110.5)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ahvge"]
 size = Vector2(194.13919, 19.091797)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_5wpgb"]
-size = Vector2(159, 61)
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_d1b3w"]
+radius = 34.5
+height = 149.0
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_clk0c"]
-size = Vector2(206, 78)
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ahvge"]
+radius = 47.0
+height = 176.0
 
 [sub_resource type="Theme" id="Theme_clk0c"]
 default_font = ExtResource("11_5wpgb")
@@ -147,11 +149,13 @@ shape = SubResource("RectangleShape2D_ahvge")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="assets/CollisionBoxes" unique_id=1976887421]
 position = Vector2(60.5, 414.5)
-shape = SubResource("RectangleShape2D_5wpgb")
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_d1b3w")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="assets/CollisionBoxes" unique_id=912446962]
-position = Vector2(84, 351)
-shape = SubResource("RectangleShape2D_clk0c")
+position = Vector2(111, 357)
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_ahvge")
 
 [node name="Character" parent="." unique_id=967131426 instance=ExtResource("3_2xp0k")]
 position = Vector2(290, 542)
